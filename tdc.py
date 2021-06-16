@@ -32,7 +32,7 @@ class Basics:
 			sys_data_path = os.path.join(sys_data_path, 'test')
 
 		if 'Linux' in platform.system():
-			self.CHROMEDRIVER = os.path.join(sys_main_path, 'chromedriver')
+			self.CHROMEDRIVER = os.path.join('/usr/bin', 'chromedriver')
 		elif 'Windows' in platform.system():
 			self.CHROMEDRIVER = os.path.join(sys_main_path, 'chromedriver.exe')
 		else:
