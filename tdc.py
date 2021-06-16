@@ -57,7 +57,7 @@ class Basics:
 	def which_system(self):
 		systems = [{'name': 'GFT-Tablet', 'root_path': r'C:\pythonCode'},
 			 	   {'name': 'raspberrypi', 'root_path': r'/home/pi/pythonCode'},
-				   {'name': 'POWER', 'root_path': r'D:\pythonCode'},
+				   {'name': 'Power', 'root_path': r'D:\pythonCode'},
 				   {'name': 'all others', 'root_path': '/home/gfreundt/pythonCode'}]
 		for system in systems:
 			if system['name'] in platform.node():
@@ -268,6 +268,7 @@ def main():
 	
 
 
-
+start = dt.now()
 active = Basics()
 main()
+print(f'Time: {dt.now()-start} seconds.')
