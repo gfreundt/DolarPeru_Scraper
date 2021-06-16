@@ -271,4 +271,4 @@ def main():
 start = dt.now()
 active = Basics()
 main()
-print(f'Time: {dt.now()-start} seconds.')
+print(f'Time: {dt.now()-start}.')
