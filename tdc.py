@@ -10,9 +10,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from statistics import mean
 import threading
-#import pytesseract
-#import cv2
-import requests
 
 
 # Switches:	NOTEST = work with production data
@@ -28,8 +25,9 @@ class Basics:
 		self.switches = [i.upper() for i in sys.argv]
 		
 		sys_root_path = self.which_system()
-		sys_main_path = os.path.join(sys_root_path, 'tipoDeCambio')
-		sys_data_path = os.path.join(sys_main_path, 'data')
+		sys_main_path = os.path.join(sys_root_path, 'DolarPeru_Scraper')
+		sys_web_path = os.path.join(sys_root_path, 'DolarPeru_Web')
+		sys_data_path = os.path.join(sys_root_path, 'DolarPeru_data')
 		if "NOTEST" not in self.switches:
 			sys_data_path = os.path.join(sys_data_path, 'test')
 
@@ -41,8 +39,8 @@ class Basics:
 			print('Cannot Determine System Type')
 			quit()
 		
-		self.DATA_STRUCTURE_FILE = os.path.join(sys_main_path, 'static', 'data_structure.json')
-		self.GRAPH_PATH = os.path.join(sys_main_path, 'static', 'images')
+		self.DATA_STRUCTURE_FILE = os.path.join(sys_main_path, 'data_structure.json')
+		self.GRAPH_PATH = os.path.join(sys_web_path, 'static', 'images', 'graphs')
 		self.SCREENSHOT_FILE = os.path.join(sys_data_path, 'screenshot.png')
 		self.LAST_USE_FILE = os.path.join(sys_data_path, 'last_use.txt')
 		self.VAULT_FILE = os.path.join(sys_data_path,'TDC_Vault.txt')
@@ -108,58 +106,23 @@ def get_source(fintech, options, k):
 				#print(fintech['name'], 'retrying')
 				success = False
 				attempts += 1
-		if False: #not success and 'ocr' in fintech:
-			ocr_result = clean(get_source_ocr(fintech['ocr'][quote], driver).strip())
-			#print('ocr result:', ocr_result)
-			if ocr_result:
-				info.append(ocr_result)
 	driver.quit()
 	if info and info[0] != '' and sanity_check(info):
 		active.results.append({'url':fintech['url'], 'Compra': info[0], 'Venta': info[1]})
-		#print(k, "Added:", fintech['name'])
+		print(k, "Added:", fintech['name'])
 		active.good += 1
 	else:
 		pass
-		#print(k, "Skipped:", fintech['name'])
+		print(k, "Skipped:", fintech['name'])
 		active.bad += 1
 
 
 def sanity_check(test):
 	for i in test:
-		if float(i) < 3.30 or float(i) > 4.30:
+		if float(i) < 3.30 or float(i) > 5.50:
 			return False
 	return True
 		
-
-def get_source_ocr(coords, driver):
-	driver.save_screenshot(active.SCREENSHOT_FILE)
-	x, y, width, height = coords
-	img = cv2.imread(active.SCREENSHOT_FILE, cv2.IMREAD_GRAYSCALE)[y:height, x:width]
-	#pytesseract.pytesseract.tesseract_cmd = active.PYTESSERACT_PATH
-	#return pytesseract.image_to_string(img, lang='eng')
-	return ocr(img)
-
-def ocr(img, overlay=False, api_key='57bd56948488957', language='eng', scale=True):  # Space OCR API
-    cv2.imwrite("temp.jpg", img)
-    payload = {'isOverlayRequired': overlay,
-               'apikey': api_key,
-               'language': language,
-               'scale': scale,
-               'OCREngine': 1
-               }
-    with open("temp.jpg", 'rb') as f:
-        r = requests.post('https://api.ocr.space/parse/image',
-                          files={"temp.jpg": f},
-                          data=payload,
-                          )
-    response = r.content.decode()
-    if "ParsedText" in response:
-        pos0 = response.index("ParsedText") + 13
-        pos1 = response.index('"', pos0)
-        return response[pos0:pos1 - 4]
-    else:
-        return "" 
-
 
 def clean(text):
 	r = ''
@@ -308,4 +271,3 @@ def main():
 
 active = Basics()
 main()
-#analysis()
