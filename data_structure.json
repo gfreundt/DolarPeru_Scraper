@@ -853,6 +853,30 @@
                 "extract_end": 6
             },
             "image": "keyex.png"
+        },
+        {
+            "id": 32,
+            "online": true,
+            "name": "DinersFX",
+            "url": "https://www.dinersfx.pe/",
+            "sleep": 3,
+            "compra":
+            {
+                "xpath": "/html/body/app-root/app-home/app-first-section/div/div[1]/div/div[2]/div[1]/div[2]/div/div/div[1]/p[1]/span",
+                "click": false,
+                "click_xpath": null,
+                "extract_start": 3,
+                "extract_end": 9
+            },
+            "venta":
+            {
+                "xpath": "/html/body/app-root/app-home/app-first-section/div/div[1]/div/div[2]/div[1]/div[2]/div/div/div[1]/p[2]/span",
+                "click": false,
+                "click_xpath": null,
+                "extract_start": 3,
+                "extract_end": 9
+            },
+            "image": "dinersfx.svg"
         }
     ]
 }
