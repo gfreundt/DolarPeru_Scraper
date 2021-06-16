@@ -10,6 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from statistics import mean
 import threading
+from google.cloud import storage
 
 
 # Switches:	NOTEST = work with production data
@@ -28,6 +29,7 @@ class Basics:
 		sys_main_path = os.path.join(sys_root_path, 'DolarPeru_Scraper')
 		sys_web_path = os.path.join(sys_root_path, 'DolarPeru_Web')
 		sys_data_path = os.path.join(sys_root_path, 'DolarPeru_data')
+		self.DATA_PATH = sys_data_path
 		if "NOTEST" not in self.switches:
 			sys_data_path = os.path.join(sys_data_path, 'test')
 
@@ -40,6 +42,7 @@ class Basics:
 			quit()
 		
 		self.DATA_STRUCTURE_FILE = os.path.join(sys_main_path, 'data_structure.json')
+		self.GCLOUD_CREDS = os.path.join(sys_main_path, 'gcloud_keys.json')
 		self.GRAPH_PATH = os.path.join(sys_web_path, 'static', 'images', 'graphs')
 		self.SCREENSHOT_FILE = os.path.join(sys_data_path, 'screenshot.png')
 		self.LAST_USE_FILE = os.path.join(sys_data_path, 'last_use.txt')
@@ -145,6 +148,14 @@ def save():
 		data = csv.writer(file, delimiter=',')
 		for f in active.results:
 			data.writerow([f['url'], f['Venta'], active.time_date, f['Compra']])
+
+def upload_to_bucket(bucket_path='data-bucket-gft'):
+	client = storage.Client.from_service_account_json(json_credentials_path=active.GCLOUD_CREDS)
+	bucket = client.get_bucket(bucket_path)
+	for file in os.listdir(active.DATA_PATH):
+		print(file)
+		object_name_in_gcs_bucket = bucket.blob('/DolarPeru_data/'+file)
+		object_name_in_gcs_bucket.upload_from_filename(os.path.join(active.DATA_PATH,file))
 
 
 def file_extract_recent(n):
@@ -263,6 +274,7 @@ def main():
 		save()
 		file_extract_recent(9800)
 		last_use()
+		upload_to_bucket()
 		print("Good:", active.good, "\nBad:", active.bad)
 	analysis()
 	
