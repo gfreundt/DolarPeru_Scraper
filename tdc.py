@@ -29,9 +29,9 @@ class Basics:
 		sys_main_path = os.path.join(sys_root_path, 'DolarPeru_Scraper')
 		sys_web_path = os.path.join(sys_root_path, 'DolarPeru_Web')
 		sys_data_path = os.path.join(sys_root_path, 'DolarPeru_data')
-		self.DATA_PATH = sys_data_path
 		if "NOTEST" not in self.switches:
 			sys_data_path = os.path.join(sys_data_path, 'test')
+		self.DATA_PATH = sys_data_path
 
 		if 'Linux' in platform.system():
 			self.CHROMEDRIVER = os.path.join('/usr/bin', 'chromedriver')
@@ -43,7 +43,7 @@ class Basics:
 		
 		self.DATA_STRUCTURE_FILE = os.path.join(sys_main_path, 'data_structure.json')
 		self.GCLOUD_KEYS = os.path.join(sys_root_path, 'gcloud_keys.json')
-		self.GRAPH_PATH = os.path.join(sys_web_path, 'static', 'images', 'graphs')
+		#self.GRAPH_PATH = os.path.join(sys_web_path, 'static', 'images', 'graphs')
 		self.SCREENSHOT_FILE = os.path.join(sys_data_path, 'screenshot.png')
 		self.LAST_USE_FILE = os.path.join(sys_data_path, 'last_use.txt')
 		self.VAULT_FILE = os.path.join(sys_data_path,'TDC_Vault.txt')
@@ -208,6 +208,7 @@ def analysis():
 		# Update only on first run of the day
 		
 		if (dt.now().hour <= 7 and dt.now().minute < 15) or "DAILY-NOW" in active.switches:
+			print("INNNN")
 			# Last 5 days Graph
 			data_5days = [(float(i[0]), dt.strptime(i[1], '%Y-%m-%d %H:%M:%S')) for i in datax if delta(days=1) <= dt.today().date() - dt.strptime(i[1],'%Y-%m-%d %H:%M:%S').date() <= delta(days=5)]
 			x = [(i[1].timestamp()-datetime_midnight)/3600/24 for i in data_5days]
@@ -243,11 +244,10 @@ def graph(data, x, y, xt, yt, axis, filename):
 	ax.spines['right'].set_color('#DFD8DF')
 	plt.tick_params(axis='both', length = 0)
 	plt.axis(axis)
-
 	plt.xticks(xt[1], xt[0], color='#606060', fontsize=8)
 	plt.yticks(yt, color='#606060', fontsize=8)
 	plt.grid(color='#DFD8DF')
-	plt.savefig(os.path.join(active.GRAPH_PATH, filename), pad_inches=0, bbox_inches = 'tight', transparent=True)
+	plt.savefig(os.path.join(active.DATA_PATH, filename), pad_inches=0, bbox_inches = 'tight', transparent=True)
 	plt.close()
 
 
