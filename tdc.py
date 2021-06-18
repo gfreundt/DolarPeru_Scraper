@@ -171,7 +171,7 @@ def analysis():
 	with open(active.ACTIVE_FILE, mode='r') as file:
 		data = [i for i in csv.reader(file, delimiter=',')]
 		fintechs = [i['url'] for i in active.fintechs]
-	for quote, avg_filename, web_filename, graph_filename in zip([1,3], [active.AVG_VENTA_FILE, active.AVG_COMPRA_FILE], [active.WEB_VENTA_FILE, active.WEB_COMPRA_FILE], ['venta', 'compra']):
+	for quote, avg_filename, web_filename, graph_filename in zip([1,3], [active.AVG_VENTA_FILE, active.AVG_COMPRA_FILE], [active.WEB_VENTA_FILE, active.WEB_COMPRA_FILE], ['vta', 'compra']):
 		this_time = data[-1][2] # Loads latest quote datetime
 		datapoints = {i[0]: float(i[quote]) for i in data if i[2] == this_time and float(i[quote]) > 0}
 		
@@ -208,7 +208,6 @@ def analysis():
 		# Update only on first run of the day
 		
 		if (dt.now().hour <= 7 and dt.now().minute < 15) or "DAILY-NOW" in active.switches:
-			print("INNNN")
 			# Last 5 days Graph
 			data_5days = [(float(i[0]), dt.strptime(i[1], '%Y-%m-%d %H:%M:%S')) for i in datax if delta(days=1) <= dt.today().date() - dt.strptime(i[1],'%Y-%m-%d %H:%M:%S').date() <= delta(days=5)]
 			x = [(i[1].timestamp()-datetime_midnight)/3600/24 for i in data_5days]
