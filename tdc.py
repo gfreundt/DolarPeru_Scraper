@@ -42,7 +42,7 @@ class Basics:
 			quit()
 		
 		self.DATA_STRUCTURE_FILE = os.path.join(sys_main_path, 'data_structure.json')
-		self.GCLOUD_CREDS = os.path.join(sys_main_path, 'gcloud_keys.json')
+		self.GCLOUD_KEYS = os.path.join(sys_root_path, 'gcloud_keys.json')
 		self.GRAPH_PATH = os.path.join(sys_web_path, 'static', 'images', 'graphs')
 		self.SCREENSHOT_FILE = os.path.join(sys_data_path, 'screenshot.png')
 		self.LAST_USE_FILE = os.path.join(sys_data_path, 'last_use.txt')
@@ -150,7 +150,7 @@ def save():
 			data.writerow([f['url'], f['Venta'], active.time_date, f['Compra']])
 
 def upload_to_bucket(bucket_path='data-bucket-gft'):
-	client = storage.Client.from_service_account_json(json_credentials_path=active.GCLOUD_CREDS)
+	client = storage.Client.from_service_account_json(json_credentials_path=active.GCLOUD_KEYS)
 	bucket = client.get_bucket(bucket_path)
 	for file in os.listdir(active.DATA_PATH):
 		print(file)
@@ -274,9 +274,9 @@ def main():
 		save()
 		file_extract_recent(9800)
 		last_use()
-		upload_to_bucket()
 		print("Good:", active.good, "\nBad:", active.bad)
 	analysis()
+	upload_to_bucket()
 	
 
 
