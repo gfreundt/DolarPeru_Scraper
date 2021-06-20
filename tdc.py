@@ -261,9 +261,9 @@ def graph(data, x, y, xt, yt, axis, filename):
 	plt.close()
 
 
-def last_use():
+def last_use(t):
 	with open(active.LAST_USE_FILE, 'w') as file:
-		file.write(active.time_date)
+		file.write(active.time_date + t)
 
 
 def main():
@@ -283,7 +283,6 @@ def main():
 
 		save()
 		file_extract_recent(9800)
-		last_use()
 		print(f'Good: {active.good} | Bad: {active.bad}')
 		for d in sorted(active.dashboard, key=lambda i:i['ID']):
 			print(d)
@@ -296,4 +295,5 @@ def main():
 start = dt.now()
 active = Basics()
 main()
+last_use(f' Time: {dt.now()-start}.')
 print(f'Time: {dt.now()-start}.')
