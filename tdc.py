@@ -86,6 +86,7 @@ def set_options():
 
 
 def get_source(fintech, options, k):
+	print(f'Started {fintech}')
 	driver = webdriver.Chrome(os.path.join(os.getcwd(),active.CHROMEDRIVER), options=options)
 	attempts = 1
 	while attempts <= 3:

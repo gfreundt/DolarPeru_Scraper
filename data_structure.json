@@ -8,7 +8,7 @@
             "url": "https://www.sbs.gob.pe/",
             "link": "https://www.sbs.gob.pe/",
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/form/div[3]/main/div[1]/div/div[3]/div/div[1]/div/div/div/div/ul/li[1]/div[2]/table/tbody/tr/td[1]/div",
@@ -34,7 +34,7 @@
             "url": "https://www.sunat.gob.pe/",
             "link": "https://www.sunat.gob.pe/",
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/section[2]/div/div[2]/div/p[1]/strong",
@@ -60,7 +60,7 @@
             "url": "https://www.bcrp.gob.pe/",
             "link": "https://www.bcrp.gob.pe/",
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[2]/section/div/div/div[3]/div[3]/div[1]/div/div[2]/table[1]/tbody/tr[2]/td[2]",
@@ -89,7 +89,7 @@
             "url": "https://acomo.com.pe/",
             "link": "https://acomo.com.pe/",
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[2]/section[1]/div[3]/div/div[1]/div[1]/span[3]",
@@ -115,7 +115,7 @@
             "url": "https://www.midpointfx.com/",
             "link": "https://www.midpointfx.com/",
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[1]/div/div[3]/div/main/div/div/div/div[2]/div/div/div/div[1]/div[2]/div/div[6]/h1/span/span/span/span",
@@ -141,7 +141,7 @@
             "url": "https://www.billex.pe/",
             "link": "https://www.billex.pe/", 
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[3]/div[2]/main/div/section/div/div/div[1]/div/div[1]/div/div/div[2]/div/div/div[1]/span[1]/span",
@@ -167,7 +167,7 @@
             "url": "https://tkambio.com",
             "link": "https://tkambio.com",
             "bench": "tkambio",
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[2]/div[2]/div/div[1]/div/div[1]/div[2]/div[2]/div[2]/div/span[2]/span",
@@ -193,7 +193,7 @@
             "url": "https://rextie.com",
             "link": "https://rextie.com", 
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/app-root/div/div/app-side-nav/mat-sidenav-container/mat-sidenav-content/app-home/app-save-money-partial/div/div/div[1]/div[2]/div/app-fx-rates/div/div/div[1]/div/div[1]/div[2]/span[2]",
@@ -219,7 +219,7 @@
             "url": "https://kambista.com",
             "link": "https://kambista.com",
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[2]/div/main/div/div/div/article/div/div[1]/div[3]/div/div/div[2]/div[1]/strong[2]",
@@ -245,7 +245,7 @@
             "url": "https://securex.pe",
             "link": "https://securex.pe",
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[4]/div/div[1]/section[1]/div/div/div[2]/form/div[1]/h4[1]/span",
@@ -271,7 +271,7 @@
             "url": "https://tucambista.pe",
             "link": "https://tucambista.pe",
             "bench": "tucambista",
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/section[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[2]/div[1]/span[2]",
@@ -297,7 +297,7 @@
             "url": "https://cocosylucasbcp.com",
             "link": "https://cocosylucasbcp.com", 
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/poly-root/poly-feature-layout/div/div/landing-root/landing-main/div[1]/landing-engine/section/div[1]/div/div[2]/div/div/landing-form-exchange/div/form/div[2]/div[1]/div/span[2]",
@@ -323,7 +323,7 @@
             "url": "https://cuantoestaeldolar.pe/",
             "link": "https://cambioseguro.com/", 
             "bench": "cambioseguro",
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[2]/div[1]/div[2]",
@@ -349,7 +349,7 @@
             "url": "https://cambiafx.pe/",
             "link": "https://cambiafx.pe/", 
             "bench": "cambiafx",
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[1]/div/header/div[2]/div/div[2]/div/button[1]/span[2]",
@@ -375,7 +375,7 @@
             "url": "https://www.cambistainka.com/",
             "link": "https://www.cambistainka.com/", 
             "bench": "cambistainka",
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[1]/section[1]/div/div/div[2]/div/div[2]/form/div[1]/div[1]/span/strong",
@@ -401,7 +401,7 @@
             "url": "https://instakash.net/",
             "link": "https://instakash.net/", 
             "bench": "instakash",
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div/div/main/section[1]/div/div/section/div[2]/div/div[1]/p",
@@ -427,7 +427,7 @@
             "url": "https://www.cambiomundial.com/",
             "link": "https://www.cambiomundial.com/", 
             "bench": "cambiomundial",
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div/section[1]/div/div[2]/form/div[1]/div[1]/span[1]/span[2]/label",
@@ -453,7 +453,7 @@
             "url": "https://perudolar.pe/",
             "link": "https://perudolar.pe/", 
             "bench": "perudolar",
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
@@ -479,7 +479,7 @@
             "url": "https://cuantoestaeldolar.pe/",
             "link": "https://terracash.pe/", 
             "bench": "terracash",
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[8]/div[1]/div[2]",
@@ -505,7 +505,7 @@
             "url": "http://cambi.pe/",
             "link": "http://cambi.pe/", 
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div/div/section[1]/div/div[2]/div/div/div[2]/div[2]/div[1]/span[3]/strong",
@@ -531,7 +531,7 @@
             "url": "https://cuantoestaeldolar.pe/",
             "link": "https://roblex.pe/", 
             "bench": "roblex",
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[7]/div[1]/div[2]",
@@ -557,7 +557,7 @@
             "url": "https://noncash.pe",
             "link": "https://noncash.pe", 
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[1]/section[1]/div[2]/div/div/div[2]/div[2]/div[1]/p[2]",
@@ -583,7 +583,7 @@
             "url": "https://cuantoestaeldolar.pe/",
             "link": "https://cambix.com.pe/home", 
             "bench": "cambix",
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]",
@@ -609,7 +609,7 @@
             "url": "https://www.westernunionperu.pe/cambiodemoneda",
             "link": "https://www.westernunionperu.pe/cambiodemoneda", 
             "bench": "westernunionperu",
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/section/div/form/div[1]/div[2]/p/button[1]",
@@ -635,7 +635,7 @@
             "url": "https://www.casadecambioelalfarero.com/",
             "link": "https://www.casadecambioelalfarero.com/", 
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/form/main/section[1]/div/div/div[2]/div[2]/div[2]/label[2]",
@@ -661,7 +661,7 @@
             "url": "https://www.cambiox.pe/",
             "link": "https://www.cambiox.pe/", 
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[3]/section[1]/div/div/div/div[2]/center/span[2]",
@@ -687,7 +687,7 @@
             "url": "https://www.fintuu.com/",
             "link": "https://www.fintuu.com/", 
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/main/div[1]/section[3]/div/div[3]/div[1]/div/div[1]/div[1]/div/h6",
@@ -713,7 +713,7 @@
             "url": "https://www.safex.pe/",
             "link": "https://www.safex.pe/", 
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[1]/section[2]/div/div/form/div/div[1]/div[2]/div/span/strong/h3",
@@ -739,7 +739,7 @@
             "url": "https://www.efectibit.com/",
             "link": "https://www.efectibit.com/", 
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[2]/div[2]/main/div/div/div/div/div/div[2]/div/form/div/div[1]/h4/span",
@@ -765,7 +765,7 @@
             "url": "https://cuantoestaeldolar.pe/",
             "link": "https://dollarhouse.pe/", 
             "bench": "dollarhouse",
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/main/div/div/form/div[1]/div/p[1]/span",
@@ -791,7 +791,7 @@
             "url": "https://cambista.online/",
             "link": "https://cambista.online/", 
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div/div/div[5]/div/div/p/strong/span[1]",
@@ -817,7 +817,7 @@
             "url": "https://www.assessorperu.com/",
             "link": "https://www.assessorperu.com/", 
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div/div[10]/section[1]/div/div[2]/div/div[1]/div/div/div[1]/div/div/h5/span",
@@ -843,7 +843,7 @@
             "url": "https://x-cambio.com/",
             "link": "https://x-cambio.com/", 
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/section[1]/div/div/div[2]/form/div[2]/div/div[1]/p[1]/strong/span",
@@ -869,7 +869,7 @@
             "url": "https://www.keyex.pe/",
             "link": "https://www.keyex.pe/", 
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/header/div/div[1]/div[2]/div[2]/div/div[1]/div[1]/div[1]/span[2]",
@@ -895,7 +895,7 @@
             "url": "https://www.dinersfx.pe/",
             "link": "https://www.dinersfx.pe/", 
             "bench": null,
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/app-root/app-home/app-first-section/div/div[1]/div/div[2]/div[1]/div[2]/div/div/div[1]/p[1]/span",
@@ -921,7 +921,7 @@
             "url": "https://cuantoestaeldolar.pe/",
             "link": "https://dlsmoney.com/", 
             "bench": "dlsmoney",
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[8]/div[1]/div[2]",
@@ -947,7 +947,7 @@
             "url": "https://hirpower.com/",
             "link": "https://hirpower.com/", 
             "bench": "hirpower",
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[1]/div[1]/div[3]/div[2]/div[1]/div",
@@ -973,7 +973,7 @@
             "url": "https://yanki.pe/",
             "link": "https://yanki.pe/", 
             "bench": "yanki",
-            "sleep":3,
+            "sleep":1,
             "compra":
             {
                 "xpath": "/html/body/div[4]/div/div/ul/div[1]/div/div/div[2]/div/div[2]/div[1]/div[1]/b/span",
