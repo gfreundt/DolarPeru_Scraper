@@ -86,7 +86,6 @@ def set_options():
 
 
 def get_source(fintech, options, k):
-	print(f'Started {fintech}')
 	driver = webdriver.Chrome(os.path.join(os.getcwd(),active.CHROMEDRIVER), options=options)
 	attempts = 1
 	while attempts <= 3:
@@ -165,7 +164,6 @@ def upload_to_bucket(bucket_path='data-bucket-gft'):
 	client = storage.Client.from_service_account_json(json_credentials_path=active.GCLOUD_KEYS)
 	bucket = client.get_bucket(bucket_path)
 	for file in os.listdir(active.DATA_PATH):
-		print(file)
 		object_name_in_gcs_bucket = bucket.blob('/DolarPeru_data/'+file)
 		object_name_in_gcs_bucket.upload_from_filename(os.path.join(active.DATA_PATH,file))
 
