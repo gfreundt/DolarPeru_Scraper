@@ -11,11 +11,13 @@ from selenium.webdriver.common.by import By
 from statistics import mean
 import threading
 from google.cloud import storage
+import bench
 
 
 # Switches:	NOTEST = work with production data
 #			DAILY-NOW = force once-a-day updates
 #			ANALYSIS = skip scraping and only perform data analysis
+#			UPLOAD = upload to Google Cloud Storage
 
 
 class Basics:
@@ -43,7 +45,6 @@ class Basics:
 		
 		self.DATA_STRUCTURE_FILE = os.path.join(sys_main_path, 'data_structure.json')
 		self.GCLOUD_KEYS = os.path.join(sys_root_path, 'gcloud_keys.json')
-		#self.GRAPH_PATH = os.path.join(sys_web_path, 'static', 'images', 'graphs')
 		self.SCREENSHOT_FILE = os.path.join(sys_data_path, 'screenshot.png')
 		self.LAST_USE_FILE = os.path.join(sys_data_path, 'last_use.txt')
 		self.VAULT_FILE = os.path.join(sys_data_path,'TDC_Vault.txt')
@@ -54,6 +55,8 @@ class Basics:
 		self.AVG_COMPRA_FILE = os.path.join(sys_data_path,'AVG_Compra.txt')
 		self.time_date = dt.now().strftime('%Y-%m-%d %H:%M:%S')
 		self.results = []
+		self.dashboard = []
+		self.bench = bench.main('https://cuantoestaeldolar.pe')
 		with open(self.DATA_STRUCTURE_FILE, 'r', encoding='utf-8') as file:
 			self.fintechs = json.load(file)['fintechs']
 
@@ -111,12 +114,19 @@ def get_source(fintech, options, k):
 				attempts += 1
 	driver.quit()
 	if info and info[0] != '' and sanity_check(info):
-		active.results.append({'url':fintech['url'], 'Compra': info[0], 'Venta': info[1]})
-		print(k, "Added:", fintech['name'])
+		active.results.append({'Link': fintech['link'], 'Compra': info[0], 'Venta': info[1]})
+		active.dashboard.append({'ID': k, 'Status': 'Add', 'Fintech': fintech['name']})
 		active.good += 1
 	else:
-		pass
-		print(k, "Skipped:", fintech['name'])
+		ext = fintech['bench']
+		if ext:
+			info = (active.bench[ext+'_compra'], active.bench[ext+'_venta'])
+			if sanity_check(info):
+				active.results.append({'Link': fintech['link'], 'Compra': info[0], 'Venta': info[1]})
+				active.dashboard.append({'ID': k, 'Status': 'Add', 'Fintech': fintech['name']})
+				active.good += 1
+		else:
+			active.dashboard.append({'ID': k, 'Status': 'Skip', 'Fintech': fintech['name']})
 		active.bad += 1
 
 
@@ -147,7 +157,8 @@ def save():
 	with open(active.VAULT_FILE, mode='a', encoding='utf-8', newline="\n") as file:
 		data = csv.writer(file, delimiter=',')
 		for f in active.results:
-			data.writerow([f['url'], f['Venta'], active.time_date, f['Compra']])
+			data.writerow([f['Link'], f['Venta'], active.time_date, f['Compra']])
+
 
 def upload_to_bucket(bucket_path='data-bucket-gft'):
 	client = storage.Client.from_service_account_json(json_credentials_path=active.GCLOUD_KEYS)
@@ -170,7 +181,7 @@ def file_extract_recent(n):
 def analysis():
 	with open(active.ACTIVE_FILE, mode='r') as file:
 		data = [i for i in csv.reader(file, delimiter=',')]
-		fintechs = [i['url'] for i in active.fintechs]
+		fintechs = [i['link'] for i in active.fintechs]
 	for quote, avg_filename, web_filename, graph_filename in zip([1,3], [active.AVG_VENTA_FILE, active.AVG_COMPRA_FILE], [active.WEB_VENTA_FILE, active.WEB_COMPRA_FILE], ['vta', 'compra']):
 		this_time = data[-1][2] # Loads latest quote datetime
 		datapoints = {i[0]: float(i[quote]) for i in data if i[2] == this_time and float(i[quote]) > 0}
@@ -184,7 +195,7 @@ def analysis():
 		with open(avg_filename, mode='a', newline='') as file:
 			csv.writer(file, delimiter=",").writerow(item)
 		# Create Text File for Web
-		datax = [{'image': [i['image'] for i in active.fintechs if i['url'] == f][0], 'name': f, 'value': f'{datapoints[f]:0<6}'} for f in datapoints.keys()]
+		datax = [{'image': [i['image'] for i in active.fintechs if i['link'] == f][0], 'name': f, 'value': f'{datapoints[f]:0<6}'} for f in datapoints.keys()]
 		with open(web_filename, mode='w', newline='') as json_file:
 			# Append Average and Date
 			dump = {'head': {'value':f'{averagetc:.4f}', 'from': f'{len(datapoints.keys())}', 'time':data[-1][2][-8:], 'date':data[-1][2][:10]}} # tc, cantidad de fintechs, time, date
@@ -273,9 +284,12 @@ def main():
 		save()
 		file_extract_recent(9800)
 		last_use()
-		print("Good:", active.good, "\nBad:", active.bad)
+		print(f'Good: {active.good} | Bad: {active.bad}')
+		for d in sorted(active.dashboard, key=lambda i:i['ID']):
+			print(d)
 	analysis()
-	upload_to_bucket()
+	if 'UPLOAD' in active.switches:
+		upload_to_bucket()
 	
 
 

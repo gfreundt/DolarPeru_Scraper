@@ -7,6 +7,7 @@
             "name": "SBS",
             "url": "https://www.sbs.gob.pe/",
             "link": "https://www.sbs.gob.pe/",
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -32,6 +33,7 @@
             "name": "SUNAT",
             "url": "https://www.sunat.gob.pe/",
             "link": "https://www.sunat.gob.pe/",
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -57,6 +59,7 @@
             "name": "BCRP",
             "url": "https://www.bcrp.gob.pe/",
             "link": "https://www.bcrp.gob.pe/",
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -85,6 +88,7 @@
             "name": "A Como",
             "url": "https://acomo.com.pe/",
             "link": "https://acomo.com.pe/",
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -110,6 +114,7 @@
             "name": "MidpointFX",
             "url": "https://www.midpointfx.com/",
             "link": "https://www.midpointfx.com/",
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -135,6 +140,7 @@
             "name": "Billex",
             "url": "https://www.billex.pe/",
             "link": "https://www.billex.pe/", 
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -160,6 +166,7 @@
             "name": "TKambio",
             "url": "https://tkambio.com",
             "link": "https://tkambio.com",
+            "bench": "tkambio",
             "sleep":3,
             "compra":
             {
@@ -185,6 +192,7 @@
             "name": "Rextie",
             "url": "https://rextie.com",
             "link": "https://rextie.com", 
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -210,6 +218,7 @@
             "name": "Kambista",
             "url": "https://kambista.com",
             "link": "https://kambista.com",
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -235,6 +244,7 @@
             "name": "Securex",
             "url": "https://securex.pe",
             "link": "https://securex.pe",
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -260,6 +270,7 @@
             "name": "Tu Cambista",
             "url": "https://tucambista.pe",
             "link": "https://tucambista.pe",
+            "bench": "tucambista",
             "sleep":3,
             "compra":
             {
@@ -285,6 +296,7 @@
             "name": "Cocos y Lucas",
             "url": "https://cocosylucasbcp.com",
             "link": "https://cocosylucasbcp.com", 
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -310,6 +322,7 @@
             "name": "Cambio Seguro",
             "url": "https://cuantoestaeldolar.pe/",
             "link": "https://cambioseguro.com/", 
+            "bench": "cambioseguro",
             "sleep":3,
             "compra":
             {
@@ -335,6 +348,7 @@
             "name": "CambiaFX",
             "url": "https://cambiafx.pe/",
             "link": "https://cambiafx.pe/", 
+            "bench": "cambiafx",
             "sleep":3,
             "compra":
             {
@@ -360,6 +374,7 @@
             "name": "Cambista Inka",
             "url": "https://www.cambistainka.com/",
             "link": "https://www.cambistainka.com/", 
+            "bench": "cambistainka",
             "sleep":3,
             "compra":
             {
@@ -385,6 +400,7 @@
             "name": "InstaKash",
             "url": "https://instakash.net/",
             "link": "https://instakash.net/", 
+            "bench": "instakash",
             "sleep":3,
             "compra":
             {
@@ -410,6 +426,7 @@
             "name": "Cambio Mundial",
             "url": "https://www.cambiomundial.com/",
             "link": "https://www.cambiomundial.com/", 
+            "bench": "cambiomundial",
             "sleep":3,
             "compra":
             {
@@ -435,6 +452,7 @@
             "name": "Peru Dolar",
             "url": "https://perudolar.pe/",
             "link": "https://perudolar.pe/", 
+            "bench": "perudolar",
             "sleep":3,
             "compra":
             {
@@ -460,6 +478,7 @@
             "name": "TerraCash",
             "url": "https://cuantoestaeldolar.pe/",
             "link": "https://terracash.pe/", 
+            "bench": "terracash",
             "sleep":3,
             "compra":
             {
@@ -485,6 +504,7 @@
             "name": "Cambi.pe",
             "url": "http://cambi.pe/",
             "link": "http://cambi.pe/", 
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -508,12 +528,13 @@
             "id": 18,
             "online": true,
             "name": "Roblex",
-            "url": "https://roblex.pe/",
+            "url": "https://cuantoestaeldolar.pe/",
             "link": "https://roblex.pe/", 
+            "bench": "roblex",
             "sleep":3,
             "compra":
             {
-                "xpath": "/html/body/app-root/app-presentation/app-home/div[1]/app-banner/div/div/div/app-calculator/div/div[1]/div[2]/label[1]",
+                "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[7]/div[1]/div[2]",
                 "click": false,
                 "click_xpath": null,
                 "extract_start": 8,
@@ -521,7 +542,7 @@
             },
             "venta":
             {
-                "xpath": "/html/body/app-root/app-presentation/app-home/div[1]/app-banner/div/div/div/app-calculator/div/div[1]/div[2]/label[2]",
+                "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[7]/div[1]/div[3]",
                 "click": false,
                 "click_xpath": null,
                 "extract_start": 7,
@@ -535,6 +556,7 @@
             "name": "NonCash",
             "url": "https://noncash.pe",
             "link": "https://noncash.pe", 
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -560,6 +582,7 @@
             "name": "Cambix",
             "url": "https://cuantoestaeldolar.pe/",
             "link": "https://cambix.com.pe/home", 
+            "bench": "cambix",
             "sleep":3,
             "compra":
             {
@@ -572,8 +595,8 @@
             "venta":
             {
                 "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[3]",
-                "click": true,
-                "click_xpath": "/html/body/app-root/app-public/app-new-home/section[1]/div/div/div[3]/div[1]/div/div[1]/div[2]/div",
+                "click": false,
+                "click_xpath": null,
                 "extract_start": 0,
                 "extract_end": 5
             },
@@ -585,6 +608,7 @@
             "name": "Western Union",
             "url": "https://www.westernunionperu.pe/cambiodemoneda",
             "link": "https://www.westernunionperu.pe/cambiodemoneda", 
+            "bench": "westernunionperu",
             "sleep":3,
             "compra":
             {
@@ -610,6 +634,7 @@
             "name": "El Alfarero",
             "url": "https://www.casadecambioelalfarero.com/",
             "link": "https://www.casadecambioelalfarero.com/", 
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -635,6 +660,7 @@
             "name": "CambioX",
             "url": "https://www.cambiox.pe/",
             "link": "https://www.cambiox.pe/", 
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -656,10 +682,11 @@
         },
         {
             "id": 24,
-            "online": true,
+            "online": false,
             "name": "Fintuu",
             "url": "https://www.fintuu.com/",
             "link": "https://www.fintuu.com/", 
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -685,6 +712,7 @@
             "name": "Safex",
             "url": "https://www.safex.pe/",
             "link": "https://www.safex.pe/", 
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -710,6 +738,7 @@
             "name": "Efectibit",
             "url": "https://www.efectibit.com/",
             "link": "https://www.efectibit.com/", 
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -735,6 +764,7 @@
             "name": "Dollar House",
             "url": "https://cuantoestaeldolar.pe/",
             "link": "https://dollarhouse.pe/", 
+            "bench": "dollarhouse",
             "sleep":3,
             "compra":
             {
@@ -760,6 +790,7 @@
             "name": "Cambista Online",
             "url": "https://cambista.online/",
             "link": "https://cambista.online/", 
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -785,6 +816,7 @@
             "name": "A$$e$$or",
             "url": "https://www.assessorperu.com/",
             "link": "https://www.assessorperu.com/", 
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -810,6 +842,7 @@
             "name": "X-Cambio",
             "url": "https://x-cambio.com/",
             "link": "https://x-cambio.com/", 
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -835,6 +868,7 @@
             "name": "KeyEx",
             "url": "https://www.keyex.pe/",
             "link": "https://www.keyex.pe/", 
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -860,6 +894,7 @@
             "name": "DinersFX",
             "url": "https://www.dinersfx.pe/",
             "link": "https://www.dinersfx.pe/", 
+            "bench": null,
             "sleep":3,
             "compra":
             {
@@ -885,6 +920,7 @@
             "name": "DL$Money",
             "url": "https://cuantoestaeldolar.pe/",
             "link": "https://dlsmoney.com/", 
+            "bench": "dlsmoney",
             "sleep":3,
             "compra":
             {
@@ -909,7 +945,9 @@
             "online": true,
             "name": "HIR Power",
             "url": "https://hirpower.com/",
-            "link": "https://hirpower.com/", "sleep":3,
+            "link": "https://hirpower.com/", 
+            "bench": "hirpower",
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div[1]/div[1]/div[3]/div[2]/div[1]/div",
@@ -934,6 +972,7 @@
             "name": "Yanki",
             "url": "https://yanki.pe/",
             "link": "https://yanki.pe/", 
+            "bench": "yanki",
             "sleep":3,
             "compra":
             {
