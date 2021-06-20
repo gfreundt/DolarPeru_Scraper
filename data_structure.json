@@ -6,7 +6,8 @@
             "online": true,
             "name": "SBS",
             "url": "https://www.sbs.gob.pe/",
-            "sleep": 3,
+            "link": "https://www.sbs.gob.pe/",
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/form/div[3]/main/div[1]/div/div[3]/div/div[1]/div/div/div/div/ul/li[1]/div[2]/table/tbody/tr/td[1]/div",
@@ -30,7 +31,8 @@
             "online": true,
             "name": "SUNAT",
             "url": "https://www.sunat.gob.pe/",
-            "sleep": 3,
+            "link": "https://www.sunat.gob.pe/",
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/section[2]/div/div[2]/div/p[1]/strong",
@@ -54,7 +56,8 @@
             "online": true,
             "name": "BCRP",
             "url": "https://www.bcrp.gob.pe/",
-            "sleep": 3,
+            "link": "https://www.bcrp.gob.pe/",
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div[2]/section/div/div/div[3]/div[3]/div[1]/div/div[2]/table[1]/tbody/tr[2]/td[2]",
@@ -81,7 +84,8 @@
             "online": true,
             "name": "A Como",
             "url": "https://acomo.com.pe/",
-            "sleep": 3,
+            "link": "https://acomo.com.pe/",
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div[2]/section[1]/div[3]/div/div[1]/div[1]/span[3]",
@@ -105,7 +109,8 @@
             "online": true,
             "name": "MidpointFX",
             "url": "https://www.midpointfx.com/",
-            "sleep": 3,
+            "link": "https://www.midpointfx.com/",
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div[1]/div/div[3]/div/main/div/div/div/div[2]/div/div/div/div[1]/div[2]/div/div[6]/h1/span/span/span/span",
@@ -129,7 +134,8 @@
             "online": true,
             "name": "Billex",
             "url": "https://www.billex.pe/",
-            "sleep": 3,
+            "link": "https://www.billex.pe/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div[3]/div[2]/main/div/section/div/div/div[1]/div/div[1]/div/div/div[2]/div/div/div[1]/span[1]/span",
@@ -153,7 +159,8 @@
             "online": true,
             "name": "TKambio",
             "url": "https://tkambio.com",
-            "sleep": 3,
+            "link": "https://tkambio.com",
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div[2]/div[2]/div/div[1]/div/div[1]/div[2]/div[2]/div[2]/div/span[2]/span",
@@ -177,10 +184,11 @@
             "online": true,
             "name": "Rextie",
             "url": "https://rextie.com",
-            "sleep": 3,
+            "link": "https://rextie.com", 
+            "sleep":3,
             "compra":
             {
-                "xpath": "/html/body/app-root/app-home-layout/div[2]/div/app-side-nav/mat-sidenav-container/mat-sidenav-content/app-home-page/app-save-money-partial/div/div/div[1]/div[2]/app-fx-rates/div/div/div[1]/div/div[1]/div[2]/span[2]",
+                "xpath": "/html/body/app-root/div/div/app-side-nav/mat-sidenav-container/mat-sidenav-content/app-home/app-save-money-partial/div/div/div[1]/div[2]/div/app-fx-rates/div/div/div[1]/div/div[1]/div[2]/span[2]",
                 "click": false,
                 "click_xpath": null,
                 "extract_start": 0,
@@ -188,7 +196,7 @@
             },
             "venta":
             {
-                "xpath": "/html/body/app-root/app-home-layout/div[2]/div/app-side-nav/mat-sidenav-container/mat-sidenav-content/app-home-page/app-save-money-partial/div/div/div[1]/div[2]/app-fx-rates/div/div/div[1]/div/div[2]/div[2]/span[2]",
+                "xpath": "/html/body/app-root/div/div/app-side-nav/mat-sidenav-container/mat-sidenav-content/app-home/app-save-money-partial/div/div/div[1]/div[2]/div/app-fx-rates/div/div/div[1]/div/div[2]/div[2]/span[2]",
                 "click": false,
                 "click_xpath": null,
                 "extract_start": 0,
@@ -201,7 +209,8 @@
             "online": true,
             "name": "Kambista",
             "url": "https://kambista.com",
-            "sleep": 3,
+            "link": "https://kambista.com",
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div[2]/div/main/div/div/div/article/div/div[1]/div[3]/div/div/div[2]/div[1]/strong[2]",
@@ -225,7 +234,8 @@
             "online": true,
             "name": "Securex",
             "url": "https://securex.pe",
-            "sleep": 3,
+            "link": "https://securex.pe",
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div[4]/div/div[1]/section[1]/div/div/div[2]/form/div[1]/h4[1]/span",
@@ -249,7 +259,8 @@
             "online": true,
             "name": "Tu Cambista",
             "url": "https://tucambista.pe",
-            "sleep": 3,
+            "link": "https://tucambista.pe",
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/section[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[2]/div[1]/span[2]",
@@ -273,7 +284,8 @@
             "online": true,
             "name": "Cocos y Lucas",
             "url": "https://cocosylucasbcp.com",
-            "sleep": 3,
+            "link": "https://cocosylucasbcp.com", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/poly-root/poly-feature-layout/div/div/landing-root/landing-main/div[1]/landing-engine/section/div[1]/div/div[2]/div/div/landing-form-exchange/div/form/div[2]/div[1]/div/span[2]",
@@ -296,40 +308,24 @@
             "id": 10,
             "online": true,
             "name": "Cambio Seguro",
-            "url": "https://cambioseguro.com/",
-            "sleep": 3,
+            "url": "https://cuantoestaeldolar.pe/",
+            "link": "https://cambioseguro.com/", 
+            "sleep":3,
             "compra":
             {
-                "xpath": "/html/body/div[1]/div/div/div[2]/header/div/div[2]/div[1]/div/div/div/div[1]/ul/li[1]/span",
+                "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[2]/div[1]/div[2]",
                 "click": false,
                 "click_xpath": null,
-                "extract_start": 14,
-                "extract_end": 20
+                "extract_start": 0,
+                "extract_end": 5
             },
             "venta":
             {
-                "xpath": "/html/body/div[1]/div/div/div[2]/header/div/div[2]/div[1]/div/div/div/div[1]/ul/li[3]/span",
+                "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[2]/div[1]/div[3]",
                 "click": false,
                 "click_xpath": null,
-                "extract_start": 13,
-                "extract_end": 20
-            },
-            "ocr":
-            {
-                "compra":
-                [
-                    658,
-                    296,
-                    711,
-                    314
-                ],
-                "venta":
-                [
-                    809,
-                    296,
-                    865,
-                    314
-                ]
+                "extract_start": 0,
+                "extract_end": 5
             },
             "image": "cambio_seguro.png"
         },
@@ -338,7 +334,8 @@
             "online": true,
             "name": "CambiaFX",
             "url": "https://cambiafx.pe/",
-            "sleep": 3,
+            "link": "https://cambiafx.pe/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div[1]/div/header/div[2]/div/div[2]/div/button[1]/span[2]",
@@ -362,7 +359,8 @@
             "online": true,
             "name": "Cambista Inka",
             "url": "https://www.cambistainka.com/",
-            "sleep": 3,
+            "link": "https://www.cambistainka.com/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div[1]/section[1]/div/div/div[2]/div/div[2]/form/div[1]/div[1]/span/strong",
@@ -386,7 +384,8 @@
             "online": true,
             "name": "InstaKash",
             "url": "https://instakash.net/",
-            "sleep": 3,
+            "link": "https://instakash.net/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div/div/main/section[1]/div/div/section/div[2]/div/div[1]/p",
@@ -410,7 +409,8 @@
             "online": true,
             "name": "Cambio Mundial",
             "url": "https://www.cambiomundial.com/",
-            "sleep": 3,
+            "link": "https://www.cambiomundial.com/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div/section[1]/div/div[2]/form/div[1]/div[1]/span[1]/span[2]/label",
@@ -431,24 +431,25 @@
         },
         {
             "id": 15,
-            "online": false,
+            "online": true,
             "name": "Peru Dolar",
             "url": "https://perudolar.pe/",
-            "sleep": 3,
+            "link": "https://perudolar.pe/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
                 "click": false,
                 "click_xpath": null,
-                "extract_start": 13,
-                "extract_end": 18
+                "extract_start": 14,
+                "extract_end": 19
             },
             "venta":
             {
                 "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
                 "click": false,
                 "click_xpath": null,
-                "extract_start": 28,
+                "extract_start": 29,
                 "extract_end": 35
             },
             "image": "perudolar.png"
@@ -457,23 +458,24 @@
             "id": 16,
             "online": true,
             "name": "TerraCash",
-            "url": "https://terracash.pe/",
-            "sleep": 3,
+            "url": "https://cuantoestaeldolar.pe/",
+            "link": "https://terracash.pe/", 
+            "sleep":3,
             "compra":
             {
-                "xpath": "/html/body/section/div[1]/div[2]/div[3]/p[1]",
+                "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[8]/div[1]/div[2]",
                 "click": false,
                 "click_xpath": null,
-                "extract_start": 18,
-                "extract_end": 23
+                "extract_start": 0,
+                "extract_end": 5
             },
             "venta":
             {
-                "xpath": "/html/body/section/div[1]/div[2]/div[4]/p[1]",
-                "click": true,
-                "click_xpath": "/html/body/section/div[1]/div[2]/div[2]/samp",
-                "extract_start": 18,
-                "extract_end": 23
+                "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[8]/div[1]/div[3]",
+                "click": false,
+                "click_xpath": null,
+                "extract_start": 0,
+                "extract_end": 5
             },
             "image": "terracash.png"
         },
@@ -482,7 +484,8 @@
             "online": true,
             "name": "Cambi.pe",
             "url": "http://cambi.pe/",
-            "sleep": 3,
+            "link": "http://cambi.pe/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div/div/section[1]/div/div[2]/div/div/div[2]/div[2]/div[1]/span[3]/strong",
@@ -506,7 +509,8 @@
             "online": true,
             "name": "Roblex",
             "url": "https://roblex.pe/",
-            "sleep": 3,
+            "link": "https://roblex.pe/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/app-root/app-presentation/app-home/div[1]/app-banner/div/div/div/app-calculator/div/div[1]/div[2]/label[1]",
@@ -530,7 +534,8 @@
             "online": true,
             "name": "NonCash",
             "url": "https://noncash.pe",
-            "sleep": 3,
+            "link": "https://noncash.pe", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div[1]/section[1]/div[2]/div/div/div[2]/div[2]/div[1]/p[2]",
@@ -553,23 +558,24 @@
             "id": 20,
             "online": true,
             "name": "Cambix",
-            "url": "https://cambix.com.pe/home",
-            "sleep": 3,
+            "url": "https://cuantoestaeldolar.pe/",
+            "link": "https://cambix.com.pe/home", 
+            "sleep":3,
             "compra":
             {
-                "xpath": "/html/body/app-root/app-public/app-new-home/section[1]/div/div/div[3]/div[1]/div/div[2]/div/form/strong",
+                "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]",
                 "click": false,
                 "click_xpath": null,
-                "extract_start": 18,
-                "extract_end": 23
+                "extract_start": 0,
+                "extract_end": 5
             },
             "venta":
             {
-                "xpath": "/html/body/app-root/app-public/app-new-home/section[1]/div/div/div[3]/div[1]/div/div[2]/div/form/strong",
+                "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[3]",
                 "click": true,
                 "click_xpath": "/html/body/app-root/app-public/app-new-home/section[1]/div/div/div[3]/div[1]/div/div[1]/div[2]/div",
-                "extract_start": 18,
-                "extract_end": 23
+                "extract_start": 0,
+                "extract_end": 5
             },
             "image": "cambix.svg"
         },
@@ -578,7 +584,8 @@
             "online": true,
             "name": "Western Union",
             "url": "https://www.westernunionperu.pe/cambiodemoneda",
-            "sleep": 3,
+            "link": "https://www.westernunionperu.pe/cambiodemoneda", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/section/div/form/div[1]/div[2]/p/button[1]",
@@ -602,7 +609,8 @@
             "online": true,
             "name": "El Alfarero",
             "url": "https://www.casadecambioelalfarero.com/",
-            "sleep": 3,
+            "link": "https://www.casadecambioelalfarero.com/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/form/main/section[1]/div/div/div[2]/div[2]/div[2]/label[2]",
@@ -626,7 +634,8 @@
             "online": true,
             "name": "CambioX",
             "url": "https://www.cambiox.pe/",
-            "sleep": 3,
+            "link": "https://www.cambiox.pe/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div[3]/section[1]/div/div/div/div[2]/center/span[2]",
@@ -650,7 +659,8 @@
             "online": true,
             "name": "Fintuu",
             "url": "https://www.fintuu.com/",
-            "sleep": 3,
+            "link": "https://www.fintuu.com/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/main/div[1]/section[3]/div/div[3]/div[1]/div/div[1]/div[1]/div/h6",
@@ -674,7 +684,8 @@
             "online": true,
             "name": "Safex",
             "url": "https://www.safex.pe/",
-            "sleep": 3,
+            "link": "https://www.safex.pe/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div[1]/section[2]/div/div/form/div/div[1]/div[2]/div/span/strong/h3",
@@ -698,7 +709,8 @@
             "online": true,
             "name": "Efectibit",
             "url": "https://www.efectibit.com/",
-            "sleep": 3,
+            "link": "https://www.efectibit.com/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div[2]/div[2]/main/div/div/div/div/div/div[2]/div/form/div/div[1]/h4/span",
@@ -721,15 +733,16 @@
             "id": 27,
             "online": true,
             "name": "Dollar House",
-            "url": "https://dollarhouse.pe/",
-            "sleep": 3,
+            "url": "https://cuantoestaeldolar.pe/",
+            "link": "https://dollarhouse.pe/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/main/div/div/form/div[1]/div/p[1]/span",
                 "click": false,
                 "click_xpath": null,
                 "extract_start": 0,
-                "extract_end": 6
+                "extract_end": 5
             },
             "venta":
             {
@@ -737,24 +750,7 @@
                 "click": false,
                 "click_xpath": null,
                 "extract_start": 0,
-                "extract_end": 6
-            },
-            "ocr":
-            {
-                "compra":
-                [
-                    866,
-                    90,
-                    967,
-                    117
-                ],
-                "venta":
-                [
-                    1140,
-                    86,
-                    1239,
-                    118
-                ]
+                "extract_end": 5
             },
             "image": "dollar_house.png"
         },
@@ -763,7 +759,8 @@
             "online": true,
             "name": "Cambista Online",
             "url": "https://cambista.online/",
-            "sleep": 3,
+            "link": "https://cambista.online/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div/div/div[5]/div/div/p/strong/span[1]",
@@ -787,7 +784,8 @@
             "online": false,
             "name": "A$$e$$or",
             "url": "https://www.assessorperu.com/",
-            "sleep": 3,
+            "link": "https://www.assessorperu.com/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/div/div[10]/section[1]/div/div[2]/div/div[1]/div/div/div[1]/div/div/h5/span",
@@ -811,7 +809,8 @@
             "online": true,
             "name": "X-Cambio",
             "url": "https://x-cambio.com/",
-            "sleep": 3,
+            "link": "https://x-cambio.com/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/section[1]/div/div/div[2]/form/div[2]/div/div[1]/p[1]/strong/span",
@@ -835,7 +834,8 @@
             "online": true,
             "name": "KeyEx",
             "url": "https://www.keyex.pe/",
-            "sleep": 3,
+            "link": "https://www.keyex.pe/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/header/div/div[1]/div[2]/div[2]/div/div[1]/div[1]/div[1]/span[2]",
@@ -859,7 +859,8 @@
             "online": true,
             "name": "DinersFX",
             "url": "https://www.dinersfx.pe/",
-            "sleep": 3,
+            "link": "https://www.dinersfx.pe/", 
+            "sleep":3,
             "compra":
             {
                 "xpath": "/html/body/app-root/app-home/app-first-section/div/div[1]/div/div[2]/div[1]/div[2]/div/div/div[1]/p[1]/span",
@@ -877,6 +878,80 @@
                 "extract_end": 9
             },
             "image": "dinersfx.svg"
+        },
+        {
+            "id": 33,
+            "online": true,
+            "name": "DL$Money",
+            "url": "https://cuantoestaeldolar.pe/",
+            "link": "https://dlsmoney.com/", 
+            "sleep":3,
+            "compra":
+            {
+                "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[8]/div[1]/div[2]",
+                "click": false,
+                "click_xpath": null,
+                "extract_start": 0,
+                "extract_end": 5
+            },
+            "venta":
+            {
+                "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[8]/div[1]/div[3]",
+                "click": false,
+                "click_xpath": null,
+                "extract_start": 0,
+                "extract_end": 5
+            },
+            "image": "dls-money.png"
+        },
+        {
+            "id": 34,
+            "online": true,
+            "name": "HIR Power",
+            "url": "https://hirpower.com/",
+            "link": "https://hirpower.com/", "sleep":3,
+            "compra":
+            {
+                "xpath": "/html/body/div[1]/div[1]/div[3]/div[2]/div[1]/div",
+                "click": false,
+                "click_xpath": null,
+                "extract_start": 8,
+                "extract_end": 13
+            },
+            "venta":
+            {
+                "xpath": "/html/body/div[1]/div[1]/div[3]/div[2]/div[2]/div",
+                "click": false,
+                "click_xpath": null,
+                "extract_start": 8,
+                "extract_end": 13
+            },
+            "image": "hir_power.png"
+        },
+        {
+            "id": 35,
+            "online": true,
+            "name": "Yanki",
+            "url": "https://yanki.pe/",
+            "link": "https://yanki.pe/", 
+            "sleep":3,
+            "compra":
+            {
+                "xpath": "/html/body/div[4]/div/div/ul/div[1]/div/div/div[2]/div/div[2]/div[1]/div[1]/b/span",
+                "click": false,
+                "click_xpath": null,
+                "extract_start": 0,
+                "extract_end": 5
+            },
+            "venta":
+            {
+                "xpath": "/html/body/div[4]/div/div/ul/div[1]/div/div/div[2]/div/div[2]/div[1]/div[3]/b/b/span",
+                "click": false,
+                "click_xpath": null,
+                "extract_start": 0,
+                "extract_end": 5
+            },
+            "image": "yanki.svg"
         }
     ]
 }
