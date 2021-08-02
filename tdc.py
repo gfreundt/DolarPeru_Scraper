@@ -8,7 +8,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from statistics import mean
+from statistics import mean, median
 import threading
 from google.cloud import storage
 import bench
@@ -16,7 +16,7 @@ import bench
 
 # Switches:	NOTEST = work with production data
 #			DAILY-NOW = force once-a-day updates
-#			ANALYSIS = skip scraping and only perform data analysis
+#			ANALYSIS-ONLY = skip scraping and only perform data analysis
 #			UPLOAD = upload to Google Cloud Storage
 
 
@@ -64,6 +64,7 @@ class Basics:
 		systems = [{'name': 'GFT-Tablet', 'root_path': r'C:\pythonCode'},
 			 	   {'name': 'raspberrypi', 'root_path': r'/home/pi/pythonCode'},
 				   {'name': 'Power', 'root_path': r'D:\pythonCode'},
+				   {'name': 'Ubuntu-gft', 'root_path': '/home/gabriel/pythonCode'},
 				   {'name': 'scraper', 'root_path': '/home/gabfre/pythonCode'}]
 		for system in systems:
 			if system['name'] in platform.node():
@@ -106,11 +107,11 @@ def get_source(fintech, options, k):
 				WebDriverWait(driver, 10).until(element_present)
 				time.sleep(fintech['sleep'])
 				info.append(extract(driver.find_element_by_xpath(fintech[quote]['xpath']).text, fintech[quote]))
-				success = True
+				#success = True
 				break
 			except:
 				#print(fintech['name'], 'retrying')
-				success = False
+				#success = False
 				attempts += 1
 	driver.quit()
 	if info and info[0] != '' and sanity_check(info):
@@ -160,7 +161,7 @@ def save():
 			data.writerow([f['Link'], f['Venta'], active.time_date, f['Compra']])
 
 
-def upload_to_bucket(bucket_path='data-bucket-gft'):
+def upload_to_bucket(bucket_path='data-bucket-gft-devops'):
 	client = storage.Client.from_service_account_json(json_credentials_path=active.GCLOUD_KEYS)
 	bucket = client.get_bucket(bucket_path)
 	for file in os.listdir(active.DATA_PATH):
@@ -180,26 +181,33 @@ def file_extract_recent(n):
 def analysis():
 	with open(active.ACTIVE_FILE, mode='r') as file:
 		data = [i for i in csv.reader(file, delimiter=',')]
-		fintechs = [i['link'] for i in active.fintechs]
+		#fintechs = [i['link'] for i in active.fintechs]
 	for quote, avg_filename, web_filename, graph_filename in zip([1,3], [active.AVG_VENTA_FILE, active.AVG_COMPRA_FILE], [active.WEB_VENTA_FILE, active.WEB_COMPRA_FILE], ['vta', 'compra']):
 		this_time = data[-1][2] # Loads latest quote datetime
 		datapoints = {i[0]: float(i[quote]) for i in data if i[2] == this_time and float(i[quote]) > 0}
 		
 		# Update every time the code runs
 
-		# Add Average to Dataset
-		averagetc = round(mean([datapoints[i] for i in datapoints.keys()]),4)
+		# Add Averages to Dataset
+		meantc = round(mean([datapoints[i] for i in datapoints.keys()]),4)
+		mediantc = round(median([datapoints[i] for i in datapoints.keys()]),4)
 		# Append Text File with new Average
-		item = [f'{averagetc:.4f}', active.time_date]
+		item = [f'{meantc:.4f}', active.time_date]
 		with open(avg_filename, mode='a', newline='') as file:
 			csv.writer(file, delimiter=",").writerow(item)
 		# Create Text File for Web
 		datax = [{'image': [i['image'] for i in active.fintechs if i['link'] == f][0], 'name': f, 'value': f'{datapoints[f]:0<6}'} for f in datapoints.keys()]
 		with open(web_filename, mode='w', newline='') as json_file:
-			# Append Average and Date
-			dump = {'head': {'value':f'{averagetc:.4f}', 'from': f'{len(datapoints.keys())}', 'time':data[-1][2][-8:], 'date':data[-1][2][:10]}} # tc, cantidad de fintechs, time, date
+			if quote == 1: # Venta
+				mejor = round(min([datapoints[i] for i in datapoints.keys()]),4)
+				details = [i for i in sorted(datax, key=lambda x:x['value']) if i['value'] != '0.0000']
+			else: # Compra
+				mejor = round(max([datapoints[i] for i in datapoints.keys()]),4)
+				details = [i for i in sorted(datax, key=lambda x:x['value'], reverse=True) if i['value'] != '0.0000']
+			# Append Averages, Best, Count of datapoints and Time/Date
+			dump = {'head': {'mediana':f'{mediantc:.4f}', 'mejor':f'{mejor:.4f}', 'promedio':f'{meantc:.4f}', 'consultas': f'{len(datapoints.keys())}', 'time':data[-1][2][-8:], 'date':data[-1][2][:10]}} # tc, cantidad de fintechs, time, date
 			# Append latest from each fintech
-			dump.update({'details': [i for i in sorted(datax, key=lambda x:x['value']) if i['value'] != '0.0000']})
+			dump.update({'details': details})
 			json.dump(dump,json_file)
 		# Intraday Graph
 		with open(avg_filename, mode='r') as file:
@@ -266,7 +274,7 @@ def last_use(t):
 
 
 def main():
-	if "ANALYSIS" not in active.switches:
+	if "ANALYSIS-ONLY" not in active.switches:
 		options = set_options()
 		all_threads = []
 		for k, fintech in enumerate(active.fintechs):
