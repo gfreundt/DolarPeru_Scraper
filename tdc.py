@@ -194,6 +194,7 @@ def analysis():
 		# Append Text File with new Average
 		item = [f'{meantc:.4f}', active.time_date]
 		with open(avg_filename, mode='a', newline='') as file:
+			item = item.replace('\0', '') # Clean possible NUL before writing item
 			csv.writer(file, delimiter=",").writerow(item)
 		# Create Text File for Web
 		datax = [{'image': [i['image'] for i in active.fintechs if i['link'] == f][0], 'name': f, 'value': f'{datapoints[f]:0<6}'} for f in datapoints.keys()]
