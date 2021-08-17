@@ -133,7 +133,7 @@ def get_source(fintech, options, k):
 
 def sanity_check(test):
 	for i in test:
-		if float(i) < 3.30 or float(i) > 5.50:
+		if float(i) < 2.50 or float(i) > 9.50:
 			return False
 	return True
 		
@@ -194,7 +194,6 @@ def analysis():
 		# Append Text File with new Average
 		item = [f'{meantc:.4f}', active.time_date]
 		with open(avg_filename, mode='a', newline='') as file:
-			item = item.replace('\0', '') # Clean possible NUL before writing item
 			csv.writer(file, delimiter=",").writerow(item)
 		# Create Text File for Web
 		datax = [{'image': [i['image'] for i in active.fintechs if i['link'] == f][0], 'name': f, 'value': f'{datapoints[f]:0<6}'} for f in datapoints.keys()]
@@ -222,7 +221,7 @@ def analysis():
 		axis = (int(x[0]), 22, min_axis_y, max_axis_y)
 		xt = (range(axis[0],axis[1]),range(axis[0],axis[1]))
 		yt = [i/1000 for i in range(int(axis[2]*1000), int(axis[3]*1000)+10, 10)]
-		graph(data_avg_today, x, y, xt, yt, axis=axis, filename=f'intraday-{graph_filename}.png')
+		graph(x, y, xt, yt, axis=axis, filename=f'intraday-{graph_filename}.png')
 
 		# Update only on first run of the day
 		
@@ -237,7 +236,7 @@ def analysis():
 			days_week = ['Dom', 'Lun', 'Mar', 'Mie', 'Jue', 'Vie', 'Sab']*2
 			xt = ([days_week[i+dt.today().weekday()+1] for i in range(-5,1)], [i for i in range(-5,1)])
 			yt = [round(i/1000,2) for i in range(int(axis[2]*1000), int(axis[3]*1000)+10, 10)]
-			graph(data_5days, x, y, xt, yt, axis=axis, filename=f'last5days-{graph_filename}.png')
+			graph(x, y, xt, yt, axis=axis, filename=f'last5days-{graph_filename}.png')
 			# Last 30 days Graph
 			data_30days = [(float(i[0]), dt.strptime(i[1], '%Y-%m-%d %H:%M:%S')) for i in datax if delta(days=1) <= dt.today().date() - dt.strptime(i[1],'%Y-%m-%d %H:%M:%S').date() <= delta(days=30)]
 			x = [(i[1].timestamp()-datetime_midnight)/3600/24 for i in data_30days]
@@ -247,11 +246,11 @@ def analysis():
 			axis = (-5, 0, min_axis_y, max_axis_y)
 			xt = ([i for i in range(-30,1,2)], [i for i in range(-30,1,2)])
 			yt = [round(i/1000,2) for i in range(int(axis[2]*1000), int(axis[3]*1000)+10, 20)]
-			graph(data_30days, x, y, xt, yt, axis=axis, filename=f'last30days-{graph_filename}.png')
+			graph(x, y, xt, yt, axis=axis, filename=f'last30days-{graph_filename}.png')
 
 
 
-def graph(data, x, y, xt, yt, axis, filename):
+def graph(x, y, xt, yt, axis, filename):
 	plt.rcParams['figure.figsize'] = (4, 2.5)
 	plt.plot(x,y)
 	ax = plt.gca()
@@ -282,13 +281,11 @@ def main():
 			if fintech['online']: # and fintech['id'] == 10:
 				new_thread = threading.Thread(target=get_source, args=(fintech, options, k))
 				all_threads.append(new_thread)
-				try:
-					new_thread.start()
-				except:
-					pass
-
+				while threading.active_count() == 12: # Infinite loop to avoid 12 or more than concurrent threads
+					time.sleep(1)
+					print('Sleeping')
+				new_thread.start()
 		_ = [i.join() for i in all_threads]  # Ensures all threads end before moving forward
-
 		save()
 		file_extract_recent(9800)
 		print(f'Good: {active.good} | Bad: {active.bad}')
