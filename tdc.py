@@ -63,7 +63,7 @@ class Basics:
 	def which_system(self):
 		systems = [{'name': 'GFT-Tablet', 'root_path': r'C:\pythonCode'},
 			 	   {'name': 'raspberrypi', 'root_path': r'/home/pi/pythonCode'},
-				   {'name': 'Power', 'root_path': r'D:\pythonCode'},
+				   {'name': 'DESKTOP', 'root_path': r'D:\pythonCode'},
 				   {'name': 'Ubuntu-gft', 'root_path': '/home/gabriel/pythonCode'},
 				   {'name': 'scraper', 'root_path': '/home/gabfre/pythonCode'}]
 		for system in systems:
@@ -87,6 +87,7 @@ def set_options():
 
 
 def get_source(fintech, options, k):
+	print(f'Starting: {fintech["name"]}')
 	driver = webdriver.Chrome(os.path.join(os.getcwd(),active.CHROMEDRIVER), options=options)
 	attempts = 1
 	while attempts <= 3:
@@ -161,7 +162,7 @@ def save():
 			data.writerow([f['Link'], f['Venta'], active.time_date, f['Compra']])
 
 
-def upload_to_bucket(bucket_path='data-bucket-gft-devops'):
+def upload_to_bucket(bucket_path='data-bucket-gft'):
 	client = storage.Client.from_service_account_json(json_credentials_path=active.GCLOUD_KEYS)
 	bucket = client.get_bucket(bucket_path)
 	for file in os.listdir(active.DATA_PATH):
@@ -281,7 +282,7 @@ def main():
 			if fintech['online']: # and fintech['id'] == 10:
 				new_thread = threading.Thread(target=get_source, args=(fintech, options, k))
 				all_threads.append(new_thread)
-				while threading.active_count() == 12: # Infinite loop to avoid 12 or more than concurrent threads
+				while threading.active_count() == 8: # Infinite loop to avoid 12 or more than concurrent threads
 					time.sleep(1)
 					print('Sleeping')
 				new_thread.start()
