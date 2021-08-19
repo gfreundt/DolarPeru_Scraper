@@ -1823,7 +1823,7 @@
        },
         {
           "id": 48,
-          "online": true,
+          "online": false,
           "name": "La Casa del Dolar",
           "url": "https://lacasadeldolar.pe/",
           "link": "https://lacasadeldolar.pe/",
@@ -1840,8 +1840,8 @@
              "xpath": "/html/body/div/div/div/div/div/div/section[2]/div[2]/div/div[3]/div/div/div/div/h6",
              "click": false,
              "click_xpath": "",
-             "extract_start": 7,
-             "extract_end": 11
+             "extract_start": 8,
+             "extract_end": 12
           },
           "image": "la_casa_del_dolar.png",
           "bancos": {
@@ -2126,18 +2126,18 @@
           "bench": "",
           "sleep": 1,
           "compra": {
-             "xpath": "/html/body/div/header/div/div/div[2]/div/div[1]/div[2]/ul/li[1]/a",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 22,
-             "extract_end": 26
-          },
-          "venta": {
              "xpath": "/html/body/div/header/div/div/div[2]/div/div[1]/div[2]/ul/li[2]/a",
              "click": false,
              "click_xpath": "",
              "extract_start": 26,
-             "extract_end": 31
+             "extract_end": 32
+          },
+          "venta": {
+             "xpath": "/html/body/div/header/div/div/div[2]/div/div[1]/div[2]/ul/li[1]/a",
+             "click": false,
+             "click_xpath": "",
+             "extract_start": 22,
+             "extract_end": 27
           },
           "image": "zona_dolar.jpg",
           "bancos": {
