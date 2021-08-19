@@ -1575,14 +1575,14 @@
              "click": false,
              "click_xpath": "",
              "extract_start": 8,
-             "extract_end": 12
+             "extract_end": 13
           },
           "venta": {
-             "xpath": "/html/body/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div[1]/div",
+             "xpath": "/html/body/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div[2]/div",
              "click": false,
              "click_xpath": "",
              "extract_start": 7,
-             "extract_end": 11
+             "extract_end": 12
           },
           "image": "cambios_jp.jpg",
           "bancos": {

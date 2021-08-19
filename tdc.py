@@ -87,7 +87,7 @@ def set_options():
 
 
 def get_source(fintech, options, k):
-	print(f'Starting: {fintech["name"]}')
+	print(f'\nStarting: {fintech["id"]} - {fintech["name"]}')
 	driver = webdriver.Chrome(os.path.join(os.getcwd(),active.CHROMEDRIVER), options=options)
 	attempts = 1
 	while attempts <= 3:
@@ -282,9 +282,9 @@ def main():
 			if fintech['online']: # and fintech['id'] == 10:
 				new_thread = threading.Thread(target=get_source, args=(fintech, options, k))
 				all_threads.append(new_thread)
-				while threading.active_count() == 8: # Infinite loop to avoid 12 or more than concurrent threads
+				while threading.active_count() == 12: # Infinite loop to avoid 12 or more than concurrent threads
 					time.sleep(1)
-					print('Sleeping')
+					print('Sleeping', end='\r')
 				new_thread.start()
 		_ = [i.join() for i in all_threads]  # Ensures all threads end before moving forward
 		save()
