@@ -31,8 +31,6 @@ class Basics:
 		sys_main_path = os.path.join(sys_root_path, 'DolarPeru_Scraper')
 		sys_web_path = os.path.join(sys_root_path, 'DolarPeru_Web')
 		sys_data_path = os.path.join(sys_root_path, 'DolarPeru_data')
-		if "NOTEST" not in self.switches:
-			sys_data_path = os.path.join(sys_data_path, 'test')
 		self.DATA_PATH = sys_data_path
 
 		if 'Linux' in platform.system():
@@ -61,11 +59,14 @@ class Basics:
 			self.fintechs = json.load(file)['fintechs']
 
 	def which_system(self):
-		systems = [{'name': 'GFT-Tablet', 'root_path': r'C:\pythonCode'},
-			 	   {'name': 'raspberrypi', 'root_path': r'/home/pi/pythonCode'},
-				   {'name': 'laptop', 'root_path': r'C:\pythonCode'},
-				   {'name': 'Ubuntu-gft', 'root_path': '/home/gabriel/pythonCode'},
-				   {'name': 'scraper', 'root_path': '/home/gabfre/pythonCode'}]
+		if "NOTEST" not in self.switches:
+			systems = [{'name': 'GFT-Tablet', 'root_path': r'C:\prodCode'},
+					   {'name': 'laptop', 'root_path': r'C:\prodCode'},
+					   {'name': 'desktop', 'root_path': '/home/gabfre/prodCode'}]
+		else:
+			systems = [{'name': 'GFT-Tablet', 'root_path': r'C:\pythonCode'},
+					   {'name': 'laptop', 'root_path': r'C:\pythonCode'},
+					   {'name': 'desktop', 'root_path': '/home/gabfre/pythonCode'}]
 		for system in systems:
 			if system['name'] in platform.node():
 				return system['root_path']
@@ -169,6 +170,9 @@ def upload_to_bucket(bucket_path='data-bucket-gft'): #test bucket_path = 'data-b
 		object_name_in_gcs_bucket = bucket.blob('/DolarPeru_data/'+file)
 		object_name_in_gcs_bucket.upload_from_filename(os.path.join(active.DATA_PATH,file))
 
+def backup_to_gdrive():
+	pass
+
 
 def file_extract_recent(n):
 	with open(active.VAULT_FILE, mode='r', encoding='utf-8', newline="\n") as file:
@@ -249,6 +253,10 @@ def analysis():
 			yt = [round(i/1000,2) for i in range(int(axis[2]*1000), int(axis[3]*1000)+10, 20)]
 			graph(x, y, xt, yt, axis=axis, filename=f'last30days-{graph_filename}.png')
 
+			# Backup data to Google Drive
+			if 'NOTEST' in active.switches and 'NOBACK' not in active.switches:
+				backup_to_gdrive()
+
 
 
 def graph(x, y, xt, yt, axis, filename):
@@ -294,6 +302,7 @@ def main():
 	analysis()
 	if 'UPLOAD' in active.switches:
 		upload_to_bucket()
+
 	
 
 
