@@ -1564,7 +1564,7 @@
        },
         {
           "id": 41,
-          "online": true,
+          "online": false,
           "name": "CambiosJP",
           "url": "https://cambiosjp.com/",
           "link": "https://cambiosjp.com/",
@@ -2082,7 +2082,7 @@
        },
         {
           "id": 55,
-          "online": true,
+          "online": false,
           "name": "Prex",
           "url": "https://www.prex.com.pe/",
           "link": "https://www.prex.com.pe/",
