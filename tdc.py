@@ -56,11 +56,6 @@ class Basics:
 		with open(self.DATA_STRUCTURE_FILE, 'r', encoding='utf-8') as file:
 			self.fintechs = json.load(file)['fintechs']
 
-		print(self.DATA_STRUCTURE_FILE)
-		print(self.VAULT_FILE)
-		print(self.WEB_VENTA_FILE)
-
-		quit()
 
 	def which_system(self):
 		if 'NOTEST' in self.switches:
