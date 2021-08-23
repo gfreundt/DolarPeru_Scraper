@@ -59,13 +59,13 @@ class Basics:
 
 	def which_system(self):
 		if 'NOTEST' in self.switches:
-			systems = [{'name': 'GFT-Tablet', 'root_path': r'C:\pythonCode'},
-					   {'name': 'laptop', 'root_path': r'C:\pythonCode'},
-					   {'name': 'desktop', 'root_path': '/home/gabfre/pythonCode'}]
-		else:
 			systems = [{'name': 'GFT-Tablet', 'root_path': r'C:\prodCode'},
-			{'name': 'laptop', 'root_path': r'C:\prodCode'},
-			{'name': 'desktop', 'root_path': '/home/gabfre/prodCode'}]
+					   {'name': 'laptop', 'root_path': r'C:\prodCode'},
+					   {'name': 'desktop', 'root_path': '/home/gabfre/prodCode'}]
+		else:
+			systems = [{'name': 'GFT-Tablet', 'root_path': r'C:\pythonCode'},
+			{'name': 'laptop', 'root_path': r'C:\pythonCode'},
+			{'name': 'desktop', 'root_path': '/home/gabfre/pythonCode'}]
 
 		for system in systems:
 			if system['name'] in platform.node():
@@ -88,7 +88,7 @@ def set_options():
 
 
 def get_source(fintech, options, k):
-	print(f'\nStarting: {fintech["id"]} - {fintech["name"]}')
+	print(f'Starting: {fintech["id"]} - {fintech["name"]}')
 	driver = webdriver.Chrome(os.path.join(os.getcwd(),active.CHROMEDRIVER), options=options)
 	attempts = 1
 	while attempts <= 3:
@@ -104,16 +104,13 @@ def get_source(fintech, options, k):
 		if fintech[quote]['click']:
 			driver.find_element_by_xpath(fintech[quote]['click_xpath']).click()
 		element_present = EC.visibility_of_element_located((By.XPATH, fintech[quote]['xpath']))
-		while attempts <= 1:
+		while attempts <= 2:
 			try:
 				WebDriverWait(driver, 10).until(element_present)
 				time.sleep(fintech['sleep'])
 				info.append(extract(driver.find_element_by_xpath(fintech[quote]['xpath']).text, fintech[quote]))
-				#success = True
 				break
 			except:
-				#print(fintech['name'], 'retrying')
-				#success = False
 				attempts += 1
 	driver.quit()
 	if info and info[0] != '' and sanity_check(info):
@@ -135,6 +132,8 @@ def get_source(fintech, options, k):
 
 def sanity_check(test):
 	for i in test:
+		if not i:
+			return False
 		if float(i) < 2.50 or float(i) > 9.50:
 			return False
 	return True
@@ -290,7 +289,7 @@ def main():
 			if fintech['online']: # and fintech['id'] == 10:
 				new_thread = threading.Thread(target=get_source, args=(fintech, options, k))
 				all_threads.append(new_thread)
-				while threading.active_count() == 12: # Infinite loop to limit to 12 concurrent threads
+				while threading.active_count() == 15: # Infinite loop to limit concurrent threads
 					time.sleep(1)
 				new_thread.start()
 		_ = [i.join() for i in all_threads]  # Ensures all threads end before moving forward
