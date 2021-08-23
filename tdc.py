@@ -29,7 +29,6 @@ class Basics:
 		
 		sys_root_path = self.which_system()
 		sys_main_path = os.path.join(sys_root_path, 'DolarPeru_Scraper')
-		sys_web_path = os.path.join(sys_root_path, 'DolarPeru_Web')
 		sys_data_path = os.path.join(sys_root_path, 'DolarPeru_data')
 		self.DATA_PATH = sys_data_path
 
@@ -43,7 +42,6 @@ class Basics:
 		
 		self.DATA_STRUCTURE_FILE = os.path.join(sys_main_path, 'data_structure.json')
 		self.GCLOUD_KEYS = os.path.join(sys_root_path, 'gcloud_keys.json')
-		self.SCREENSHOT_FILE = os.path.join(sys_data_path, 'screenshot.png')
 		self.LAST_USE_FILE = os.path.join(sys_data_path, 'last_use.txt')
 		self.VAULT_FILE = os.path.join(sys_data_path,'TDC_Vault.txt')
 		self.ACTIVE_FILE = os.path.join(sys_data_path,'TDC.txt')
@@ -58,15 +56,22 @@ class Basics:
 		with open(self.DATA_STRUCTURE_FILE, 'r', encoding='utf-8') as file:
 			self.fintechs = json.load(file)['fintechs']
 
+		print(self.DATA_STRUCTURE_FILE)
+		print(self.VAULT_FILE)
+		print(self.WEB_VENTA_FILE)
+
+		quit()
+
 	def which_system(self):
-		if "NOTEST" not in self.switches:
-			systems = [{'name': 'GFT-Tablet', 'root_path': r'C:\prodCode'},
-					   {'name': 'laptop', 'root_path': r'C:\prodCode'},
-					   {'name': 'desktop', 'root_path': '/home/gabfre/prodCode'}]
-		else:
+		if 'NOTEST' in self.switches:
 			systems = [{'name': 'GFT-Tablet', 'root_path': r'C:\pythonCode'},
 					   {'name': 'laptop', 'root_path': r'C:\pythonCode'},
 					   {'name': 'desktop', 'root_path': '/home/gabfre/pythonCode'}]
+		else:
+			systems = [{'name': 'GFT-Tablet', 'root_path': r'C:\prodCode'},
+			{'name': 'laptop', 'root_path': r'C:\prodCode'},
+			{'name': 'desktop', 'root_path': '/home/gabfre/prodCode'}]
+
 		for system in systems:
 			if system['name'] in platform.node():
 				return system['root_path']

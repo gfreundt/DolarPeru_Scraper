@@ -1464,14 +1464,14 @@
              "click": false,
              "click_xpath": "",
              "extract_start": 24,
-             "extract_end": 29
+             "extract_end": 30
           },
           "venta": {
              "xpath": "/html/body/div[7]/div/div/div/div[1]/div/div[1]/div/div[4]/div/div/p",
              "click": false,
              "click_xpath": "",
              "extract_start": 40,
-             "extract_end": 45
+             "extract_end": 46
           },
           "image": "jet_peru.png",
           "bancos": {
@@ -2137,7 +2137,7 @@
              "click": false,
              "click_xpath": "",
              "extract_start": 22,
-             "extract_end": 27
+             "extract_end": 28
           },
           "image": "zona_dolar.jpg",
           "bancos": {
