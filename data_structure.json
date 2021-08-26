@@ -1,2195 +1,2187 @@
 {
-    "oficiales":
-    [
-        {
-            "id": 1,
-            "online": true,
-            "name": "SBS",
-            "url": "https://www.sbs.gob.pe/",
-            "link": "https://www.sbs.gob.pe/",
-            "bench": null,
-            "sleep":1,
-            "compra":
-            {
-                "xpath": "/html/body/form/div[3]/main/div[1]/div/div[3]/div/div[1]/div/div/div/div/ul/li[1]/div[2]/table/tbody/tr/td[1]/div",
-                "click": false,
-                "click_xpath": null,
-                "extract_start": 0,
-                "extract_end": 5
-            },
-            "venta":
-            {
-                "xpath": "/html/body/form/div[3]/main/div[1]/div/div[3]/div/div[1]/div/div/div/div/ul/li[1]/div[2]/table/tbody/tr/td[2]/div/div",
-                "click": false,
-                "click_xpath": null,
-                "extract_start": 0,
-                "extract_end": 5
-            },
-            "image": "sbs.svg"
-        },
-        {
-            "id": 2,
-            "online": true,
-            "name": "SUNAT",
-            "url": "https://www.sunat.gob.pe/",
-            "link": "https://www.sunat.gob.pe/",
-            "bench": null,
-            "sleep":1,
-            "compra":
-            {
-                "xpath": "/html/body/section[2]/div/div[2]/div/p[1]/strong",
-                "click": false,
-                "click_xpath": null,
-                "extract_start": 0,
-                "extract_end": 5
-            },
-            "venta":
-            {
-                "xpath": "/html/body/section[2]/div/div[2]/div/p[2]/strong",
-                "click": false,
-                "click_xpath": null,
-                "extract_start": 0,
-                "extract_end": 5
-            },
-            "image": "sunat.png"
-        },
-        {
-            "id": 3,
-            "online": true,
-            "name": "BCRP",
-            "url": "https://www.bcrp.gob.pe/",
-            "link": "https://www.bcrp.gob.pe/",
-            "bench": null,
-            "sleep":1,
-            "compra":
-            {
-                "xpath": "/html/body/div[2]/section/div/div/div[3]/div[3]/div[1]/div/div[2]/table[1]/tbody/tr[2]/td[2]",
-                "click": false,
-                "click_xpath": null,
-                "extract_start": 0,
-                "extract_end": 5
-            },
-            "venta":
-            {
-                "xpath": "/html/body/div[2]/section/div/div/div[3]/div[3]/div[1]/div/div[2]/table[1]/tbody/tr[2]/td[3]",
-                "click": false,
-                "click_xpath": null,
-                "extract_start": 0,
-                "extract_end": 5
-            },
-            "image": "bcrp.png"
-        }
-    ],
-    "fintechs":
-    [
-        {
-          "id": 1,
-          "online": true,
-          "name": "A Como",
-          "url": "https://acomo.com.pe/",
-          "link": "https://acomo.com.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[2]/section[1]/div[3]/div/div[1]/div[1]/span[3]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 3,
-             "extract_end": 9
-          },
-          "venta": {
-             "xpath": "/html/body/div[2]/section[1]/div[3]/div/div[1]/div[3]/span[3]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 3,
-             "extract_end": 9
-          },
-          "image": "acomo.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": "01937-2019"
-       },
-        {
-          "id": 2,
-          "online": true,
-          "name": "MidpointFX",
-          "url": "https://www.midpointfx.com/",
-          "link": "https://www.midpointfx.com/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[1]/div/div[3]/div/main/div/div/div/div[2]/div/div/div/div[1]/div[2]/div/div[6]/h1/span/span/span/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/div[1]/div/div[3]/div/main/div/div/div/div[2]/div/div/div/div[1]/div[2]/div/div[7]/h1/span/span/span/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "midpointfx.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 3,
-          "online": true,
-          "name": "Billex",
-          "url": "https://www.billex.pe/",
-          "link": "https://www.billex.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[3]/div[2]/main/div/section/div/div/div[1]/div/div[1]/div/div/div[2]/div/div/div[1]/span[1]/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "venta": {
-             "xpath": "/html/body/div[3]/div[2]/main/div/section/div/div/div[1]/div/div[1]/div/div/div[2]/div/div/div[1]/span[2]/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "image": "billex.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 4,
-          "online": true,
-          "name": "TKambio",
-          "url": "https://tkambio.com",
-          "link": "https://tkambio.com",
-          "bench": "tkambio",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[2]/div[2]/div/div[1]/div/div[1]/div[2]/div[2]/div[2]/div/span[2]/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/div[2]/div[2]/div/div[1]/div/div[1]/div[2]/div[2]/div[2]/div/span[4]/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "tkambio.svg",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 5,
-          "online": true,
-          "name": "Rextie",
-          "url": "https://rextie.com",
-          "link": "https://rextie.com",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/app-root/div/div/app-side-nav/mat-sidenav-container/mat-sidenav-content/app-home/app-save-money-partial/div/div/div[1]/div[2]/div/app-fx-rates/div/div/div[1]/div/div[1]/div[2]/span[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "venta": {
-             "xpath": "/html/body/app-root/div/div/app-side-nav/mat-sidenav-container/mat-sidenav-content/app-home/app-save-money-partial/div/div/div[1]/div[2]/div/app-fx-rates/div/div/div[1]/div/div[2]/div[2]/span[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "image": "rextie.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 6,
-          "online": true,
-          "name": "Kambista",
-          "url": "https://kambista.com",
-          "link": "https://kambista.com",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[2]/div/main/div/div/div/article/div/div[1]/div[3]/div/div/div[2]/div[1]/strong[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/div[2]/div/main/div/div/div/article/div/div[1]/div[3]/div/div/div[2]/div[1]/strong[3]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "kambista.svg",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 7,
-          "online": true,
-          "name": "Securex",
-          "url": "https://securex.pe",
-          "link": "https://securex.pe",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[4]/div/div[1]/section[1]/div/div/div[2]/form/div[1]/h4[1]/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/div[4]/div/div[1]/section[1]/div/div/div[2]/form/div[1]/h4[2]/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "securex.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 8,
-          "online": true,
-          "name": "Tu Cambista",
-          "url": "https://tucambista.pe",
-          "link": "https://tucambista.pe",
-          "bench": "tucambista",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/section[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[2]/div[1]/span[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/section[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[2]/div[2]/span[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "tucambista.svg",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 9,
-          "online": true,
-          "name": "Cocos y Lucas",
-          "url": "https://cocosylucasbcp.com",
-          "link": "https://cocosylucasbcp.com",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/poly-root/poly-feature-layout/div/div/landing-root/landing-main/div[1]/landing-engine/section/div[1]/div/div[2]/div/div/landing-form-exchange/div/form/div[2]/div[1]/div/span[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 3,
-             "extract_end": 9
-          },
-          "venta": {
-             "xpath": "/html/body/poly-root/poly-feature-layout/div/div/landing-root/landing-main/div[1]/landing-engine/section/div[1]/div/div[2]/div/div/landing-form-exchange/div/form/div[2]/div[3]/div/span[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 3,
-             "extract_end": 9
-          },
-          "image": "cocosylucas.svg",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 10,
-          "online": true,
-          "name": "Cambio Seguro",
-          "url": "https://cuantoestaeldolar.pe/",
-          "link": "https://cambioseguro.com/",
-          "bench": "cambioseguro",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[2]/div[1]/div[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[2]/div[1]/div[3]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "cambio_seguro.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 11,
-          "online": true,
-          "name": "CambiaFX",
-          "url": "https://cambiafx.pe/",
-          "link": "https://cambiafx.pe/",
-          "bench": "cambiafx",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[1]/div/header/div[2]/div/div[2]/div/button[1]/span[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 3,
-             "extract_end": 9
-          },
-          "venta": {
-             "xpath": "/html/body/div[1]/div/header/div[2]/div/div[2]/div/button[2]/span[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 3,
-             "extract_end": 9
-          },
-          "image": "cambiafx.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 12,
-          "online": true,
-          "name": "Cambista Inka",
-          "url": "https://www.cambistainka.com/",
-          "link": "https://www.cambistainka.com/",
-          "bench": "cambistainka",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[1]/section[1]/div/div/div[2]/div/div[2]/form/div[1]/div[1]/span/strong",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "venta": {
-             "xpath": "/html/body/div[1]/section[1]/div/div/div[2]/div/div[2]/form/div[1]/div[2]/span/strong",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "image": "cambistainka.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 13,
-          "online": true,
-          "name": "InstaKash",
-          "url": "https://instakash.net/",
-          "link": "https://instakash.net/",
-          "bench": "instakash",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div/div/main/section[1]/div/div/section/div[2]/div/div[1]/p",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 4,
-             "extract_end": 9
-          },
-          "venta": {
-             "xpath": "/html/body/div/div/main/section[1]/div/div/section/div[2]/div/div[2]/p",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 4,
-             "extract_end": 9
-          },
-          "image": "instakash.svg",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 14,
-          "online": true,
-          "name": "Cambio Mundial",
-          "url": "https://www.cambiomundial.com/",
-          "link": "https://www.cambiomundial.com/",
-          "bench": "cambiomundial",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div/section[1]/div/div[2]/form/div[1]/div[1]/span[1]/span[2]/label",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "venta": {
-             "xpath": "/html/body/div/section[1]/div/div[2]/form/div[1]/div[1]/span[2]/span[2]/label",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "image": "cambio_mundial.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 15,
-          "online": true,
-          "name": "Peru Dolar",
-          "url": "https://perudolar.pe/",
-          "link": "https://perudolar.pe/",
-          "bench": "perudolar",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 14,
-             "extract_end": 19
-          },
-          "venta": {
-             "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 29,
-             "extract_end": 35
-          },
-          "image": "perudolar.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 16,
-          "online": true,
-          "name": "TerraCash",
-          "url": "https://cuantoestaeldolar.pe/",
-          "link": "https://terracash.pe/",
-          "bench": "terracash",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[8]/div[1]/div[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[8]/div[1]/div[3]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "terracash.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 17,
-          "online": true,
-          "name": "Cambi.pe",
-          "url": "http://cambi.pe/",
-          "link": "http://cambi.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div/div/section[1]/div/div[2]/div/div/div[2]/div[2]/div[1]/span[3]/strong",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/div[1]/div/section[1]/div/div[2]/div/div/div[2]/div[2]/div[1]/span[4]/strong",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "cambipe.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 18,
-          "online": true,
-          "name": "Roblex",
-          "url": "https://cuantoestaeldolar.pe/",
-          "link": "https://roblex.pe/",
-          "bench": "roblex",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[7]/div[1]/div[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 8,
-             "extract_end": 12
-          },
-          "venta": {
-             "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[7]/div[1]/div[3]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 7,
-             "extract_end": 11
-          },
-          "image": "roblex.svg",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 19,
-          "online": true,
-          "name": "NonCash",
-          "url": "https://noncash.pe",
-          "link": "https://noncash.pe",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[1]/section[1]/div[2]/div/div/div[2]/div[2]/div[1]/p[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 8,
-             "extract_end": 13
-          },
-          "venta": {
-             "xpath": "/html/body/div[1]/section[1]/div[2]/div/div/div[2]/div[2]/div[1]/p[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 23,
-             "extract_end": 28
-          },
-          "image": "noncash.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 20,
-          "online": true,
-          "name": "Cambix",
-          "url": "https://cuantoestaeldolar.pe/",
-          "link": "https://cambix.com.pe/home",
-          "bench": "cambix",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[3]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "cambix.svg",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 21,
-          "online": true,
-          "name": "Western Union",
-          "url": "https://www.westernunionperu.pe/cambiodemoneda",
-          "link": "https://www.westernunionperu.pe/cambiodemoneda",
-          "bench": "westernunionperu",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/section/div/form/div[1]/div[2]/p/button[1]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "venta": {
-             "xpath": "/html/body/section/div/form/div[1]/div[2]/p/button[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "image": "western_union.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 22,
-          "online": true,
-          "name": "El Alfarero",
-          "url": "https://www.casadecambioelalfarero.com/",
-          "link": "https://www.casadecambioelalfarero.com/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/form/main/section[1]/div/div/div[2]/div[2]/div[2]/label[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "venta": {
-             "xpath": "/html/body/form/main/section[1]/div/div/div[2]/div[2]/div[1]/label[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "image": "el_alfarero.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 23,
-          "online": true,
-          "name": "CambioX",
-          "url": "https://www.cambiox.pe/",
-          "link": "https://www.cambiox.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[3]/section[1]/div/div/div/div[2]/center/span[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 8,
-             "extract_end": 13
-          },
-          "venta": {
-             "xpath": "/html/body/div[3]/section[1]/div/div/div/div[2]/center/span[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 23,
-             "extract_end": 28
-          },
-          "image": "cambiox.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 24,
-          "online": false,
-          "name": "Fintuu",
-          "url": "https://www.fintuu.com/",
-          "link": "https://www.fintuu.com/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/main/div[1]/section[3]/div/div[3]/div[1]/div/div[1]/div[1]/div/h6",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 11,
-             "extract_end": 16
-          },
-          "venta": {
-             "xpath": "/html/body/main/div[1]/section[3]/div/div[3]/div[1]/div/div[1]/div[2]/div/h6",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 10,
-             "extract_end": 17
-          },
-          "image": "fintuu.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 25,
-          "online": true,
-          "name": "Safex",
-          "url": "https://www.safex.pe/",
-          "link": "https://www.safex.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[1]/section[2]/div/div/form/div/div[1]/div[2]/div/span/strong/h3",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 8,
-             "extract_end": 13
-          },
-          "venta": {
-             "xpath": "/html/body/div[1]/section[2]/div/div/form/div/div[1]/div[2]/div/span/strong/h3",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 23,
-             "extract_end": 28
-          },
-          "image": "safex.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 26,
-          "online": true,
-          "name": "Efectibit",
-          "url": "https://www.efectibit.com/",
-          "link": "https://www.efectibit.com/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[2]/div[2]/main/div/div/div/div/div/div[2]/div/form/div/div[1]/h4/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/div[2]/div[2]/main/div/div/div/div/div/div[2]/div/form/div/div[1]/h4/span",
-             "click": true,
-             "click_xpath": "/html/body/div[2]/div[2]/main/div/div/div/div/div/div[2]/div/form/div/div[3]/button",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "efectibit.svg",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 27,
-          "online": true,
-          "name": "Dollar House",
-          "url": "https://cuantoestaeldolar.pe/",
-          "link": "https://dollarhouse.pe/",
-          "bench": "dollarhouse",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/main/div/div/form/div[1]/div/p[1]/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/main/div/div/form/div[1]/div/p[2]/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "dollar_house.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 28,
-          "online": true,
-          "name": "Cambista Online",
-          "url": "https://cambista.online/",
-          "link": "https://cambista.online/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div/div/div[5]/div/div/p/strong/span[1]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "venta": {
-             "xpath": "/html/body/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div/div/div[5]/div/div/p/strong/span[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "image": "cambista_online.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 29,
-          "online": false,
-          "name": "A$$e$$or",
-          "url": "https://www.assessorperu.com/",
-          "link": "https://www.assessorperu.com/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div/div[10]/section[1]/div/div[2]/div/div[1]/div/div/div[1]/div/div/h5/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/div/div[10]/section[1]/div/div[2]/div/div[1]/div/div/div[2]/div/div/h5/span",
-             "click": true,
-             "click_xpath": "/html/body/div/div[10]/section[1]/div/div[2]/div/div[1]/div/div/div[2]/div/div/h5/span",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "a$$e$$or.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 30,
-          "online": true,
-          "name": "X-Cambio",
-          "url": "https://x-cambio.com/",
-          "link": "https://x-cambio.com/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/section[1]/div/div/div[2]/form/div[2]/div/div[1]/p[1]/strong/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/section[1]/div/div/div[2]/form/div[2]/div/div[1]/p[2]/strong/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "x-cambio.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 31,
-          "online": true,
-          "name": "KeyEx",
-          "url": "https://www.keyex.pe/",
-          "link": "https://www.keyex.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/header/div/div[1]/div[2]/div[2]/div/div[1]/div[1]/div[1]/span[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "venta": {
-             "xpath": "/html/body/header/div/div[1]/div[2]/div[2]/div/div[1]/div[1]/div[2]/span[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "image": "keyex.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 32,
-          "online": true,
-          "name": "DinersFX",
-          "url": "https://www.dinersfx.pe/",
-          "link": "https://www.dinersfx.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/app-root/app-home/app-first-section/div/div[1]/div/div[2]/div[1]/div[2]/div/div/div[1]/p[1]/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 3,
-             "extract_end": 9
-          },
-          "venta": {
-             "xpath": "/html/body/app-root/app-home/app-first-section/div/div[1]/div/div[2]/div[1]/div[2]/div/div/div[1]/p[2]/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 3,
-             "extract_end": 9
-          },
-          "image": "dinersfx.svg",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 33,
-          "online": true,
-          "name": "DL$Money",
-          "url": "https://cuantoestaeldolar.pe/",
-          "link": "https://dlsmoney.com/",
-          "bench": "dlsmoney",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[8]/div[1]/div[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[8]/div[1]/div[3]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "dls-money.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 34,
-          "online": true,
-          "name": "HIR Power",
-          "url": "https://hirpower.com/",
-          "link": "https://hirpower.com/",
-          "bench": "hirpower",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[1]/div[1]/div[3]/div[2]/div[1]/div",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 8,
-             "extract_end": 13
-          },
-          "venta": {
-             "xpath": "/html/body/div[1]/div[1]/div[3]/div[2]/div[2]/div",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 8,
-             "extract_end": 13
-          },
-          "image": "hir_power.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 35,
-          "online": true,
-          "name": "Yanki",
-          "url": "https://yanki.pe/",
-          "link": "https://yanki.pe/",
-          "bench": "yanki",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[4]/div/div/ul/div[1]/div/div/div[2]/div/div[2]/div[1]/div[1]/b/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/div[4]/div/div/ul/div[1]/div/div/div[2]/div/div[2]/div[1]/div[3]/b/b/span",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "yanki.svg",
-          "bancos": {
-             "inmediatos": [
-                "BCP",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "BBVA",
-                "BanBif",
-                "Scotiabank"
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 36,
-          "online": true,
-          "name": "Tintercambio",
-          "url": "https://tintercambio.com/",
-          "link": "https://tintercambio.com/",
-          "bench": "ftb",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/main/div[1]/div/div/div/div/div/div/div[3]/div[1]/div[1]/span[3]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/main/div[1]/div/div/div/div/div/div/div[3]/div[1]/div[2]/span[3]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "tintercambio.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 37,
-          "online": true,
-          "name": "DolarSol",
-          "url": "https://dolarsol.com/",
-          "link": "https://dolarsol.com/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[2]/div/div[1]/div/div[1]/div[1]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 9,
-             "extract_end": 14
-          },
-          "venta": {
-             "xpath": "/html/body/div[2]/div/div[1]/div/div[1]/div[1]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 22,
-             "extract_end": 27
-          },
-          "image": "dolarsol.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 38,
-          "online": true,
-          "name": "JetCash",
-          "url": "http://www.jetperu.com.pe/casa-de-cambio",
-          "link": "http://www.jetperu.com.pe/casa-de-cambio",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[7]/div/div/div/div[1]/div/div[1]/div/div[4]/div/div/p",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 24,
-             "extract_end": 30
-          },
-          "venta": {
-             "xpath": "/html/body/div[7]/div/div/div/div[1]/div/div[1]/div/div[4]/div/div/p",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 40,
-             "extract_end": 46
-          },
-          "image": "jet_peru.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 39,
-          "online": true,
-          "name": "PeruDollar",
-          "url": "www.perudollar.pe",
-          "link": "www.perudollar.pe",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/main/section/div/div/div/div/section[1]/div/div/div[2]/div/div/div/div/div/div/form/div[1]/div[1]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 8,
-             "extract_end": 12
-          },
-          "venta": {
-             "xpath": "/html/body/main/section/div/div/div/div/section[1]/div/div/div[2]/div/div/div/div/div/div/form/div[1]/div[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 7,
-             "extract_end": 11
-          },
-          "image": "perudollar.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 40,
-          "online": true,
-          "name": "Monnety",
-          "url": "https://www.monnety.com/",
-          "link": "https://www.monnety.com/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[2]/div[1]/div/div/div/div[2]/div[1]/label[1]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 8,
-             "extract_end": 12
-          },
-          "venta": {
-             "xpath": "/html/body/div[2]/div[1]/div/div/div/div[2]/div[1]/label[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 7,
-             "extract_end": 11
-          },
-          "image": "monnety.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 41,
-          "online": false,
-          "name": "CambiosJP",
-          "url": "https://cambiosjp.com/",
-          "link": "https://cambiosjp.com/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div[1]/div",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 8,
-             "extract_end": 13
-          },
-          "venta": {
-             "xpath": "/html/body/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div[2]/div",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 7,
-             "extract_end": 12
-          },
-          "image": "cambios_jp.jpg",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 42,
-          "online": true,
-          "name": "Money King",
-          "url": "https://www.moneyking.pe/",
-          "link": "https://www.moneyking.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/section[1]/div/div/div[2]/form/div[1]/div[1]/p",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 10,
-             "extract_end": 15
-          },
-          "venta": {
-             "xpath": "/html/body/section[1]/div/div/div[2]/form/div[1]/div[2]/p",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 8,
-             "extract_end": 13
-          },
-          "image": "moneyking.svg",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 43,
-          "online": true,
-          "name": "Yomimoka",
-          "url": "https://yomimoka.com/",
-          "link": "https://yomimoka.com/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[2]/div[3]/div/div/div/main/article/div/div/div/div/section[1]/div[2]/div/div/div/div/section[1]/div/div/div[3]/div/div/div[2]/div/div",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 32,
-             "extract_end": 37
-          },
-          "venta": {
-             "xpath": "/html/body/div[2]/div[3]/div/div/div/main/article/div/div/div/div/section[1]/div[2]/div/div/div/div/section[1]/div/div/div[3]/div/div/div[2]/div/div",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 45,
-             "extract_end": 50
-          },
-          "image": "yomimoka.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 44,
-          "online": true,
-          "name": "iMoney",
-          "url": "https://imoney.pe/",
-          "link": "https://imoney.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div/div[2]/div[1]/div[1]/div[1]/h4[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "venta": {
-             "xpath": "/html/body/div/div[2]/div[1]/div[1]/div[2]/h4[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 6
-          },
-          "image": "imoney.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 45,
-          "online": true,
-          "name": "Buenkambio",
-          "url": "https://buenkambio.com/index.php",
-          "link": "https://buenkambio.com/index.php",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 14,
-             "extract_end": 19
-          },
-          "venta": {
-             "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 29,
-             "extract_end": 34
-          },
-          "image": "buenkambio.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 46,
-          "online": false,
-          "name": "Dolartec",
-          "url": "http://190.119.236.76:8090/",
-          "link": "http://190.119.236.76:8090/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": null,
-             "extract_end": null
-          },
-          "venta": {
-             "xpath": "",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": null,
-             "extract_end": null
-          },
-          "image": "",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 47,
-          "online": true,
-          "name": "Fortune Online",
-          "url": "https://www.fortuneonline.com.pe/",
-          "link": "https://www.fortuneonline.com.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[4]/div[1]/section/div/div/section/div/div[1]/div/div/div/div[1]/div/ul/li/div/div[1]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 9,
-             "extract_end": 13
-          },
-          "venta": {
-             "xpath": "/html/body/div[4]/div[1]/section/div/div/section/div/div[1]/div/div/div/div[1]/div/ul/li/div/div[1]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 24,
-             "extract_end": 29
-          },
-          "image": "fortune_online.jpg",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 48,
-          "online": false,
-          "name": "La Casa del Dolar",
-          "url": "https://lacasadeldolar.pe/",
-          "link": "https://lacasadeldolar.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div/div/div/div/div/div/section[2]/div[2]/div/div[2]/div/div/div/div/h6",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 8,
-             "extract_end": 12
-          },
-          "venta": {
-             "xpath": "/html/body/div/div/div/div/div/div/section[2]/div[2]/div/div[3]/div/div/div/div/h6",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 8,
-             "extract_end": 12
-          },
-          "image": "la_casa_del_dolar.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 49,
-          "online": false,
-          "name": "FTB",
-          "url": "https://ftb.pe/",
-          "link": "https://ftb.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": null,
-             "extract_end": null
-          },
-          "venta": {
-             "xpath": "",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": null,
-             "extract_end": null
-          },
-          "image": "",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 50,
-          "online": true,
-          "name": "Dolarvip",
-          "url": "https://www.dolarvip.com/",
-          "link": "https://www.dolarvip.com/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div[1]/div[2]/div/div/main/article/div/div/div/div/section[1]/div[2]/div/div[2]/div/div/div[2]/div/div/strong[1]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 4
-          },
-          "venta": {
-             "xpath": "/html/body/div[1]/div[2]/div/div/main/article/div/div/div/div/section[1]/div[2]/div/div[2]/div/div/div[2]/div/div/strong[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 4
-          },
-          "image": "dolar_vip.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 51,
-          "online": true,
-          "name": "Cambialo",
-          "url": "https://www.cambialo.pe/",
-          "link": "https://www.cambialo.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div/div/section[1]/div/div/div/div/div[2]/span[1]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 14,
-             "extract_end": 19
-          },
-          "venta": {
-             "xpath": "/html/body/div/div/section[1]/div/div/div/div/div[2]/span[2]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 13,
-             "extract_end": 18
-          },
-          "image": "cambialo.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 52,
-          "online": true,
-          "name": "Decamoney",
-          "url": "https://decamoney.com/",
-          "link": "https://decamoney.com/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/app-root/app-landing/section[1]/div/div/div[2]/div[1]/div[1]/h5/span[1]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 8,
-             "extract_end": 14
-          },
-          "venta": {
-             "xpath": "/html/body/app-root/app-landing/section[1]/div/div/div[2]/div[1]/div[1]/h5/span[3]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 7,
-             "extract_end": 13
-          },
-          "image": "decamoney.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 53,
-          "online": true,
-          "name": "Tica",
-          "url": "https://www.tica.pe/",
-          "link": "https://www.tica.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div/div[1]/div[2]/div/div/div[2]/div[1]/div[1]/div[1]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 10,
-             "extract_end": 16
-          },
-          "venta": {
-             "xpath": "/html/body/div/div[1]/div[2]/div/div/div[2]/div[1]/div[1]/div[3]",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 9,
-             "extract_end": 15
-          },
-          "image": "tica.png",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 54,
-          "online": false,
-          "name": "Intispot",
-          "url": "www.intispot.com",
-          "link": "www.intispot.com",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": null,
-             "extract_end": null
-          },
-          "venta": {
-             "xpath": "",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": null,
-             "extract_end": null
-          },
-          "image": "",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 55,
-          "online": false,
-          "name": "Prex",
-          "url": "https://www.prex.com.pe/",
-          "link": "https://www.prex.com.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/main/section[1]/div[2]/div/div/div[2]/div/div[1]/h2",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "venta": {
-             "xpath": "/html/body/main/section[1]/div[2]/div/div/div[2]/div/div[2]/h2",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 0,
-             "extract_end": 5
-          },
-          "image": "prex.svg",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 56,
-          "online": true,
-          "name": "Zona Dolar",
-          "url": "https://zonadolar.pe/",
-          "link": "https://zonadolar.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "/html/body/div/header/div/div/div[2]/div/div[1]/div[2]/ul/li[2]/a",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 26,
-             "extract_end": 32
-          },
-          "venta": {
-             "xpath": "/html/body/div/header/div/div/div[2]/div/div[1]/div[2]/ul/li[1]/a",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": 22,
-             "extract_end": 28
-          },
-          "image": "zona_dolar.jpg",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       },
-        {
-          "id": 57,
-          "online": false,
-          "name": "Amaz FX",
-          "url": "https://amazfx.pe/",
-          "link": "https://amazfx.pe/",
-          "bench": "",
-          "sleep": 1,
-          "compra": {
-             "xpath": "",
-             "click": false,
-             "click_xpath": "",
-             "extract_start": null,
-             "extract_end": null
-          },
-          "venta": {
-             "xpath": "",
-             "click": null,
-             "click_xpath": "",
-             "extract_start": null,
-             "extract_end": null
-          },
-          "image": "",
-          "bancos": {
-             "inmediatos": [
-                "",
-                "",
-                ""
-             ],
-             "interbancario": [
-                "",
-                "",
-                ""
-             ]
-          },
-          "registro_SBS": ""
-       }
-    ]
+   "oficiales": [
+      {
+         "id": 1,
+         "online": true,
+         "name": "SBS",
+         "url": "https://www.sbs.gob.pe/",
+         "link": "https://www.sbs.gob.pe/",
+         "bench": null,
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/form/div[3]/main/div[1]/div/div[3]/div/div[1]/div/div/div/div/ul/li[1]/div[2]/table/tbody/tr/td[1]/div",
+            "click": false,
+            "click_xpath": null,
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/form/div[3]/main/div[1]/div/div[3]/div/div[1]/div/div/div/div/ul/li[1]/div[2]/table/tbody/tr/td[2]/div/div",
+            "click": false,
+            "click_xpath": null,
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "sbs.svg"
+      },
+      {
+         "id": 2,
+         "online": true,
+         "name": "SUNAT",
+         "url": "https://www.sunat.gob.pe/",
+         "link": "https://www.sunat.gob.pe/",
+         "bench": null,
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/section[2]/div/div[2]/div/p[1]/strong",
+            "click": false,
+            "click_xpath": null,
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/section[2]/div/div[2]/div/p[2]/strong",
+            "click": false,
+            "click_xpath": null,
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "sunat.png"
+      },
+      {
+         "id": 3,
+         "online": true,
+         "name": "BCRP",
+         "url": "https://www.bcrp.gob.pe/",
+         "link": "https://www.bcrp.gob.pe/",
+         "bench": null,
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[2]/section/div/div/div[3]/div[3]/div[1]/div/div[2]/table[1]/tbody/tr[2]/td[2]",
+            "click": false,
+            "click_xpath": null,
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/div[2]/section/div/div/div[3]/div[3]/div[1]/div/div[2]/table[1]/tbody/tr[2]/td[3]",
+            "click": false,
+            "click_xpath": null,
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "bcrp.png"
+      }
+   ],
+   "fintechs": [
+      {
+         "id": 1,
+         "online": true,
+         "name": "A Como",
+         "url": "https://acomo.com.pe/",
+         "link": "https://acomo.com.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[2]/section[1]/div[3]/div/div[1]/div[1]/span[3]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 3,
+            "extract_end": 9
+         },
+         "venta": {
+            "xpath": "/html/body/div[2]/section[1]/div[3]/div/div[1]/div[3]/span[3]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 3,
+            "extract_end": 9
+         },
+         "image": "acomo.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": "01937-2019"
+      },
+      {
+         "id": 2,
+         "online": true,
+         "name": "MidpointFX",
+         "url": "https://www.midpointfx.com/",
+         "link": "https://www.midpointfx.com/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[1]/div/div[3]/div/main/div/div/div/div[2]/div/div/div/div[1]/div[2]/div/div[6]/h1/span/span/span/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/div[1]/div/div[3]/div/main/div/div/div/div[2]/div/div/div/div[1]/div[2]/div/div[7]/h1/span/span/span/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "midpointfx.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 3,
+         "online": true,
+         "name": "Billex",
+         "url": "https://www.billex.pe/",
+         "link": "https://www.billex.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[3]/div[2]/main/div/section/div/div/div[1]/div/div[1]/div/div/div[2]/div/div/div[1]/span[1]/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "venta": {
+            "xpath": "/html/body/div[3]/div[2]/main/div/section/div/div/div[1]/div/div[1]/div/div/div[2]/div/div/div[1]/span[2]/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "image": "billex.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 4,
+         "online": true,
+         "name": "TKambio",
+         "url": "https://tkambio.com",
+         "link": "https://tkambio.com",
+         "bench": "tkambio",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[2]/div[2]/div/div[1]/div/div[1]/div[2]/div[2]/div[2]/div/span[2]/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/div[2]/div[2]/div/div[1]/div/div[1]/div[2]/div[2]/div[2]/div/span[4]/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "tkambio.svg",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 5,
+         "online": true,
+         "name": "Rextie",
+         "url": "https://rextie.com",
+         "link": "https://rextie.com",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/app-root/div/div/app-side-nav/mat-sidenav-container/mat-sidenav-content/app-home/app-save-money-partial/div/div/div[1]/div[2]/div/app-fx-rates/div/div/div[1]/div/div[1]/div[2]/span[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "venta": {
+            "xpath": "/html/body/app-root/div/div/app-side-nav/mat-sidenav-container/mat-sidenav-content/app-home/app-save-money-partial/div/div/div[1]/div[2]/div/app-fx-rates/div/div/div[1]/div/div[2]/div[2]/span[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "image": "rextie.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 6,
+         "online": true,
+         "name": "Kambista",
+         "url": "https://kambista.com",
+         "link": "https://kambista.com",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[2]/div/main/div/div/div/article/div/div[1]/div[3]/div/div/div[2]/div[1]/strong[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/div[2]/div/main/div/div/div/article/div/div[1]/div[3]/div/div/div[2]/div[1]/strong[3]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "kambista.svg",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 7,
+         "online": true,
+         "name": "Securex",
+         "url": "https://securex.pe",
+         "link": "https://securex.pe",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[4]/div/div[1]/section[1]/div/div/div[2]/form/div[1]/h4[1]/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/div[4]/div/div[1]/section[1]/div/div/div[2]/form/div[1]/h4[2]/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "securex.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 8,
+         "online": true,
+         "name": "Tu Cambista",
+         "url": "https://tucambista.pe",
+         "link": "https://tucambista.pe",
+         "bench": "tucambista",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/section[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[2]/div[1]/span[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/section[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[2]/div[2]/span[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "tucambista.svg",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 9,
+         "online": true,
+         "name": "Cocos y Lucas",
+         "url": "https://cocosylucasbcp.com",
+         "link": "https://cocosylucasbcp.com",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/poly-root/poly-feature-layout/div/div/landing-root/landing-main/div[1]/landing-engine/section/div[1]/div/div[2]/div/div/landing-form-exchange/div/form/div[2]/div[1]/div/span[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 3,
+            "extract_end": 9
+         },
+         "venta": {
+            "xpath": "/html/body/poly-root/poly-feature-layout/div/div/landing-root/landing-main/div[1]/landing-engine/section/div[1]/div/div[2]/div/div/landing-form-exchange/div/form/div[2]/div[3]/div/span[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 3,
+            "extract_end": 9
+         },
+         "image": "cocosylucas.svg",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 10,
+         "online": true,
+         "name": "Cambio Seguro",
+         "url": "https://cuantoestaeldolar.pe/",
+         "link": "https://cambioseguro.com/",
+         "bench": "cambioseguro",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[2]/div[1]/div[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[2]/div[1]/div[3]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "cambio_seguro.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 11,
+         "online": true,
+         "name": "CambiaFX",
+         "url": "https://cambiafx.pe/",
+         "link": "https://cambiafx.pe/",
+         "bench": "cambiafx",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[1]/div/header/div[2]/div/div[2]/div/button[1]/span[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 3,
+            "extract_end": 9
+         },
+         "venta": {
+            "xpath": "/html/body/div[1]/div/header/div[2]/div/div[2]/div/button[2]/span[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 3,
+            "extract_end": 9
+         },
+         "image": "cambiafx.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 12,
+         "online": true,
+         "name": "Cambista Inka",
+         "url": "https://www.cambistainka.com/",
+         "link": "https://www.cambistainka.com/",
+         "bench": "cambistainka",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[1]/section[1]/div/div/div[2]/div/div[2]/form/div[1]/div[1]/span/strong",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "venta": {
+            "xpath": "/html/body/div[1]/section[1]/div/div/div[2]/div/div[2]/form/div[1]/div[2]/span/strong",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "image": "cambistainka.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 13,
+         "online": true,
+         "name": "InstaKash",
+         "url": "https://instakash.net/",
+         "link": "https://instakash.net/",
+         "bench": "instakash",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div/div/main/section[1]/div/div/section/div[2]/div/div[1]/p",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 4,
+            "extract_end": 9
+         },
+         "venta": {
+            "xpath": "/html/body/div/div/main/section[1]/div/div/section/div[2]/div/div[2]/p",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 4,
+            "extract_end": 9
+         },
+         "image": "instakash.svg",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 14,
+         "online": true,
+         "name": "Cambio Mundial",
+         "url": "https://www.cambiomundial.com/",
+         "link": "https://www.cambiomundial.com/",
+         "bench": "cambiomundial",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div/section[1]/div/div[2]/form/div[1]/div[1]/span[1]/span[2]/label",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "venta": {
+            "xpath": "/html/body/div/section[1]/div/div[2]/form/div[1]/div[1]/span[2]/span[2]/label",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "image": "cambio_mundial.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 15,
+         "online": true,
+         "name": "Peru Dolar",
+         "url": "https://perudolar.pe/",
+         "link": "https://perudolar.pe/",
+         "bench": "perudolar",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 14,
+            "extract_end": 19
+         },
+         "venta": {
+            "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 29,
+            "extract_end": 35
+         },
+         "image": "perudolar.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 16,
+         "online": true,
+         "name": "TerraCash",
+         "url": "https://cuantoestaeldolar.pe/",
+         "link": "https://terracash.pe/",
+         "bench": "terracash",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[8]/div[1]/div[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[8]/div[1]/div[3]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "terracash.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 17,
+         "online": true,
+         "name": "Cambi.pe",
+         "url": "http://cambi.pe/",
+         "link": "http://cambi.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div/div/section[1]/div/div[2]/div/div/div[2]/div[2]/div[1]/span[3]/strong",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/div[1]/div/section[1]/div/div[2]/div/div/div[2]/div[2]/div[1]/span[4]/strong",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "cambipe.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 18,
+         "online": true,
+         "name": "Roblex",
+         "url": "https://cuantoestaeldolar.pe/",
+         "link": "https://roblex.pe/",
+         "bench": "roblex",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[7]/div[1]/div[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 8,
+            "extract_end": 12
+         },
+         "venta": {
+            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[7]/div[1]/div[3]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 7,
+            "extract_end": 11
+         },
+         "image": "roblex.svg",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 19,
+         "online": true,
+         "name": "NonCash",
+         "url": "https://noncash.pe",
+         "link": "https://noncash.pe",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[1]/section[1]/div[2]/div/div/div[2]/div[2]/div[1]/p[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 8,
+            "extract_end": 13
+         },
+         "venta": {
+            "xpath": "/html/body/div[1]/section[1]/div[2]/div/div/div[2]/div[2]/div[1]/p[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 23,
+            "extract_end": 28
+         },
+         "image": "noncash.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 20,
+         "online": true,
+         "name": "Cambix",
+         "url": "https://cuantoestaeldolar.pe/",
+         "link": "https://cambix.com.pe/home",
+         "bench": "cambix",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[3]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "cambix.svg",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 21,
+         "online": true,
+         "name": "Western Union",
+         "url": "https://www.westernunionperu.pe/cambiodemoneda",
+         "link": "https://www.westernunionperu.pe/cambiodemoneda",
+         "bench": "westernunionperu",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/section/div/form/div[1]/div[2]/p/button[1]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "venta": {
+            "xpath": "/html/body/section/div/form/div[1]/div[2]/p/button[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "image": "western_union.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 22,
+         "online": true,
+         "name": "El Alfarero",
+         "url": "https://www.casadecambioelalfarero.com/",
+         "link": "https://www.casadecambioelalfarero.com/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/form/main/section[1]/div/div/div[2]/div[2]/div[2]/label[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "venta": {
+            "xpath": "/html/body/form/main/section[1]/div/div/div[2]/div[2]/div[1]/label[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "image": "el_alfarero.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 23,
+         "online": true,
+         "name": "CambioX",
+         "url": "https://www.cambiox.pe/",
+         "link": "https://www.cambiox.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[3]/section[1]/div/div/div/div[2]/center/span[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 8,
+            "extract_end": 13
+         },
+         "venta": {
+            "xpath": "/html/body/div[3]/section[1]/div/div/div/div[2]/center/span[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 23,
+            "extract_end": 28
+         },
+         "image": "cambiox.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 24,
+         "online": false,
+         "name": "Fintuu",
+         "url": "https://www.fintuu.com/",
+         "link": "https://www.fintuu.com/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/main/div[1]/section[3]/div/div[3]/div[1]/div/div[1]/div[1]/div/h6",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 11,
+            "extract_end": 16
+         },
+         "venta": {
+            "xpath": "/html/body/main/div[1]/section[3]/div/div[3]/div[1]/div/div[1]/div[2]/div/h6",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 10,
+            "extract_end": 17
+         },
+         "image": "fintuu.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 25,
+         "online": true,
+         "name": "Safex",
+         "url": "https://www.safex.pe/",
+         "link": "https://www.safex.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[1]/section[2]/div/div/form/div/div[1]/div[2]/div/span/strong/h3",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 8,
+            "extract_end": 13
+         },
+         "venta": {
+            "xpath": "/html/body/div[1]/section[2]/div/div/form/div/div[1]/div[2]/div/span/strong/h3",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 23,
+            "extract_end": 28
+         },
+         "image": "safex.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 26,
+         "online": true,
+         "name": "Efectibit",
+         "url": "https://www.efectibit.com/",
+         "link": "https://www.efectibit.com/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[2]/div[2]/main/div/div/div/div/div/div[2]/div/form/div/div[1]/h4/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/div[2]/div[2]/main/div/div/div/div/div/div[2]/div/form/div/div[1]/h4/span",
+            "click": true,
+            "click_xpath": "/html/body/div[2]/div[2]/main/div/div/div/div/div/div[2]/div/form/div/div[3]/button",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "efectibit.svg",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 27,
+         "online": true,
+         "name": "Dollar House",
+         "url": "https://cuantoestaeldolar.pe/",
+         "link": "https://dollarhouse.pe/",
+         "bench": "dollarhouse",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/main/div/div/form/div[1]/div/p[1]/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/main/div/div/form/div[1]/div/p[2]/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "dollar_house.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 28,
+         "online": true,
+         "name": "Cambista Online",
+         "url": "https://cambista.online/",
+         "link": "https://cambista.online/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div/div/div[5]/div/div/p/strong/span[1]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "venta": {
+            "xpath": "/html/body/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div/div/div[5]/div/div/p/strong/span[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "image": "cambista_online.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 29,
+         "online": false,
+         "name": "A$$e$$or",
+         "url": "https://www.assessorperu.com/",
+         "link": "https://www.assessorperu.com/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div/div[10]/section[1]/div/div[2]/div/div[1]/div/div/div[1]/div/div/h5/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/div/div[10]/section[1]/div/div[2]/div/div[1]/div/div/div[2]/div/div/h5/span",
+            "click": true,
+            "click_xpath": "/html/body/div/div[10]/section[1]/div/div[2]/div/div[1]/div/div/div[2]/div/div/h5/span",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "a$$e$$or.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 30,
+         "online": true,
+         "name": "X-Cambio",
+         "url": "https://x-cambio.com/",
+         "link": "https://x-cambio.com/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/section[1]/div/div/div[2]/form/div[2]/div/div[1]/p[1]/strong/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/section[1]/div/div/div[2]/form/div[2]/div/div[1]/p[2]/strong/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "x-cambio.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 31,
+         "online": true,
+         "name": "KeyEx",
+         "url": "https://www.keyex.pe/",
+         "link": "https://www.keyex.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/header/div/div[1]/div[2]/div[2]/div/div[1]/div[1]/div[1]/span[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "venta": {
+            "xpath": "/html/body/header/div/div[1]/div[2]/div[2]/div/div[1]/div[1]/div[2]/span[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "image": "keyex.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 32,
+         "online": true,
+         "name": "DinersFX",
+         "url": "https://www.dinersfx.pe/",
+         "link": "https://www.dinersfx.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/app-root/app-home/app-first-section/div/div[1]/div/div[2]/div[1]/div[2]/div/div/div[1]/p[1]/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 3,
+            "extract_end": 9
+         },
+         "venta": {
+            "xpath": "/html/body/app-root/app-home/app-first-section/div/div[1]/div/div[2]/div[1]/div[2]/div/div/div[1]/p[2]/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 3,
+            "extract_end": 9
+         },
+         "image": "dinersfx.svg",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 33,
+         "online": true,
+         "name": "DL$Money",
+         "url": "https://cuantoestaeldolar.pe/",
+         "link": "https://dlsmoney.com/",
+         "bench": "dlsmoney",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[8]/div[1]/div[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[8]/div[1]/div[3]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "dls-money.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 34,
+         "online": true,
+         "name": "HIR Power",
+         "url": "https://hirpower.com/",
+         "link": "https://hirpower.com/",
+         "bench": "hirpower",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[1]/div[1]/div[3]/div[2]/div[1]/div",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 8,
+            "extract_end": 13
+         },
+         "venta": {
+            "xpath": "/html/body/div[1]/div[1]/div[3]/div[2]/div[2]/div",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 8,
+            "extract_end": 13
+         },
+         "image": "hir_power.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 35,
+         "online": true,
+         "name": "Yanki",
+         "url": "https://yanki.pe/",
+         "link": "https://yanki.pe/",
+         "bench": "yanki",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[4]/div/div/ul/div[1]/div/div/div[2]/div/div[2]/div[1]/div[1]/b/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/div[4]/div/div/ul/div[1]/div/div/div[2]/div/div[2]/div[1]/div[3]/b/b/span",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "yanki.svg",
+         "bancos": {
+            "inmediatos": [
+               "BCP",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "BBVA",
+               "BanBif",
+               "Scotiabank"
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 36,
+         "online": true,
+         "name": "Tintercambio",
+         "url": "https://tintercambio.com/",
+         "link": "https://tintercambio.com/",
+         "bench": "ftb",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/main/div[1]/div/div/div/div/div/div/div[3]/div[1]/div[1]/span[3]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/main/div[1]/div/div/div/div/div/div/div[3]/div[1]/div[2]/span[3]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "tintercambio.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 37,
+         "online": true,
+         "name": "DolarSol",
+         "url": "https://dolarsol.com/",
+         "link": "https://dolarsol.com/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[2]/div/div[1]/div/div[1]/div[1]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 9,
+            "extract_end": 14
+         },
+         "venta": {
+            "xpath": "/html/body/div[2]/div/div[1]/div/div[1]/div[1]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 22,
+            "extract_end": 27
+         },
+         "image": "dolarsol.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 38,
+         "online": true,
+         "name": "JetCash",
+         "url": "http://www.jetperu.com.pe/casa-de-cambio",
+         "link": "http://www.jetperu.com.pe/casa-de-cambio",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[7]/div/div/div/div[1]/div/div[1]/div/div[4]/div/div/p",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 24,
+            "extract_end": 30
+         },
+         "venta": {
+            "xpath": "/html/body/div[7]/div/div/div/div[1]/div/div[1]/div/div[4]/div/div/p",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 40,
+            "extract_end": 46
+         },
+         "image": "jet_peru.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 39,
+         "online": true,
+         "name": "PeruDollar",
+         "url": "www.perudollar.pe",
+         "link": "www.perudollar.pe",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/main/section/div/div/div/div/section[1]/div/div/div[2]/div/div/div/div/div/div/form/div[1]/div[1]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 8,
+            "extract_end": 12
+         },
+         "venta": {
+            "xpath": "/html/body/main/section/div/div/div/div/section[1]/div/div/div[2]/div/div/div/div/div/div/form/div[1]/div[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 7,
+            "extract_end": 11
+         },
+         "image": "perudollar.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 40,
+         "online": true,
+         "name": "Monnety",
+         "url": "https://www.monnety.com/",
+         "link": "https://www.monnety.com/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[2]/div[1]/div/div/div/div[2]/div[1]/label[1]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 8,
+            "extract_end": 13
+         },
+         "venta": {
+            "xpath": "/html/body/div[2]/div[1]/div/div/div/div[2]/div[1]/label[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 7,
+            "extract_end": 12
+         },
+         "image": "monnety.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 41,
+         "online": false,
+         "name": "CambiosJP",
+         "url": "https://cambiosjp.com/",
+         "link": "https://cambiosjp.com/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div[1]/div",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 8,
+            "extract_end": 13
+         },
+         "venta": {
+            "xpath": "/html/body/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div[2]/div",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 7,
+            "extract_end": 12
+         },
+         "image": "cambios_jp.jpg",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 42,
+         "online": true,
+         "name": "Money King",
+         "url": "https://www.moneyking.pe/",
+         "link": "https://www.moneyking.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/section[1]/div/div/div[2]/form/div[1]/div[1]/p",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 10,
+            "extract_end": 15
+         },
+         "venta": {
+            "xpath": "/html/body/section[1]/div/div/div[2]/form/div[1]/div[2]/p",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 8,
+            "extract_end": 13
+         },
+         "image": "moneyking.svg",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 43,
+         "online": true,
+         "name": "Yomimoka",
+         "url": "https://yomimoka.com/",
+         "link": "https://yomimoka.com/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[2]/div[3]/div/div/div/main/article/div/div/div/div/section[1]/div[2]/div/div/div/div/section[1]/div/div/div[3]/div/div/div[2]/div/div",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 32,
+            "extract_end": 37
+         },
+         "venta": {
+            "xpath": "/html/body/div[2]/div[3]/div/div/div/main/article/div/div/div/div/section[1]/div[2]/div/div/div/div/section[1]/div/div/div[3]/div/div/div[2]/div/div",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 45,
+            "extract_end": 50
+         },
+         "image": "yomimoka.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 44,
+         "online": true,
+         "name": "iMoney",
+         "url": "https://imoney.pe/",
+         "link": "https://imoney.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div/div[2]/div[1]/div[1]/div[1]/h4[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "venta": {
+            "xpath": "/html/body/div/div[2]/div[1]/div[1]/div[2]/h4[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 6
+         },
+         "image": "imoney.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 45,
+         "online": true,
+         "name": "Buenkambio",
+         "url": "https://buenkambio.com/index.php",
+         "link": "https://buenkambio.com/index.php",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 14,
+            "extract_end": 19
+         },
+         "venta": {
+            "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 29,
+            "extract_end": 34
+         },
+         "image": "buenkambio.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 46,
+         "online": false,
+         "name": "Dolartec",
+         "url": "http://190.119.236.76:8090/",
+         "link": "http://190.119.236.76:8090/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": null,
+            "extract_end": null
+         },
+         "venta": {
+            "xpath": "",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": null,
+            "extract_end": null
+         },
+         "image": "",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 47,
+         "online": true,
+         "name": "Fortune Online",
+         "url": "https://www.fortuneonline.com.pe/",
+         "link": "https://www.fortuneonline.com.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[4]/div[1]/section/div/div/section/div/div[1]/div/div/div/div[1]/div/ul/li/div/div[1]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 9,
+            "extract_end": 13
+         },
+         "venta": {
+            "xpath": "/html/body/div[4]/div[1]/section/div/div/section/div/div[1]/div/div/div/div[1]/div/ul/li/div/div[1]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 24,
+            "extract_end": 29
+         },
+         "image": "fortune_online.jpg",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 48,
+         "online": false,
+         "name": "La Casa del Dolar",
+         "url": "https://lacasadeldolar.pe/",
+         "link": "https://lacasadeldolar.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div/div/div/div/div/div/section[2]/div[2]/div/div[2]/div/div/div/div/h6",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 8,
+            "extract_end": 12
+         },
+         "venta": {
+            "xpath": "/html/body/div/div/div/div/div/div/section[2]/div[2]/div/div[3]/div/div/div/div/h6",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 8,
+            "extract_end": 12
+         },
+         "image": "la_casa_del_dolar.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 49,
+         "online": false,
+         "name": "FTB",
+         "url": "https://ftb.pe/",
+         "link": "https://ftb.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": null,
+            "extract_end": null
+         },
+         "venta": {
+            "xpath": "",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": null,
+            "extract_end": null
+         },
+         "image": "",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 50,
+         "online": true,
+         "name": "Dolarvip",
+         "url": "https://www.dolarvip.com/",
+         "link": "https://www.dolarvip.com/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div[1]/div[2]/div/div/main/article/div/div/div/div/section[1]/div[2]/div/div[2]/div/div/div[2]/div/div/strong[1]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 4
+         },
+         "venta": {
+            "xpath": "/html/body/div[1]/div[2]/div/div/main/article/div/div/div/div/section[1]/div[2]/div/div[2]/div/div/div[2]/div/div/strong[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 4
+         },
+         "image": "dolar_vip.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 51,
+         "online": true,
+         "name": "Cambialo",
+         "url": "https://www.cambialo.pe/",
+         "link": "https://www.cambialo.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div/div/section[1]/div/div/div/div/div[2]/span[1]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 14,
+            "extract_end": 19
+         },
+         "venta": {
+            "xpath": "/html/body/div/div/section[1]/div/div/div/div/div[2]/span[2]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 13,
+            "extract_end": 18
+         },
+         "image": "cambialo.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 52,
+         "online": true,
+         "name": "Decamoney",
+         "url": "https://decamoney.com/",
+         "link": "https://decamoney.com/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/app-root/app-landing/section[1]/div/div/div[2]/div[1]/div[1]/h5/span[1]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 8,
+            "extract_end": 14
+         },
+         "venta": {
+            "xpath": "/html/body/app-root/app-landing/section[1]/div/div/div[2]/div[1]/div[1]/h5/span[3]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 7,
+            "extract_end": 13
+         },
+         "image": "decamoney.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 53,
+         "online": true,
+         "name": "Tica",
+         "url": "https://www.tica.pe/",
+         "link": "https://www.tica.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div/div[1]/div[2]/div/div/div[2]/div[1]/div[1]/div[1]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 10,
+            "extract_end": 16
+         },
+         "venta": {
+            "xpath": "/html/body/div/div[1]/div[2]/div/div/div[2]/div[1]/div[1]/div[3]",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 9,
+            "extract_end": 15
+         },
+         "image": "tica.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 54,
+         "online": false,
+         "name": "Intispot",
+         "url": "www.intispot.com",
+         "link": "www.intispot.com",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": null,
+            "extract_end": null
+         },
+         "venta": {
+            "xpath": "",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": null,
+            "extract_end": null
+         },
+         "image": "",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 55,
+         "online": false,
+         "name": "Prex",
+         "url": "https://www.prex.com.pe/",
+         "link": "https://www.prex.com.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/main/section[1]/div[2]/div/div/div[2]/div/div[1]/h2",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "venta": {
+            "xpath": "/html/body/main/section[1]/div[2]/div/div/div[2]/div/div[2]/h2",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 0,
+            "extract_end": 5
+         },
+         "image": "prex.svg",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 56,
+         "online": true,
+         "name": "Zona Dolar",
+         "url": "https://zonadolar.pe/",
+         "link": "https://zonadolar.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "/html/body/div/header/div/div/div[2]/div/div[1]/div[2]/ul/li[2]/a",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 26,
+            "extract_end": 32
+         },
+         "venta": {
+            "xpath": "/html/body/div/header/div/div/div[2]/div/div[1]/div[2]/ul/li[1]/a",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": 22,
+            "extract_end": 28
+         },
+         "image": "zona_dolar.jpg",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      },
+      {
+         "id": 57,
+         "online": false,
+         "name": "Amaz FX",
+         "url": "https://amazfx.pe/",
+         "link": "https://amazfx.pe/",
+         "bench": "",
+         "sleep": 1,
+         "compra": {
+            "xpath": "",
+            "click": false,
+            "click_xpath": "",
+            "extract_start": null,
+            "extract_end": null
+         },
+         "venta": {
+            "xpath": "",
+            "click": null,
+            "click_xpath": "",
+            "extract_start": null,
+            "extract_end": null
+         },
+         "image": "",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
+         "registro_SBS": ""
+      }
+   ]
 }
