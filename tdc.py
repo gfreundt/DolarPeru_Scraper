@@ -63,12 +63,14 @@ class Basics:
                 {"name": "GFT-Tablet", "root_path": r"C:\prodCode"},
                 {"name": "laptop", "root_path": r"C:\prodCode"},
                 {"name": "desktop", "root_path": "/home/gabfre/prodCode"},
+                {"name": "gft-vps", "root_path": "/root/prodCode"}
             ]
         else:
             systems = [
                 {"name": "GFT-Tablet", "root_path": r"C:\pythonCode"},
                 {"name": "laptop", "root_path": r"C:\pythonCode"},
                 {"name": "desktop", "root_path": "/home/gabfre/pythonCode"},
+                {"name": "gft-vps", "root_path": "/root/pythonCode"}
             ]
 
         for system in systems:
@@ -301,7 +303,7 @@ def analysis():
         meta = {"date": data[-1][2][:10], "time": data[-1][2][11:]}
         results = []
         times = sorted(set([i[2] for i in data]))
-        for t in list(times)[-2:]:
+        for t in list(times)[-20:]:
             results.append(
                 {
                     t: [
