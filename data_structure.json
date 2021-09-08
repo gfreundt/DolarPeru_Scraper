@@ -299,7 +299,7 @@
                ""
             ]
          },
-         "contacto": "",
+         "contacto": "contacto@kambista.com",
          "registro_SBS": ""
       },
       {
@@ -375,7 +375,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "contacto@tucambista.pe",
          "registro_SBS": ""
       },
       {
@@ -413,7 +413,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "cocosylucas@bcp.com.pe",
          "registro_SBS": ""
       },
       {
@@ -451,7 +451,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "info@cambioseguro.com",
          "registro_SBS": ""
       },
       {
@@ -489,7 +489,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "hola@cambiafx.pe",
          "registro_SBS": ""
       },
       {
@@ -527,7 +527,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "info@cambistainka.com",
          "registro_SBS": ""
       },
       {
@@ -565,7 +565,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "contacto@instakash.net",
          "registro_SBS": ""
       },
       {
@@ -603,7 +603,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "clientes@cambiomundial.com",
          "registro_SBS": ""
       },
       {
@@ -641,7 +641,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "contacto@perudolar.pe",
          "registro_SBS": ""
       },
       {
@@ -679,7 +679,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "estherventas@terracash.pe",
          "registro_SBS": ""
       },
       {
@@ -717,7 +717,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "operaciones@cambi.pe",
          "registro_SBS": ""
       },
       {
@@ -755,7 +755,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "contacto@roblex.pe",
          "registro_SBS": ""
       },
       {
@@ -793,7 +793,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "info@noncash.pe",
          "registro_SBS": ""
       },
       {
@@ -831,7 +831,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "cambix_info@bancomercio.com.pe",
          "registro_SBS": ""
       },
       {
@@ -869,12 +869,12 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "01 422 0014",
          "registro_SBS": ""
       },
       {
          "id": 22,
-         "online": true,
+         "online": false,
          "name": "El Alfarero",
          "url": "https://www.casadecambioelalfarero.com/",
          "link": "https://www.casadecambioelalfarero.com/",
@@ -907,7 +907,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "ventas@casadecambioelalfarero.com",
          "registro_SBS": ""
       },
       {
@@ -945,7 +945,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "consultas@cambiox.pe",
          "registro_SBS": ""
       },
       {
@@ -983,7 +983,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "N/A",
          "registro_SBS": ""
       },
       {
@@ -1021,7 +1021,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "978-830-054",
          "registro_SBS": ""
       },
       {
@@ -1059,7 +1059,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "915-097-744",
          "registro_SBS": ""
       },
       {
@@ -1097,7 +1097,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "contacto@dollarhouse.pe",
          "registro_SBS": ""
       },
       {
@@ -1135,7 +1135,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "contacto@cambista.com",
          "registro_SBS": ""
       },
       {
@@ -1173,7 +1173,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "contacto@assessorperu.com",
          "registro_SBS": ""
       },
       {
@@ -1211,7 +1211,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "info@x-cambio.com",
          "registro_SBS": ""
       },
       {
@@ -1249,7 +1249,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "soporte@keyex.pe",
          "registro_SBS": ""
       },
       {
@@ -1287,7 +1287,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "01-615-1111p2",
          "registro_SBS": ""
       },
       {
@@ -1325,7 +1325,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "operaciones@dlsmoney.com",
          "registro_SBS": ""
       },
       {
@@ -1363,7 +1363,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "contacto@hirpower.com",
          "registro_SBS": ""
       },
       {
@@ -1401,7 +1401,7 @@
                "Scotiabank"
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "+51 980-020-052",
          "registro_SBS": ""
       },
       {
@@ -1477,7 +1477,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "+51 959-370-922",
          "registro_SBS": ""
       },
       {
@@ -1515,7 +1515,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "N/A",
          "registro_SBS": ""
       },
       {
@@ -1553,7 +1553,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "divisas@perudollar.pe",
          "registro_SBS": ""
       },
       {
@@ -1591,7 +1591,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "comunicaciones@monnety.com",
          "registro_SBS": ""
       },
       {
@@ -1629,7 +1629,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "contactos@cambiosjp.com",
          "registro_SBS": ""
       },
       {
@@ -1667,7 +1667,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "moneyking.pe@gmail.com",
          "registro_SBS": ""
       },
       {
@@ -1705,7 +1705,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "contacto@yomimoka.com",
          "registro_SBS": ""
       },
       {
@@ -1743,7 +1743,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "982-273-702",
          "registro_SBS": ""
       },
       {
@@ -1781,7 +1781,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "contacto@buenkambio.com",
          "registro_SBS": ""
       },
       {
@@ -1857,7 +1857,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "cambios@fortuneonline.com.pe",
          "registro_SBS": ""
       },
       {
@@ -1895,7 +1895,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "informes@lacasadeldolar.pe",
          "registro_SBS": ""
       },
       {
@@ -1933,7 +1933,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "info@ftb.pe",
          "registro_SBS": ""
       },
       {
@@ -1971,7 +1971,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "contacto@dolarvip.com",
          "registro_SBS": ""
       },
       {
@@ -2009,7 +2009,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "admin@cambialo.pe",
          "registro_SBS": ""
       },
       {
@@ -2047,7 +2047,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "contacto@decamoney.com",
          "registro_SBS": ""
       },
       {
@@ -2085,7 +2085,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "contacto@tica.pe",
          "registro_SBS": ""
       },
       {
@@ -2123,7 +2123,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "N/A",
          "registro_SBS": ""
       },
       {
@@ -2161,7 +2161,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "info@prex.com.pe",
          "registro_SBS": ""
       },
       {
@@ -2199,7 +2199,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "jayala@zonadolar.pe",
          "registro_SBS": ""
       },
       {
@@ -2237,7 +2237,7 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
+         "contacto": "contacto@amazfx.pe",
          "registro_SBS": ""
       }
    ]
