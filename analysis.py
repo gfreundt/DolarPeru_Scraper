@@ -3,169 +3,116 @@ import matplotlib as plt
 import matplotlib.pyplot as plt
 from statistics import mean, median
 from datetime import datetime as dt, timedelta as delta
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options as WebDriverOptions
-from selenium.webdriver.support.ui import WebDriverWait
 
 
-def analysis():
-    with open(ACTIVE_FILE, mode="r") as file:
-        data = [i for i in csv.reader(file, delimiter=",")]
-
-    proc = [
+def analysis1(fintechs, data):
+    """
+    Creates files with latest quote of each fintech for main pages Compra and Venta. Creates graphs
+    """
+    # Current time
+    time_date = dt.now().timestamp()
+    process = [
         {
-            "quote": 2,
-            "avg_filename": AVG_VENTA_FILE,
-            "web_filename": WEB_VENTA_FILE,
-            "graph_filename": "vta",
-        },
-        {
-            "quote": 4,
+            "quote": 1,
+            "quote_type": "venta",
             "avg_filename": AVG_COMPRA_FILE,
             "web_filename": WEB_COMPRA_FILE,
-            "graph_filename": "compra",
+        },
+        {
+            "quote": 2,
+            "quote_type": "compra",
+            "avg_filename": AVG_VENTA_FILE,
+            "web_filename": WEB_VENTA_FILE,
         },
     ]
-    for p in proc:
-        # Current time
-        time_date = dt.now().strftime("%Y-%m-%d %H:%M:%S")
-        # Loads latest quote datetime
-        quote_time = data[-1][2]
-        # Loads all the datapoints that correspond to latest quote datetime
-        datapoints = {i[0]: float(i[p["quote"]]) for i in data if i[2] == quote_time}
-
-        # Runs every time
-        meantc = round(mean([datapoints[i] for i in datapoints.keys()]), 4)
-        mediantc = round(median([datapoints[i] for i in datapoints.keys()]), 4)
-        # Append Text File with new Average
+    web_data = {}
+    for proc in process:
+        # Loads latest quote timestamp
+        last_timestamp = data[-1][3]
+        # Loads all the datapoints that correspond to latest quote timestamp
+        datapoints = {
+            i[0]: float(i[proc["quote"]]) for i in data if i[3] == last_timestamp
+        }
+        # Calculate head data
+        meantc = round(mean(datapoints.values()), 4)
+        mediantc = round(median(datapoints.values()), 4)
+        mejor = (
+            round(max(datapoints.values()), 4)
+            if proc["quote"] == 1
+            else round(min(datapoints.values()), 4)
+        )
+        # Append "AVG" Text File with new Median
         item = [f"{mediantc:.4f}", time_date]
-        with open(p["avg_filename"], mode="a", newline="") as file:
+        with open(proc["avg_filename"], mode="a", newline="") as file:
             csv.writer(file, delimiter=",").writerow(item)
-        # Create Text File for Web
-        datax = [
+        # Create JSON File for web app
+        # Part 1: Add Averages, Best, Count of datapoints and Time/Date
+        dump = {
+            "head": {
+                "mediana": f"{mediantc:.4f}",
+                "mejor": f"{mejor:.4f}",
+                "promedio": f"{meantc:.4f}",
+                "consultas": len(datapoints),
+                "timestamp": last_timestamp,
+            }
+        }
+        # Part 2: Add latest quote from all available Fintechs
+        details = [
             {
-                "image": [i["image"] for i in active.fintechs if i["link"] == f][0],
+                "image": [i["image"] for i in fintechs if i["id"] == int(f)][0],
                 "name": f,
                 "value": f"{datapoints[f]:0<6}",
             }
-            for f in datapoints.keys()
+            for f in datapoints.keys() 
         ]
-        with open(web_filename, mode="w", newline="") as json_file:
-            if quote == 2:  # Venta
-                mejor = round(min([datapoints[i] for i in datapoints.keys()]), 4)
-                details = [
-                    i
-                    for i in sorted(datax, key=lambda x: x["value"])
-                    if i["value"] != "0.0000"
-                ]
-            else:  # Compra
-                mejor = round(max([datapoints[i] for i in datapoints.keys()]), 4)
-                details = [
-                    i
-                    for i in sorted(datax, key=lambda x: x["value"], reverse=True)
-                    if i["value"] != "0.0000"
-                ]
-            # Append Averages, Best, Count of datapoints and Time/Date
-            dump = {
-                "head": {
-                    "mediana": f"{mediantc:.4f}",
-                    "mejor": f"{mejor:.4f}",
-                    "promedio": f"{meantc:.4f}",
-                    "consultas": f"{len(datapoints.keys())}",
-                    "time": data[-1][2][-8:],
-                    "date": data[-1][2][:10],
-                }
-            }  # tc, cantidad de fintechs, time, date
-            # Append latest from each fintech
-            dump.update({"details": details})
-            json.dump(dump, json_file)
-        # Intraday Graph
-        with open(avg_filename, mode="r") as file:
-            datax = [i for i in csv.reader(file, delimiter=",")]
-        data_avg_today = [
-            (float(i[0]), dt.strptime(i[1], "%Y-%m-%d %H:%M:%S"))
-            for i in datax
-            if dt.strptime(i[1], "%Y-%m-%d %H:%M:%S").date() == dt.today().date()
+        details = [
+            i
+            for i in sorted(
+                details, key=lambda x: x["value"], reverse=(proc["quote"] == 1)
+            )
+            if i["value"] != "0.0000"
         ]
-        datetime_midnight = (
+        dump.update({"details": details})
+        web_data.update({proc['quote_type']:dump})
+        '''
+        # Generate graphs
+        with open(proc["avg_filename"], mode="r") as file:
+            dpoints = [i for i in csv.reader(file, delimiter=",")]
+        midnight = (
             dt.now().replace(hour=0, minute=0, second=0, microsecond=0).timestamp()
         )
-        x = [(i[1].timestamp() - datetime_midnight) / 3600 for i in data_avg_today]
-        y = [i[0] for i in data_avg_today]
-        mid_axis_y = round((max(y) + min(y)) / 2, 2)
-        min_axis_y, max_axis_y = mid_axis_y - 0.05, mid_axis_y + 0.05
-        axis = (int(x[0]), 22, min_axis_y, max_axis_y)
-        xt = (range(axis[0], axis[1]), range(axis[0], axis[1]))
-        yt = [
-            i / 1000 for i in range(int(axis[2] * 1000), int(axis[3] * 1000) + 10, 10)
-        ]
-        graph(x, y, xt, yt, axis=axis, filename=f"intraday-{graph_filename}.png")
-
-        # Update only on first run of the day
-
-        if (
-            dt.now().hour <= 7 and dt.now().minute < 15
-        ) or "DAILY-NOW" in active.switches:
-            # Last 5 days Graph
-            data_5days = [
-                (float(i[0]), dt.strptime(i[1], "%Y-%m-%d %H:%M:%S"))
-                for i in datax
-                if delta(days=1)
-                <= dt.today().date() - dt.strptime(i[1], "%Y-%m-%d %H:%M:%S").date()
-                <= delta(days=5)
-            ]
-            x = [(i[1].timestamp() - datetime_midnight) / 3600 / 24 for i in data_5days]
-            y = [i[0] for i in data_5days]
-            mid_axis_y = round((max(y) + min(y)) / 2, 2)
-            min_axis_y, max_axis_y = mid_axis_y - 0.075, mid_axis_y + 0.075
-            axis = (-5, 0, min_axis_y, max_axis_y)
-            days_week = ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"] * 2
-            xt = (
-                [days_week[i + dt.today().weekday() + 1] for i in range(-5, 1)],
-                [i for i in range(-5, 1)],
+        # Intraday Graph
+        create_intraday_graph(
+            dpoints, midnight, filename=f"{proc['quote_type']}-intraday.png"
+        )
+        if first_daily_run():
+            # Last 7 days Graph
+            create_7day_graph(
+                dpoints, midnight, filename=f"{proc['quote_type']}-last7days.png"
             )
-            yt = [
-                round(i / 1000, 2)
-                for i in range(int(axis[2] * 1000), int(axis[3] * 1000) + 10, 10)
-            ]
-            graph(x, y, xt, yt, axis=axis, filename=f"last5days-{graph_filename}.png")
             # Last 30 days Graph
-            data_30days = [
-                (float(i[0]), dt.strptime(i[1], "%Y-%m-%d %H:%M:%S"))
-                for i in datax
-                if delta(days=1)
-                <= dt.today().date() - dt.strptime(i[1], "%Y-%m-%d %H:%M:%S").date()
-                <= delta(days=30)
-            ]
-            x = [
-                (i[1].timestamp() - datetime_midnight) / 3600 / 24 for i in data_30days
-            ]
-            y = [i[0] for i in data_30days]
-            mid_axis_y = round((max(y) + min(y)) / 2, 2)
-            min_axis_y, max_axis_y = mid_axis_y - 0.2, mid_axis_y + 0.2
-            axis = (-5, 0, min_axis_y, max_axis_y)
-            xt = ([i for i in range(-30, 1, 2)], [i for i in range(-30, 1, 2)])
-            yt = [
-                round(i / 1000, 2)
-                for i in range(int(axis[2] * 1000), int(axis[3] * 1000) + 10, 20)
-            ]
-            graph(x, y, xt, yt, axis=axis, filename=f"last30days-{graph_filename}.png")
+            create_90day_graph(
+                dpoints, midnight, filename=f"{proc['quote_type']}-last90days.png"
+            )
+        '''
+    # Save file
+    with open('WEB_000.json', mode="w", newline="") as json_file:
+        json.dump(web_data, json_file, indent=2)
 
-            # Backup data to Google Drive
-            if "NOTEST" in active.switches and "NOBACK" not in active.switches:
-                backup_to_gdrive()
+        # Backup data to Google Drive
+        # if "NOTEST" in active.switches and "NOBACK" not in active.switches:
+        # backup_to_gdrive()
 
 
-def analysis2(fintechs):
-    """Creates individual web files for each fintech and their corresponding graph. Also creates stats file."""
-    with open(ACTIVE_FILE, mode="r") as file:
-        data = [i for i in csv.reader(file, delimiter=",")]
-
-    # Web file and graph for each online fintech
+def analysis2(fintechs, data):
+    """
+    Creates individual web files for each fintech and its corresponding graph. Creates stats file.
+    """
     for f in fintechs:
         if f["online"]:
             # Generate web file
             id = f"{f['id']:03d}"
+            print(id)
             dpoints = [
                 (i[4], i[2], i[3]) for i in data if i[0] == id
             ]  # Compra, Venta, Datetime
@@ -206,79 +153,12 @@ def analysis2(fintechs):
                     # Last 5 days Graph
                     create_7day_graph(dpoints, midnight, filename=f"{id}-last7days.png")
                     # Last 30 days Graph
-                    create_30day_graph(dpoints, midnight, filename=f"{id}-last30days.png")
+                    create_90day_graph(
+                        dpoints, midnight, filename=f"{id}-last30days.png"
+                    )
 
-def create_intraday_graph(dpoints, midnight, filename):
-    data_avg_today = [
-        (float(i[0]), dt.strptime(i[2], "%Y-%m-%d %H:%M:%S"))
-        for i in dpoints
-        if dt.strptime(i[2], "%Y-%m-%d %H:%M:%S").date() == dt.today().date()
-    ]
-
-    x = [(i[1].timestamp() - midnight) / 3600 for i in data_avg_today]
-    y = [i[0] for i in data_avg_today]
-    if y:
-        mid_axis_y = round((max(y) + min(y)) / 2, 2)
-        min_axis_y, max_axis_y = mid_axis_y - 0.05, mid_axis_y + 0.05
-        axis = (int(x[0]), 22, min_axis_y, max_axis_y)
-        xt = (range(axis[0], axis[1]), range(axis[0], axis[1]))
-        yt = [
-            i / 1000 for i in range(int(axis[2] * 1000), int(axis[3] * 1000) + 10, 10)
-        ]
-        graph(x, y, xt, yt, axis=axis, filename=filename)
-
-
-def create_7day_graph(dpoints, midnight, filename):
-    data_7days = [
-        (float(i[0]), dt.strptime(i[2], "%Y-%m-%d %H:%M:%S"))
-        for i in dpoints
-        if delta(days=1)
-        <= dt.today().date() - dt.strptime(i[2], "%Y-%m-%d %H:%M:%S").date()
-        <= delta(days=7)
-    ]
-    x = [(i[1].timestamp() - midnight) / 3600 / 24 for i in data_7days]
-    y = [i[0] for i in data_7days]
-    if y:
-        mid_axis_y = round((max(y) + min(y)) / 2, 2)
-        min_axis_y, max_axis_y = mid_axis_y - 0.075, mid_axis_y + 0.075
-        axis = (-5, 0, min_axis_y, max_axis_y)
-        days_week = ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"] * 2
-        xt = (
-            [days_week[i + dt.today().weekday() + 1] for i in range(-7, 1)],
-            [i for i in range(-7, 1)],
-        )
-        yt = [
-            round(i / 1000, 2)
-            for i in range(int(axis[2] * 1000), int(axis[3] * 1000) + 10, 10)
-        ]
-        graph(x, y, xt, yt, axis=axis, filename=filename)
-
-
-def create_30day_graph(dpoints, midnight, filename):
-    data_30days = [
-        (float(i[0]), dt.strptime(i[2], "%Y-%m-%d %H:%M:%S"))
-        for i in dpoints
-        if delta(days=1)
-        <= dt.today().date() - dt.strptime(i[2], "%Y-%m-%d %H:%M:%S").date()
-        <= delta(days=30)
-    ]
-    x = [(i[1].timestamp() - midnight) / 3600 / 24 for i in data_30days]
-    y = [i[0] for i in data_30days]
-    if y:
-        mid_axis_y = round((max(y) + min(y)) / 2, 2)
-        min_axis_y, max_axis_y = mid_axis_y - 0.2, mid_axis_y + 0.2
-        axis = (-5, 0, min_axis_y, max_axis_y)
-        xt = ([i for i in range(-30, 1, 2)], [i for i in range(-30, 1, 2)])
-        yt = [
-            round(i / 1000, 2)
-            for i in range(int(axis[2] * 1000), int(axis[3] * 1000) + 10, 20)
-        ]
-        graph(x, y, xt, yt, axis=axis, filename=filename)
-
-
-def stats():
-    # Stats file
-    meta = {"date": data[-1][2][:10], "time": data[-1][2][11:]}
+    # Create stats file
+    meta = {"date": data[-1][3][:10], "time": data[-1][3][11:]}
     results = []
     times = sorted(set([i[2] for i in data]))
     for t in list(times)[-2:]:
@@ -290,7 +170,75 @@ def stats():
         outfile.write(json.dumps(final_json))
 
 
-def graph(x, y, xt, yt, axis, filename):
+def create_intraday_graph(dpoints, midnight, filename):
+    data_avg_today = [
+        (float(i[0]), dt.strptime(i[1], "%Y-%m-%d %H:%M:%S"))
+        for i in dpoints
+        if dt.strptime(i[1], "%Y-%m-%d %H:%M:%S").date() == dt.today().date()
+    ]
+
+    x = [(i[1].timestamp() - midnight) / 3600 for i in data_avg_today]
+    y = [i[0] for i in data_avg_today]
+    if y:
+        min_axis_y = round(min(y) - 0.05, 2)
+        max_axis_y = round(max(y) + 0.05, 2)
+        xticks = (range(7, 21), range(7, 21))
+        yticks = [
+            i / 1000 for i in range(int(min_axis_y * 1000), int(max_axis_y * 1000), 10)
+        ]
+        graph(x, y, xticks, yticks, filename=filename, rotation=0)
+
+
+def create_7day_graph(dpoints, midnight, filename):
+    data_7days = [
+        (float(i[0]), dt.strptime(i[1], "%Y-%m-%d %H:%M:%S"))
+        for i in dpoints
+        if delta(days=1)
+        <= dt.today().date() - dt.strptime(i[1], "%Y-%m-%d %H:%M:%S").date()
+        <= delta(days=7)
+    ]
+
+    x = [(i[1].timestamp() - midnight) / 3600 / 24 for i in data_7days]
+    y = [i[0] for i in data_7days]
+    if y:
+        min_axis_y = round(min(y) - 0.05, 2)
+        max_axis_y = round(max(y) + 0.05, 2)
+        days_week = ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"] * 2
+        xt = (
+            [days_week[i + dt.today().weekday() + 1] for i in range(-7, 1)],
+            [i for i in range(-7, 1)],
+        )
+        yt = [
+            round(i / 1000, 2)
+            for i in range(int(min_axis_y * 1000), int(max_axis_y * 1000), 10)
+        ]
+        graph(x, y, xt, yt, filename=filename, rotation=0)
+
+
+def create_90day_graph(dpoints, midnight, filename):
+    data = [
+        (float(i[0]), dt.strptime(i[1], "%Y-%m-%d %H:%M:%S"))
+        for i in dpoints
+        if delta(days=1)
+        <= dt.today().date() - dt.strptime(i[1], "%Y-%m-%d %H:%M:%S").date()
+        <= delta(days=90)
+    ]
+    x = [(i[1].timestamp() - midnight) / 3600 / 24 for i in data]
+    y = [i[0] for i in data]
+    
+    if y:
+        min_axis_y = round(min(y) - 0.05, 2)
+        max_axis_y = round(max(y) + 0.05, 2)
+        xticks = ([i for i in range(-90, 1, 10)], [i for i in range(-90, 1, 10)])
+        yticks = [
+            round(i / 1000, 2)
+            for i in range(int(min_axis_y * 1000), int(max_axis_y * 1000), 20)
+        ]
+        graph(x, y, xticks, yticks, filename=filename, rotation=90)
+    
+
+
+def graph(x, y, xt, yt, filename, rotation):
     plt.rcParams["figure.figsize"] = (4, 2.5)
     plt.plot(x, y)
     ax = plt.gca()
@@ -300,8 +248,7 @@ def graph(x, y, xt, yt, axis, filename):
     ax.spines["left"].set_color("white")
     ax.spines["right"].set_color("#DFD8DF")
     plt.tick_params(axis="both", length=0)
-    plt.axis(axis)
-    plt.xticks(xt[1], xt[0], color="#606060", fontsize=8)
+    plt.xticks(xt[1], xt[0], color="#606060", fontsize=8, rotation=rotation)
     plt.yticks(yt, color="#606060", fontsize=8)
     plt.grid(color="#DFD8DF")
     plt.savefig(
@@ -314,6 +261,8 @@ def graph(x, y, xt, yt, axis, filename):
 
 
 def first_daily_run():
+    return True
+    # ONLY FOR TESTING
     if dt.now().hour <= 7 and dt.now().minute < 15:
         return True
 
@@ -327,9 +276,12 @@ WEB_COMPRA_FILE = "WEB_Compra.json"
 STATS_FILE = "stats.json"
 
 
-os.chdir(r"c:\pythonCode\DolarPeru_data")
+os.chdir(r"C:\pythonCode\DolarPeru_data")
 
+with open(ACTIVE_FILE, mode="r") as file:
+    data = [i for i in csv.reader(file, delimiter=",")]
 with open(DATA_STRUCTURE_FILE, "r", encoding="utf-8") as file:
     fintechs = json.load(file)["fintechs"]
 
-analysis2(fintechs)
+analysis1(fintechs, data)
+# analysis2(fintechs, data)
