@@ -2,7 +2,8 @@ import csv, os, json
 import matplotlib as plt
 import matplotlib.pyplot as plt
 from statistics import mean, median
-from datetime import datetime as dt, timedelta as delta
+from datetime import datetime as dt
+from tqdm import tqdm
 
 
 def analysis1(fintechs, data):
@@ -10,21 +11,18 @@ def analysis1(fintechs, data):
     Creates files with latest quote of each fintech for main pages Compra and Venta. Creates graphs
     """
     # Current time
-    time_date = dt.now().timestamp()
+    time_date = round(dt.now().timestamp(), 0)
     process = [
         {
             "quote": 1,
             "quote_type": "venta",
-            "avg_filename": AVG_COMPRA_FILE,
-            "web_filename": WEB_COMPRA_FILE,
         },
         {
             "quote": 2,
             "quote_type": "compra",
-            "avg_filename": AVG_VENTA_FILE,
-            "web_filename": WEB_VENTA_FILE,
         },
     ]
+    median_file_record = ["000"]  # Useless data to maintain structure
     web_data = {}
     for proc in process:
         # Loads latest quote timestamp
@@ -41,11 +39,13 @@ def analysis1(fintechs, data):
             if proc["quote"] == 1
             else round(min(datapoints.values()), 4)
         )
-        # Append "AVG" Text File with new Median
-        item = [f"{mediantc:.4f}", time_date]
-        with open(proc["avg_filename"], mode="a", newline="") as file:
-            csv.writer(file, delimiter=",").writerow(item)
-        # Create JSON File for web app
+        # Calculate band edges
+        band_min = mediantc * 0.995
+        band_max = mediantc * 1.005
+        # Create record with new Medians
+        median_file_record.append(f"{mediantc:.4f}")
+        # Create data for JSON file to be read by Web App
+
         # Part 1: Add Averages, Best, Count of datapoints and Time/Date
         dump = {
             "head": {
@@ -56,14 +56,14 @@ def analysis1(fintechs, data):
                 "timestamp": last_timestamp,
             }
         }
-        # Part 2: Add latest quote from all available Fintechs
+        # Part 2: Add latest quote from all available Fintechs inside band
         details = [
             {
                 "image": [i["image"] for i in fintechs if i["id"] == int(f)][0],
-                "name": f,
+                "id": f,
                 "value": f"{datapoints[f]:0<6}",
             }
-            for f in datapoints.keys() 
+            for f in datapoints.keys() if band_min <= datapoints[f] <= band_max
         ]
         details = [
             i
@@ -72,32 +72,49 @@ def analysis1(fintechs, data):
             )
             if i["value"] != "0.0000"
         ]
-        dump.update({"details": details})
-        web_data.update({proc['quote_type']:dump})
-        '''
-        # Generate graphs
-        with open(proc["avg_filename"], mode="r") as file:
-            dpoints = [i for i in csv.reader(file, delimiter=",")]
-        midnight = (
-            dt.now().replace(hour=0, minute=0, second=0, microsecond=0).timestamp()
-        )
-        # Intraday Graph
+        dump.update({"incluidos": details})
+        # Part 3: Add latest quote from all available Fintechs outside band
+        details = [
+            {
+                "image": [i["image"] for i in fintechs if i["id"] == int(f)][0],
+                "id": f,
+                "value": f"{datapoints[f]:0<6}",
+            }
+            for f in datapoints.keys() if not (band_min <= datapoints[f] <= band_max)
+        ]        
+        dump.update({"excluidos": details})
+        web_data.update({proc["quote_type"]: dump})
+
+
+    median_file_record.append(time_date)
+
+    # Save files
+    with open(MEDIAN_FILE, mode="a", newline="") as csv_file:
+        csv.writer(csv_file, delimiter=",").writerow(median_file_record)
+    with open(WEB_MAIN_FILE, mode="w", newline="") as json_file:
+        json.dump(web_data, json_file, indent=2)
+
+    # Generate graphs
+    midnight = dt.now().replace(hour=0, minute=0, second=0, microsecond=0).timestamp()
+    with open(MEDIAN_FILE, mode="r") as file:
+        dpoints = [i for i in csv.reader(file, delimiter=",")]
+
+    for proc in process:
+        points = [
+            (i[proc["quote"]], i[3]) for i in dpoints
+        ]  # select compra/venta and timestamp
         create_intraday_graph(
-            dpoints, midnight, filename=f"{proc['quote_type']}-intraday.png"
+            points, midnight, filename=f"graph000-{proc['quote_type']}-intraday.png"
         )
         if first_daily_run():
             # Last 7 days Graph
             create_7day_graph(
-                dpoints, midnight, filename=f"{proc['quote_type']}-last7days.png"
+                points, midnight, filename=f"graph000-{proc['quote_type']}-7days.png"
             )
-            # Last 30 days Graph
-            create_90day_graph(
-                dpoints, midnight, filename=f"{proc['quote_type']}-last90days.png"
+            # Last 90 days Graph
+            create_100day_graph(
+                points, midnight, filename=f"graph000-{proc['quote_type']}-100days.png"
             )
-        '''
-    # Save file
-    with open('WEB_000.json', mode="w", newline="") as json_file:
-        json.dump(web_data, json_file, indent=2)
 
         # Backup data to Google Drive
         # if "NOTEST" in active.switches and "NOBACK" not in active.switches:
@@ -108,54 +125,72 @@ def analysis2(fintechs, data):
     """
     Creates individual web files for each fintech and its corresponding graph. Creates stats file.
     """
-    for f in fintechs:
+    midnight = dt.now().replace(hour=0, minute=0, second=0, microsecond=0).timestamp()
+    for f in tqdm(fintechs):
         if f["online"]:
             # Generate web file
             id = f"{f['id']:03d}"
-            print(id)
-            dpoints = [
-                (i[4], i[2], i[3]) for i in data if i[0] == id
-            ]  # Compra, Venta, Datetime
+            dpoints = [i for i in data if i[0] == id]
             if dpoints:
                 info = {
                     "datos": {
                         "name": f["name"],
-                        "url": f["url"],
+                        "link": f["link"],
                         "image": f["image"],
                         "contacto": f["contacto"],
                         "registro_SBS": f["registro_SBS"],
                         "bancos": f["bancos"],
                     }
                 }
-                # insert up to last 30 records
-                cotizaciones = [
+                # insert up to last 50 records
+                vigente = [
                     {
-                        "compra": dpoints[-pos][0],
-                        "venta": dpoints[-pos][1],
-                        "time": dpoints[-pos][2][0:10],
-                        "date": dpoints[-pos][2][11:],
+                        "compra": dpoints[-1][1],
+                        "venta": dpoints[-1][2],
+                        "timestamp": dpoints[-1][3],
                     }
-                    for pos in range(min(len(dpoints), 30))
                 ]
-                info.update({"cotizaciones": cotizaciones})
-                filename = "WEB_" + id + ".json"
-                with open(filename, mode="w", encoding="utf-8", newline="") as outfile:
-                    outfile.write(json.dumps(info))
-                # Generate graphs
-                midnight = (
-                    dt.now()
-                    .replace(hour=0, minute=0, second=0, microsecond=0)
-                    .timestamp()
+                historicas = [
+                    {
+                        "compra": dpoints[-pos][1],
+                        "venta": dpoints[-pos][2],
+                        "timestamp": dpoints[-pos][3],
+                    }
+                    for pos in range(2, min(len(dpoints), 50))
+                ]
+
+                info.update(
+                    {"cotizaciones": {"vigente": vigente, "historicas": historicas}}
                 )
-                # Intraday Graph
-                create_intraday_graph(dpoints, midnight, filename=f"{id}-intraday.png")
-                if first_daily_run():
-                    # Last 5 days Graph
-                    create_7day_graph(dpoints, midnight, filename=f"{id}-last7days.png")
-                    # Last 30 days Graph
-                    create_90day_graph(
-                        dpoints, midnight, filename=f"{id}-last30days.png"
+                filename = "web" + id + ".json"
+                with open(filename, mode="w", newline="") as json_file:
+                    json.dump(info, json_file, indent=2)
+                # Generate graphs
+                process = [
+                    {
+                        "quote": 1,
+                        "quote_type": "venta",
+                    },
+                    {
+                        "quote": 2,
+                        "quote_type": "compra",
+                    },
+                ]
+                for proc in process:
+                    points = [
+                        (i[proc["quote"]], i[3]) for i in dpoints
+                    ]  # select compra/venta and timestamp
+
+                    create_intraday_graph(
+                        points, midnight, filename=f"graph{id}-{proc['quote_type']}-intraday.png"
                     )
+                    if first_daily_run():
+                        create_7day_graph(
+                            points, midnight, filename=f"graph{id}-{proc['quote_type']}-7days.png"
+                        )
+                        create_100day_graph(
+                            points, midnight, filename=f"graph{id}-{proc['quote_type']}-100days.png"
+                        )
 
     # Create stats file
     meta = {"date": data[-1][3][:10], "time": data[-1][3][11:]}
@@ -171,14 +206,9 @@ def analysis2(fintechs, data):
 
 
 def create_intraday_graph(dpoints, midnight, filename):
-    data_avg_today = [
-        (float(i[0]), dt.strptime(i[1], "%Y-%m-%d %H:%M:%S"))
-        for i in dpoints
-        if dt.strptime(i[1], "%Y-%m-%d %H:%M:%S").date() == dt.today().date()
-    ]
-
-    x = [(i[1].timestamp() - midnight) / 3600 for i in data_avg_today]
-    y = [i[0] for i in data_avg_today]
+    data = [(float(i[0]), float(i[1])) for i in dpoints if float(i[1]) > midnight]
+    x = [(i[1] - midnight) / 3600 for i in data]
+    y = [i[0] for i in data]
     if y:
         min_axis_y = round(min(y) - 0.05, 2)
         max_axis_y = round(max(y) + 0.05, 2)
@@ -190,16 +220,13 @@ def create_intraday_graph(dpoints, midnight, filename):
 
 
 def create_7day_graph(dpoints, midnight, filename):
-    data_7days = [
-        (float(i[0]), dt.strptime(i[1], "%Y-%m-%d %H:%M:%S"))
+    data = [
+        (float(i[0]), float(i[1]))
         for i in dpoints
-        if delta(days=1)
-        <= dt.today().date() - dt.strptime(i[1], "%Y-%m-%d %H:%M:%S").date()
-        <= delta(days=7)
+        if (midnight - 24 * 3600 * 7) <= float(i[1]) <= midnight
     ]
-
-    x = [(i[1].timestamp() - midnight) / 3600 / 24 for i in data_7days]
-    y = [i[0] for i in data_7days]
+    x = [(i[1] - midnight) / 3600 / 24 for i in data]
+    y = [i[0] for i in data]
     if y:
         min_axis_y = round(min(y) - 0.05, 2)
         max_axis_y = round(max(y) + 0.05, 2)
@@ -215,27 +242,25 @@ def create_7day_graph(dpoints, midnight, filename):
         graph(x, y, xt, yt, filename=filename, rotation=0)
 
 
-def create_90day_graph(dpoints, midnight, filename):
+def create_100day_graph(dpoints, midnight, filename):
     data = [
-        (float(i[0]), dt.strptime(i[1], "%Y-%m-%d %H:%M:%S"))
+        (float(i[0]), float(i[1]))
         for i in dpoints
-        if delta(days=1)
-        <= dt.today().date() - dt.strptime(i[1], "%Y-%m-%d %H:%M:%S").date()
-        <= delta(days=90)
+        if (midnight - 24 * 3600 * 100) <= float(i[1]) <= midnight
     ]
-    x = [(i[1].timestamp() - midnight) / 3600 / 24 for i in data]
+
+    x = [(i[1] - midnight) / 3600 / 24 for i in data]
     y = [i[0] for i in data]
-    
+
     if y:
         min_axis_y = round(min(y) - 0.05, 2)
         max_axis_y = round(max(y) + 0.05, 2)
-        xticks = ([i for i in range(-90, 1, 10)], [i for i in range(-90, 1, 10)])
+        xticks = ([i for i in range(-100, 1, 10)], [i for i in range(-100, 1, 10)])
         yticks = [
             round(i / 1000, 2)
             for i in range(int(min_axis_y * 1000), int(max_axis_y * 1000), 20)
         ]
         graph(x, y, xticks, yticks, filename=filename, rotation=90)
-    
 
 
 def graph(x, y, xt, yt, filename, rotation):
@@ -267,12 +292,10 @@ def first_daily_run():
         return True
 
 
-DATA_STRUCTURE_FILE = "data_structure.json"
-ACTIVE_FILE = "TDC.txt"
-AVG_VENTA_FILE = "AVG_Venta.txt"
-AVG_COMPRA_FILE = "AVG_Compra.txt"
-WEB_VENTA_FILE = "WEB_Venta.json"
-WEB_COMPRA_FILE = "WEB_Compra.json"
+DATA_STRUCTURE_FILE = "dataStructure.json"
+ACTIVE_FILE = "recentQuotes.txt"
+MEDIAN_FILE = "historicMedians.txt"
+WEB_MAIN_FILE = "web000.json"
 STATS_FILE = "stats.json"
 
 
@@ -284,4 +307,4 @@ with open(DATA_STRUCTURE_FILE, "r", encoding="utf-8") as file:
     fintechs = json.load(file)["fintechs"]
 
 analysis1(fintechs, data)
-# analysis2(fintechs, data)
+#analysis2(fintechs, data)
