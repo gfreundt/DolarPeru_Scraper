@@ -15,11 +15,11 @@ def analysis1(fintechs, data):
     process = [
         {
             "quote": 1,
-            "quote_type": "venta",
+            "quote_type": "compra",
         },
         {
             "quote": 2,
-            "quote_type": "compra",
+            "quote_type": "venta",
         },
     ]
     median_file_record = ["000"]  # Useless data to maintain structure
@@ -53,7 +53,9 @@ def analysis1(fintechs, data):
                 "mejor": f"{mejor:.4f}",
                 "promedio": f"{meantc:.4f}",
                 "consultas": len(datapoints),
-                "timestamp": last_timestamp,
+                "fecha": dt.fromtimestamp(float(last_timestamp)).strftime('%d-%m-%Y'),
+                "hora": dt.fromtimestamp(float(last_timestamp)).strftime("%H:%M:%S"),
+                "timestamp": last_timestamp
             }
         }
         # Part 2: Add latest quote from all available Fintechs inside band
@@ -84,7 +86,6 @@ def analysis1(fintechs, data):
         ]        
         dump.update({"excluidos": details})
         web_data.update({proc["quote_type"]: dump})
-
 
     median_file_record.append(time_date)
 
@@ -134,12 +135,16 @@ def analysis2(fintechs, data):
             if dpoints:
                 info = {
                     "datos": {
+                        "id": id,
                         "name": f["name"],
                         "link": f["link"],
                         "image": f["image"],
                         "contacto": f["contacto"],
                         "registro_SBS": f["registro_SBS"],
                         "bancos": f["bancos"],
+                        "RUC": f["RUC"],
+                        "App_iOS": f["App_iOS"],
+                        "App_Android": f["App_Android"]
                     }
                 }
                 # insert up to last 50 records
@@ -169,11 +174,11 @@ def analysis2(fintechs, data):
                 process = [
                     {
                         "quote": 1,
-                        "quote_type": "venta",
+                        "quote_type": "compra",
                     },
                     {
                         "quote": 2,
-                        "quote_type": "compra",
+                        "quote_type": "venta",
                     },
                 ]
                 for proc in process:
@@ -277,7 +282,7 @@ def graph(x, y, xt, yt, filename, rotation):
     plt.yticks(yt, color="#606060", fontsize=8)
     plt.grid(color="#DFD8DF")
     plt.savefig(
-        os.path.join("C:/pythonCode/DolarPeru_data/", filename),
+        os.path.join("D:/pythonCode/DolarPeru_data/", filename),
         pad_inches=0,
         bbox_inches="tight",
         transparent=True,
@@ -286,8 +291,7 @@ def graph(x, y, xt, yt, filename, rotation):
 
 
 def first_daily_run():
-    return True
-    # ONLY FOR TESTING
+    return True  # ONLY FOR TESTING
     if dt.now().hour <= 7 and dt.now().minute < 15:
         return True
 
@@ -299,7 +303,7 @@ WEB_MAIN_FILE = "web000.json"
 STATS_FILE = "stats.json"
 
 
-os.chdir(r"C:\pythonCode\DolarPeru_data")
+os.chdir(r"D:\pythonCode\DolarPeru_data")
 
 with open(ACTIVE_FILE, mode="r") as file:
     data = [i for i in csv.reader(file, delimiter=",")]
@@ -307,4 +311,4 @@ with open(DATA_STRUCTURE_FILE, "r", encoding="utf-8") as file:
     fintechs = json.load(file)["fintechs"]
 
 analysis1(fintechs, data)
-#analysis2(fintechs, data)
+analysis2(fintechs, data)
