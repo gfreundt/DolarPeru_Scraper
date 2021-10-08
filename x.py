@@ -66,7 +66,7 @@ def avg(file1="AVG_Venta.txt", file2="AVG_Compra.txt"):
         _ = [writer.writerow(i) for i in final]
 
 
-os.chdir("c:/pythonCode/DolarPeru_data")
+os.chdir("d:/pythonCode/DolarPeru_data")
 fromprod()
 vault()
 avg()
