@@ -1,4 +1,6 @@
-import csv, os, json
+import csv
+import os
+import json
 import matplotlib as plt
 import matplotlib.pyplot as plt
 from statistics import mean, median
@@ -53,9 +55,9 @@ def analysis1(fintechs, data):
                 "mejor": f"{mejor:.4f}",
                 "promedio": f"{meantc:.4f}",
                 "consultas": len(datapoints),
-                "fecha": dt.fromtimestamp(float(last_timestamp)).strftime('%d-%m-%Y'),
+                "fecha": dt.fromtimestamp(float(last_timestamp)).strftime("%d-%m-%Y"),
                 "hora": dt.fromtimestamp(float(last_timestamp)).strftime("%H:%M:%S"),
-                "timestamp": last_timestamp
+                "timestamp": last_timestamp,
             }
         }
         # Part 2: Add latest quote from all available Fintechs inside band
@@ -65,7 +67,8 @@ def analysis1(fintechs, data):
                 "id": f,
                 "value": f"{datapoints[f]:0<6}",
             }
-            for f in datapoints.keys() if band_min <= datapoints[f] <= band_max
+            for f in datapoints.keys()
+            if band_min <= datapoints[f] <= band_max
         ]
         details = [
             i
@@ -82,8 +85,9 @@ def analysis1(fintechs, data):
                 "id": f,
                 "value": f"{datapoints[f]:0<6}",
             }
-            for f in datapoints.keys() if not (band_min <= datapoints[f] <= band_max)
-        ]        
+            for f in datapoints.keys()
+            if not (band_min <= datapoints[f] <= band_max)
+        ]
         dump.update({"excluidos": details})
         web_data.update({proc["quote_type"]: dump})
 
@@ -124,7 +128,7 @@ def analysis1(fintechs, data):
 
 def analysis2(fintechs, data):
     """
-    Creates individual web files for each fintech and its corresponding graph. Creates stats file.
+    Creates individual web files for each fintech and its corresponding graph.
     """
     midnight = dt.now().replace(hour=0, minute=0, second=0, microsecond=0).timestamp()
     for f in tqdm(fintechs):
@@ -144,7 +148,7 @@ def analysis2(fintechs, data):
                         "bancos": f["bancos"],
                         "RUC": f["RUC"],
                         "App_iOS": f["App_iOS"],
-                        "App_Android": f["App_Android"]
+                        "App_Android": f["App_Android"],
                     }
                 }
                 # insert up to last 50 records
@@ -187,31 +191,63 @@ def analysis2(fintechs, data):
                     ]  # select compra/venta and timestamp
 
                     create_intraday_graph(
-                        points, midnight, filename=f"graph{id}-{proc['quote_type']}-intraday.png"
+                        points,
+                        midnight,
+                        filename=f"graph{id}-{proc['quote_type']}-intraday.png",
                     )
                     if first_daily_run():
                         create_7day_graph(
-                            points, midnight, filename=f"graph{id}-{proc['quote_type']}-7days.png"
+                            points,
+                            midnight,
+                            filename=f"graph{id}-{proc['quote_type']}-7days.png",
                         )
                         create_100day_graph(
-                            points, midnight, filename=f"graph{id}-{proc['quote_type']}-100days.png"
+                            points,
+                            midnight,
+                            filename=f"graph{id}-{proc['quote_type']}-100days.png",
                         )
 
-    # Create stats file
-    meta = {"date": data[-1][3][:10], "time": data[-1][3][11:]}
-    results = []
-    times = sorted(set([i[2] for i in data]))
-    for t in list(times)[-2:]:
-        results.append(
-            {t: [{i[0]: {"Compra": i[3], "Venta": i[1]} for i in data if t == i[2]}]}
+
+def analysis3(fintechs, data):
+    """
+    Creates stats file.
+    """
+    TS_COUNT = 20
+    meta = {
+        "timestamp": int(dt.now().timestamp()),
+        "time": dt.strftime(dt.now(), "%H:%M:%S"),
+        "date": dt.strftime(dt.now(), "%Y-%m-%d"),
+    }
+
+    # create list of last 100 timestamps (newer to older)
+    ts_list = list(
+        sorted(set([i[-1] for i in data]), reverse=True))[-TS_COUNT:]
+    activity = {"scraper_count": TS_COUNT}
+    scraper = []
+    for fintech in fintechs:
+        id = f'{fintech["id"]:03d}'
+        ts_fintech = [i[-1] for i in data if i[0] == id]
+        latest = ["K" if i in ts_fintech else "E" for i in ts_list]
+        success = (latest.count("K")) / TS_COUNT
+
+        scraper.append(
+            {
+                "id": id,
+                "name": fintech["name"],
+                "success": success,
+                "latest": latest,
+            }
         )
-    final_json = {"meta": meta, "results": results}
+    final_json = {"meta": meta, "activity": activity,
+                  "scraper_results": scraper}
+
     with open(STATS_FILE, mode="w") as outfile:
-        outfile.write(json.dumps(final_json))
+        outfile.write(json.dumps(final_json, indent=4))
 
 
 def create_intraday_graph(dpoints, midnight, filename):
-    data = [(float(i[0]), float(i[1])) for i in dpoints if float(i[1]) > midnight]
+    data = [(float(i[0]), float(i[1]))
+            for i in dpoints if float(i[1]) > midnight]
     x = [(i[1] - midnight) / 3600 for i in data]
     y = [i[0] for i in data]
     if y:
@@ -260,7 +296,8 @@ def create_100day_graph(dpoints, midnight, filename):
     if y:
         min_axis_y = round(min(y) - 0.05, 2)
         max_axis_y = round(max(y) + 0.05, 2)
-        xticks = ([i for i in range(-100, 1, 10)], [i for i in range(-100, 1, 10)])
+        xticks = ([i for i in range(-100, 1, 10)],
+                  [i for i in range(-100, 1, 10)])
         yticks = [
             round(i / 1000, 2)
             for i in range(int(min_axis_y * 1000), int(max_axis_y * 1000), 20)
@@ -310,5 +347,6 @@ with open(ACTIVE_FILE, mode="r") as file:
 with open(DATA_STRUCTURE_FILE, "r", encoding="utf-8") as file:
     fintechs = json.load(file)["fintechs"]
 
-analysis1(fintechs, data)
-analysis2(fintechs, data)
+# analysis1(fintechs, data)
+# analysis2(fintechs, data)
+analysis3(fintechs, data)
