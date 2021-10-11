@@ -1,6 +1,11 @@
 # erase
-import csv, json, os, shutil
+import csv
+import json
+import os
+import shutil
 from datetime import datetime as dt
+
+from analysis import ROOT_FOLDER
 
 
 def fromprod():
@@ -15,7 +20,7 @@ def vault():
     with open("TDC_Vault.txt", "r", encoding="utf-8") as file:
         data = [i for i in csv.reader(file)]
 
-    with open("dataStructure.json", "r", encoding="utf-8") as file:
+    with open(os.path.join(ROOT_FOLDER, "DolarPeru_Scraper", "dataStructure.json"), "r", encoding="utf-8") as file:
         fintechs = json.load(file)["fintechs"]
 
     ind = {i["link"]: f'{i["id"]:03d}' for i in fintechs}
@@ -39,7 +44,7 @@ def vault():
 
     with open("recentQuotes.txt", "w", encoding="utf-8", newline="") as file:
         writer = csv.writer(file, delimiter=",")
-        _ = [writer.writerow(i) for i in final[-100000:]]
+        _ = [writer.writerow(i) for i in final[-300000:]]
 
 
 def avg(file1="AVG_Venta.txt", file2="AVG_Compra.txt"):
@@ -66,7 +71,14 @@ def avg(file1="AVG_Venta.txt", file2="AVG_Compra.txt"):
         _ = [writer.writerow(i) for i in final]
 
 
-os.chdir("d:/pythonCode/DolarPeru_data")
+def eraseworkingfiles():
+    for f in ("AVG_Venta.txt", "AVG_Compra.txt", "TDC_Vault.txt"):
+        os.remove(f)
+
+
+ROOT_FOLDER = r"d:/pythonCode"
+os.chdir(os.path.join(ROOT_FOLDER, "DolarPeru_data"))
 fromprod()
 vault()
 avg()
+eraseworkingfiles()
