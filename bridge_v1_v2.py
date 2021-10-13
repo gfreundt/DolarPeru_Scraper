@@ -1,11 +1,9 @@
-# erase
+import platform
 import csv
 import json
 import os
 import shutil
 from datetime import datetime as dt
-
-from analysis import ROOT_FOLDER
 
 
 def fromprod():
@@ -75,10 +73,20 @@ def eraseworkingfiles():
     for f in ("AVG_Venta.txt", "AVG_Compra.txt", "TDC_Vault.txt"):
         os.remove(f)
 
+def copygraphs():
+    for f in os.listdir(os.path.join("graphs")):
+        shutil.copyfile(
+            os.path.join(ROOT_FOLDER, "DolarPeru_data", "graphs", f),
+            os.path.join(ROOT_FOLDER, "DolarPeru_Web", "static", "graphs", f)
+        )
 
-ROOT_FOLDER = r"d:/pythonCode"
+if "POWER" in platform.node().upper():
+    ROOT_FOLDER = r"D:/pythonCode"
+else:
+    ROOT_FOLDER = r"C:/pythonCode"
 os.chdir(os.path.join(ROOT_FOLDER, "DolarPeru_data"))
 fromprod()
 vault()
 avg()
 eraseworkingfiles()
+copygraphs()
