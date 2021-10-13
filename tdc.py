@@ -1,4 +1,9 @@
-import os, sys, platform, csv, json, time
+import os
+import sys
+import platform
+import csv
+import json
+import time
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 from datetime import datetime as dt, timedelta as delta
@@ -40,7 +45,8 @@ class Basics:
             print("Cannot Determine System Type")
             quit()
 
-        self.DATA_STRUCTURE_FILE = os.path.join(sys_main_path, "data_structure.json")
+        self.DATA_STRUCTURE_FILE = os.path.join(
+            sys_main_path, "data_structure.json")
         self.GCLOUD_KEYS = os.path.join(sys_root_path, "gcloud_keys.json")
         self.LAST_USE_FILE = os.path.join(sys_data_path, "last_use.txt")
         self.VAULT_FILE = os.path.join(sys_data_path, "TDC_Vault.txt")
@@ -119,7 +125,8 @@ def get_source(fintech, options, k):
                 time.sleep(fintech["sleep"])
                 info.append(
                     extract(
-                        driver.find_element_by_xpath(fintech[quote]["xpath"]).text,
+                        driver.find_element_by_xpath(
+                            fintech[quote]["xpath"]).text,
                         fintech[quote],
                     )
                 )
@@ -131,15 +138,18 @@ def get_source(fintech, options, k):
         active.results.append(
             {"Link": fintech["link"], "Compra": info[0], "Venta": info[1]}
         )
-        active.dashboard.append({"ID": k, "Status": "Add", "Fintech": fintech["name"]})
+        active.dashboard.append(
+            {"ID": k, "Status": "Add", "Fintech": fintech["name"]})
         active.good += 1
     else:
         ext = fintech["bench"]
         if ext:
-            info = (active.bench[ext + "_compra"], active.bench[ext + "_venta"])
+            info = (active.bench[ext + "_compra"],
+                    active.bench[ext + "_venta"])
             if sanity_check(info):
                 active.results.append(
-                    {"Link": fintech["link"], "Compra": info[0], "Venta": info[1]}
+                    {"Link": fintech["link"],
+                        "Compra": info[0], "Venta": info[1]}
                 )
                 active.dashboard.append(
                     {"ID": k, "Status": "Add", "Fintech": fintech["name"]}
@@ -173,7 +183,8 @@ def clean(text):
 
 def extract(source, fintech):
     init = 0
-    text = source[init + fintech["extract_start"] : init + fintech["extract_end"]]
+    text = source[init + fintech["extract_start"]
+        : init + fintech["extract_end"]]
     return clean(text)
 
 
@@ -181,7 +192,8 @@ def save():
     with open(active.VAULT_FILE, mode="a", encoding="utf-8", newline="\n") as file:
         data = csv.writer(file, delimiter=",")
         for f in active.results:
-            data.writerow([f["Link"], f["Venta"], active.time_date, f["Compra"]])
+            data.writerow(
+                [f["Link"], f["Venta"], active.time_date, f["Compra"]])
 
 
 def upload_to_bucket(
@@ -214,189 +226,6 @@ def file_extract_recent(n):
                 data2.writerow(lines)
 
 
-def analysis():
-    with open(active.ACTIVE_FILE, mode="r") as file:
-        data = [i for i in csv.reader(file, delimiter=",")]
-        # fintechs = [i['link'] for i in active.fintechs]
-    for quote, avg_filename, web_filename, graph_filename in zip(
-        [1, 3],
-        [active.AVG_VENTA_FILE, active.AVG_COMPRA_FILE],
-        [active.WEB_VENTA_FILE, active.WEB_COMPRA_FILE],
-        ["vta", "compra"],
-    ):
-        this_time = data[-1][2]  # Loads latest quote datetime
-        datapoints = {
-            i[0]: float(i[quote])
-            for i in data
-            if i[2] == this_time and float(i[quote]) > 0
-        }
-
-        # Update every time the code runs
-
-        # Add Averages to Dataset
-        meantc = round(mean([datapoints[i] for i in datapoints.keys()]), 4)
-        mediantc = round(median([datapoints[i] for i in datapoints.keys()]), 4)
-        # Append Text File with new Average
-        item = [f"{meantc:.4f}", active.time_date]
-        with open(avg_filename, mode="a", newline="") as file:
-            csv.writer(file, delimiter=",").writerow(item)
-        # Create Text File for Web
-        datax = [
-            {
-                "image": [i["image"] for i in active.fintechs if i["link"] == f][0],
-                "name": f,
-                "value": f"{datapoints[f]:0<6}",
-            }
-            for f in datapoints.keys()
-        ]
-        with open(web_filename, mode="w", newline="") as json_file:
-            if quote == 1:  # Venta
-                mejor = round(min([datapoints[i] for i in datapoints.keys()]), 4)
-                details = [
-                    i
-                    for i in sorted(datax, key=lambda x: x["value"])
-                    if i["value"] != "0.0000"
-                ]
-            else:  # Compra
-                mejor = round(max([datapoints[i] for i in datapoints.keys()]), 4)
-                details = [
-                    i
-                    for i in sorted(datax, key=lambda x: x["value"], reverse=True)
-                    if i["value"] != "0.0000"
-                ]
-            # Append Averages, Best, Count of datapoints and Time/Date
-            dump = {
-                "head": {
-                    "mediana": f"{mediantc:.4f}",
-                    "mejor": f"{mejor:.4f}",
-                    "promedio": f"{meantc:.4f}",
-                    "consultas": f"{len(datapoints.keys())}",
-                    "time": data[-1][2][-8:],
-                    "date": data[-1][2][:10],
-                }
-            }  # tc, cantidad de fintechs, time, date
-            # Append latest from each fintech
-            dump.update({"details": details})
-            json.dump(dump, json_file)
-        # Intraday Graph
-        with open(avg_filename, mode="r") as file:
-            datax = [i for i in csv.reader(file, delimiter=",")]
-        data_avg_today = [
-            (float(i[0]), dt.strptime(i[1], "%Y-%m-%d %H:%M:%S"))
-            for i in datax
-            if dt.strptime(i[1], "%Y-%m-%d %H:%M:%S").date() == dt.today().date()
-        ]
-        datetime_midnight = (
-            dt.now().replace(hour=0, minute=0, second=0, microsecond=0).timestamp()
-        )
-        x = [(i[1].timestamp() - datetime_midnight) / 3600 for i in data_avg_today]
-        y = [i[0] for i in data_avg_today]
-        mid_axis_y = round((max(y) + min(y)) / 2, 2)
-        min_axis_y, max_axis_y = mid_axis_y - 0.05, mid_axis_y + 0.05
-        axis = (int(x[0]), 22, min_axis_y, max_axis_y)
-        xt = (range(axis[0], axis[1]), range(axis[0], axis[1]))
-        yt = [
-            i / 1000 for i in range(int(axis[2] * 1000), int(axis[3] * 1000) + 10, 10)
-        ]
-        graph(x, y, xt, yt, axis=axis, filename=f"intraday-{graph_filename}.png")
-        # Create stats file
-        meta = {"date": data[-1][2][:10], "time": data[-1][2][11:]}
-        results = []
-        times = sorted(set([i[2] for i in data]))
-        for t in list(times)[-20:]:
-            results.append(
-                {
-                    t: [
-                        {
-                            i[0]: {"Compra": i[3], "Venta": i[1]}
-                            for i in data
-                            if t == i[2]
-                        }
-                    ]
-                }
-            )
-        final_json = {"Meta": meta, "Results": results}
-        with open(active.STATS_FILE, mode="w") as outfile:
-            outfile.write(json.dumps(final_json))
-
-        # Update only on first run of the day
-
-        if (
-            dt.now().hour <= 7 and dt.now().minute < 15
-        ) or "DAILY-NOW" in active.switches:
-            # Last 5 days Graph
-            data_5days = [
-                (float(i[0]), dt.strptime(i[1], "%Y-%m-%d %H:%M:%S"))
-                for i in datax
-                if delta(days=1)
-                <= dt.today().date() - dt.strptime(i[1], "%Y-%m-%d %H:%M:%S").date()
-                <= delta(days=5)
-            ]
-            x = [(i[1].timestamp() - datetime_midnight) / 3600 / 24 for i in data_5days]
-            y = [i[0] for i in data_5days]
-            mid_axis_y = round((max(y) + min(y)) / 2, 2)
-            min_axis_y, max_axis_y = mid_axis_y - 0.075, mid_axis_y + 0.075
-            axis = (-5, 0, min_axis_y, max_axis_y)
-            days_week = ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"] * 2
-            xt = (
-                [days_week[i + dt.today().weekday() + 1] for i in range(-5, 1)],
-                [i for i in range(-5, 1)],
-            )
-            yt = [
-                round(i / 1000, 2)
-                for i in range(int(axis[2] * 1000), int(axis[3] * 1000) + 10, 10)
-            ]
-            graph(x, y, xt, yt, axis=axis, filename=f"last5days-{graph_filename}.png")
-            # Last 30 days Graph
-            data_30days = [
-                (float(i[0]), dt.strptime(i[1], "%Y-%m-%d %H:%M:%S"))
-                for i in datax
-                if delta(days=1)
-                <= dt.today().date() - dt.strptime(i[1], "%Y-%m-%d %H:%M:%S").date()
-                <= delta(days=30)
-            ]
-            x = [
-                (i[1].timestamp() - datetime_midnight) / 3600 / 24 for i in data_30days
-            ]
-            y = [i[0] for i in data_30days]
-            mid_axis_y = round((max(y) + min(y)) / 2, 2)
-            min_axis_y, max_axis_y = mid_axis_y - 0.2, mid_axis_y + 0.2
-            axis = (-5, 0, min_axis_y, max_axis_y)
-            xt = ([i for i in range(-30, 1, 2)], [i for i in range(-30, 1, 2)])
-            yt = [
-                round(i / 1000, 2)
-                for i in range(int(axis[2] * 1000), int(axis[3] * 1000) + 10, 20)
-            ]
-            graph(x, y, xt, yt, axis=axis, filename=f"last30days-{graph_filename}.png")
-
-            # Backup data to Google Drive
-            if "NOTEST" in active.switches and "NOBACK" not in active.switches:
-                backup_to_gdrive()
-
-
-def graph(x, y, xt, yt, axis, filename):
-    plt.rcParams["figure.figsize"] = (4, 2.5)
-    plt.plot(x, y)
-    ax = plt.gca()
-    ax.set_facecolor("#F5F1F5")
-    ax.spines["bottom"].set_color("#DFD8DF")
-    ax.spines["top"].set_color("#DFD8DF")
-    ax.spines["left"].set_color("white")
-    ax.spines["right"].set_color("#DFD8DF")
-    plt.tick_params(axis="both", length=0)
-    plt.axis(axis)
-    plt.xticks(xt[1], xt[0], color="#606060", fontsize=8)
-    plt.yticks(yt, color="#606060", fontsize=8)
-    plt.grid(color="#DFD8DF")
-    plt.savefig(
-        os.path.join(active.DATA_PATH, filename),
-        pad_inches=0,
-        bbox_inches="tight",
-        transparent=True,
-    )
-    plt.close()
-
-
 def last_use(t):
     with open(active.LAST_USE_FILE, "w") as file:
         file.write(active.time_date + t)
@@ -421,11 +250,11 @@ def main():
             i.join() for i in all_threads
         ]  # Ensures all threads end before moving forward
         save()
-        file_extract_recent(9800)
+        #TODO: file_extract_recent(9800)
         print(f"Good: {active.good} | Bad: {active.bad}")
         for d in sorted(active.dashboard, key=lambda i: i["ID"]):
             print(d)
-    analysis()
+    #TODO: analysis()
     if "UPLOAD" in active.switches:
         upload_to_bucket()
 
