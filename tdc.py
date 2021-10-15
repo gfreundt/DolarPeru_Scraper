@@ -46,17 +46,13 @@ class Basics:
             quit()
 
         self.DATA_STRUCTURE_FILE = os.path.join(
-            sys_main_path, "data_structure.json")
+            sys_main_path, "dataStructure.json")
         self.GCLOUD_KEYS = os.path.join(sys_root_path, "gcloud_keys.json")
         self.LAST_USE_FILE = os.path.join(sys_data_path, "last_use.txt")
-        self.VAULT_FILE = os.path.join(sys_data_path, "TDC_Vault.txt")
+        self.VAULT_FILE = os.path.join(sys_data_path, "historicQuotes.txt")
         self.ACTIVE_FILE = os.path.join(sys_data_path, "TDC.txt")
-        self.WEB_VENTA_FILE = os.path.join(sys_data_path, "WEB_Venta.json")
-        self.WEB_COMPRA_FILE = os.path.join(sys_data_path, "WEB_Compra.json")
-        self.AVG_VENTA_FILE = os.path.join(sys_data_path, "AVG_Venta.txt")
-        self.AVG_COMPRA_FILE = os.path.join(sys_data_path, "AVG_Compra.txt")
-        self.STATS_FILE = os.path.join(sys_data_path, "stats.json")
-        self.time_date = dt.now().strftime("%Y-%m-%d %H:%M:%S")
+        self.AVG_FILE = os.path.join(sys_data_path, "historicMedians.txt")
+        self.timestamp = int(dt.now().timestamp())
         self.results = []
         self.dashboard = []
         self.bench = bench.main("https://cuantoestaeldolar.pe")
@@ -66,14 +62,14 @@ class Basics:
     def which_system(self):
         if "NOTEST" in self.switches:
             systems = [
-                {"name": "GFT-Tablet", "root_path": r"C:\prodCode"},
+                {"name": "power", "root_path": r"D:\prodCode"},
                 {"name": "laptop", "root_path": r"C:\prodCode"},
                 {"name": "desktop", "root_path": "/home/gabfre/prodCode"},
                 {"name": "gft-vps", "root_path": "/root/prodCode"}
             ]
         else:
             systems = [
-                {"name": "GFT-Tablet", "root_path": r"C:\pythonCode"},
+                {"name": "power", "root_path": r"D:\pythonCode"},
                 {"name": "laptop", "root_path": r"C:\pythonCode"},
                 {"name": "desktop", "root_path": "/home/gabfre/pythonCode"},
                 {"name": "gft-vps", "root_path": "/root/pythonCode"}
@@ -136,7 +132,7 @@ def get_source(fintech, options, k):
     driver.quit()
     if info and info[0] != "" and sanity_check(info):
         active.results.append(
-            {"Link": fintech["link"], "Compra": info[0], "Venta": info[1]}
+            {"ID": f'{fintech["id"]:03d}', "Compra": info[0], "Venta": info[1]}
         )
         active.dashboard.append(
             {"ID": k, "Status": "Add", "Fintech": fintech["name"]})
@@ -148,7 +144,7 @@ def get_source(fintech, options, k):
                     active.bench[ext + "_venta"])
             if sanity_check(info):
                 active.results.append(
-                    {"Link": fintech["link"],
+                    {"ID": f'{fintech["id"]:03d}',
                         "Compra": info[0], "Venta": info[1]}
                 )
                 active.dashboard.append(
@@ -193,7 +189,7 @@ def save():
         data = csv.writer(file, delimiter=",")
         for f in active.results:
             data.writerow(
-                [f["Link"], f["Venta"], active.time_date, f["Compra"]])
+                [f["ID"], f["Compra"], f["Venta"], active.timestamp])
 
 
 def upload_to_bucket(
@@ -226,9 +222,9 @@ def file_extract_recent(n):
                 data2.writerow(lines)
 
 
-def last_use(t):
+def last_use():
     with open(active.LAST_USE_FILE, "w") as file:
-        file.write(active.time_date + t)
+        file.write(str(active.timestamp))
 
 
 def main():
@@ -262,5 +258,5 @@ def main():
 start = dt.now()
 active = Basics()
 main()
-last_use(f" Time: {dt.now()-start}.")
+last_use()
 print(f"Time: {dt.now()-start}.")

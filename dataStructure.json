@@ -443,18 +443,18 @@
          "bench": "",
          "sleep": 1,
          "compra": {
-            "xpath": "/html/body/poly-root/poly-feature-layout/div/div/landing-root/landing-main/div[1]/landing-engine/section/div[1]/div/div[2]/div/div/landing-form-exchange/div/form/div[2]/div[1]/div/span[2]",
+            "xpath": "/html/body/poly-root/poly-feature-layout/div/div/landing-root/landing-main/div[1]/landing-engine/section/div[1]/div/div[2]/div/landing-form-exchange/div/form/div[2]/div[1]/form-exchange-type[1]/div/div/div/div/span",
             "click": false,
             "click_xpath": "",
-            "extract_start": 3,
-            "extract_end": 9
+            "extract_start": 4,
+            "extract_end": 10
          },
          "venta": {
-            "xpath": "/html/body/poly-root/poly-feature-layout/div/div/landing-root/landing-main/div[1]/landing-engine/section/div[1]/div/div[2]/div/div/landing-form-exchange/div/form/div[2]/div[3]/div/span[2]",
+            "xpath": "/html/body/poly-root/poly-feature-layout/div/div/landing-root/landing-main/div[1]/landing-engine/section/div[1]/div/div[2]/div/landing-form-exchange/div/form/div[2]/div[1]/form-exchange-type[2]/div/div/div/div/span",
             "click": false,
             "click_xpath": "",
-            "extract_start": 3,
-            "extract_end": 9
+            "extract_start": 4,
+            "extract_end": 10
          },
          "image": "cocosylucas.svg",
          "bancos": {
@@ -2645,7 +2645,7 @@
          "name": "Buenbit",
          "url": "https://www.buenbit.com/es-PE/",
          "link": "https://www.buenbit.com/es-PE/",
-         "bench": "https://cuantoestaeldolar.pe/",
+         "bench": "buenbit",
          "sleep": 1,
          "compra": {
             "xpath": "",
@@ -2690,7 +2690,7 @@
          "name": "Tu Cambio Total",
          "url": "https://tucambiototal.com/",
          "link": "https://tucambiototal.com/",
-         "bench": "https://cuantoestaeldolar.pe/",
+         "bench": "tucambiototal",
          "sleep": 1,
          "compra": {
             "xpath": "",
