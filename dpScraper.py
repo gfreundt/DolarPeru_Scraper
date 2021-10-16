@@ -17,7 +17,7 @@ from selenium.webdriver.common.by import By
 import threading
 from google.cloud import storage
 import bench
-import analysis
+import dpAnalysis
 
 
 # Switches:	NOTEST = work with production data
@@ -250,7 +250,7 @@ def main():
         print(f"Good: {active.good} | Bad: {active.bad}")
         for d in sorted(active.dashboard, key=lambda i: i["ID"]):
             print(d)
-    analysis()
+    dpAnalysis.main()
     if "UPLOAD" in active.switches:
         upload_to_bucket()
 
