@@ -2,3 +2,5 @@ __pycache__/
 WEB_*.*
 chromedriver*.*
 virtualenv/
+first-daily-run.txt
+todo.txt
