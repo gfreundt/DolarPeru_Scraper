@@ -444,9 +444,6 @@ STATS_FILE = os.path.join(DATA_FOLDER, "stats.json")
 FIRST_DAILY_RUN = first_daily_run()
 fintechs, data, historic = load_data_from_files()
 
-if "1" in sys.argv:
-    analysis1(fintechs, data)
-if "2" in sys.argv:
-    analysis2(fintechs, data, historic)
-if "3" in sys.argv:
-    analysis3(fintechs, data)
+analysis1(fintechs, data)
+analysis2(fintechs, data, historic)
+analysis3(fintechs, data)

@@ -5,18 +5,19 @@ import csv
 import json
 import time
 import matplotlib.pyplot as plt
-import matplotlib as mpl
-from datetime import datetime as dt, timedelta as delta
+#import matplotlib as mpl
+from datetime import datetime as dt  # , timedelta as delta
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as WebDriverOptions
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.keys import Keys
+#from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from statistics import mean, median
+#from statistics import mean, median
 import threading
 from google.cloud import storage
 import bench
+import analysis
 
 
 # Switches:	NOTEST = work with production data
@@ -179,8 +180,7 @@ def clean(text):
 
 def extract(source, fintech):
     init = 0
-    text = source[init + fintech["extract_start"]
-        : init + fintech["extract_end"]]
+    text = source[init + fintech["extract_start"]                  : init + fintech["extract_end"]]
     return clean(text)
 
 
@@ -250,7 +250,7 @@ def main():
         print(f"Good: {active.good} | Bad: {active.bad}")
         for d in sorted(active.dashboard, key=lambda i: i["ID"]):
             print(d)
-    #TODO: analysis()
+    analysis()
     if "UPLOAD" in active.switches:
         upload_to_bucket()
 
@@ -258,5 +258,4 @@ def main():
 start = dt.now()
 active = Basics()
 main()
-last_use()
 print(f"Time: {dt.now()-start}.")
