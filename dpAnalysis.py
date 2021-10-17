@@ -3,11 +3,13 @@ import os
 import sys
 import json
 import platform
+from threading import local
 import matplotlib as plt
 import matplotlib.pyplot as plt
 from statistics import mean, median
 from datetime import datetime as dt
 from tqdm import tqdm
+from google.cloud import storage
 
 
 class Definitions:
@@ -24,8 +26,10 @@ class Definitions:
         self.ACTIVE_FILE = os.path.join(self.DATA_FOLDER, "recentQuotes.txt")
         self.MEDIAN_FILE = os.path.join(
             self.DATA_FOLDER, "historicMedians.txt")
-        self.WEB_MAIN_FILE = os.path.join(self.DATA_FOLDER, "web000.json")
+        self.WEB_MAIN_FILE = os.path.join(
+            self.WEBFILE_FOLDER, "webfile-000.json")
         self.STATS_FILE = os.path.join(self.DATA_FOLDER, "stats.json")
+        self.GCLOUD_KEYS = os.path.join(self.ROOT_FOLDER, "gcloud_keys.json")
 
         self.FIRST_DAILY_RUN = self.first_daily_run()
 
@@ -173,16 +177,16 @@ def analysis1(fintechs, data):
             (i[proc["quote"]], i[3]) for i in dpoints
         ]  # select compra/venta and timestamp
         create_intraday_graph(
-            points, 0, midnight, filename=f"graph000-{proc['quote_type']}-intraday.png"
+            points, 0, midnight, filename=f"graph-000-{proc['quote_type']}-intraday.png"
         )
         if active.FIRST_DAILY_RUN:
             # Last 7 days Graph
             create_7day_graph(
-                points, 0, midnight, filename=f"graph000-{proc['quote_type']}-7days.png"
+                points, 0, midnight, filename=f"graph-000-{proc['quote_type']}-7days.png"
             )
             # Last 100 days Graph
             create_100day_graph(
-                points, 0, midnight, filename=f"graph000-{proc['quote_type']}-100days.png"
+                points, 0, midnight, filename=f"graph-000-{proc['quote_type']}-100days.png"
             )
 
 
@@ -284,7 +288,7 @@ def analysis2(fintechs, data, historic):
 
 def analysis3(fintechs, data):
     """
-    Creates stats file.
+    Creates file with run statistics.
     """
     OK_SYMBOL = u'\u220e'
     TS_COUNT = 100
@@ -450,14 +454,46 @@ def ts_to_str(ts, format):
         return dt.strftime(dt.fromtimestamp(ts), "%Y-%m-%d")
 
 
-def main():
+def upload_to_gcloud_bucket():
+    print("Upload to Bucket")
+    bucket_path = "data-bucket-gft"  # test bucket_path = 'data-bucket-gft-devops'
+    client = storage.Client.from_service_account_json(
+        json_credentials_path=active.GCLOUD_KEYS
+    )
+    bucket = client.get_bucket(bucket_path)
+
+    local_paths = [os.path.join(i, j) for i in (
+        active.DATA_FOLDER, active.WEBFILE_FOLDER, active.GRAPH_FOLDER) for j in os.listdir(i) if os.path.isfile(os.path.join(i, j)) if not "txt" in j]
+
+    # Only update intraday graphs and web json files if not first run
+    local_paths = [
+        i for i in local_paths if not "days" in i] if not active.FIRST_DAILY_RUN else local_paths
+
+    for local_path in local_paths:
+        gcloud_path = local_path[13:].replace("\\", "/")
+        object_name_in_gcs_bucket = bucket.blob(gcloud_path)
+        object_name_in_gcs_bucket.cache_control = "no-store"
+        object_name_in_gcs_bucket.upload_from_filename(local_path)
+
+
+def backup_to_gdrive():
+    print("Backup to GDrive")
+    local_paths = [os.path.join(i, j) for i in (
+        active.DATA_FOLDER, active.WEBFILE_FOLDER, active.GRAPH_FOLDER) for j in os.listdir(i) if os.path.isfile(os.path.join(i, j)) if "txt" in j]
+    # TODO: finish!
+
+
+def main(UPLOAD):
     global active
     active = Definitions()
     fintechs, data, historic = load_data_from_files()
-    analysis1(fintechs, data)
     analysis2(fintechs, data, historic)
+    analysis1(fintechs, data)
     analysis3(fintechs, data)
+    if UPLOAD:
+        upload_to_gcloud_bucket()
+        backup_to_gdrive()
 
 
 if __name__ == "__main__":
-    main()
+    main(UPLOAD=False)

@@ -5,17 +5,16 @@ import csv
 import json
 import time
 import matplotlib.pyplot as plt
-#import matplotlib as mpl
+# import matplotlib as mpl
 from datetime import datetime as dt  # , timedelta as delta
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as WebDriverOptions
 from selenium.webdriver.support.ui import WebDriverWait
-#from selenium.webdriver.common.keys import Keys
+# from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-#from statistics import mean, median
+# from statistics import mean, median
 import threading
-from google.cloud import storage
 import bench
 import dpAnalysis
 
@@ -51,8 +50,10 @@ class Basics:
         self.GCLOUD_KEYS = os.path.join(sys_root_path, "gcloud_keys.json")
         self.LAST_USE_FILE = os.path.join(sys_data_path, "last_use.txt")
         self.VAULT_FILE = os.path.join(sys_data_path, "historicQuotes.txt")
-        self.ACTIVE_FILE = os.path.join(sys_data_path, "TDC.txt")
+        self.ACTIVE_FILE = os.path.join(sys_data_path, "recentQuotes.txt")
         self.AVG_FILE = os.path.join(sys_data_path, "historicMedians.txt")
+        self.GRAPH_FOLDER = os.path.join(self.DATA_PATH, "graphs")
+        self.WEBFILE_FOLDER = os.path.join(self.DATA_PATH, "webfiles")
         self.timestamp = int(dt.now().timestamp())
         self.results = []
         self.dashboard = []
@@ -180,7 +181,7 @@ def clean(text):
 
 def extract(source, fintech):
     init = 0
-    text = source[init + fintech["extract_start"]                  : init + fintech["extract_end"]]
+    text = source[init + fintech["extract_start"]: init + fintech["extract_end"]]
     return clean(text)
 
 
@@ -190,25 +191,6 @@ def save():
         for f in active.results:
             data.writerow(
                 [f["ID"], f["Compra"], f["Venta"], active.timestamp])
-
-
-def upload_to_bucket(
-    bucket_path="data-bucket-gft",
-):  # test bucket_path = 'data-bucket-gft-devops'
-    client = storage.Client.from_service_account_json(
-        json_credentials_path=active.GCLOUD_KEYS
-    )
-    bucket = client.get_bucket(bucket_path)
-    for file in os.listdir(active.DATA_PATH):
-        object_name_in_gcs_bucket = bucket.blob("/DolarPeru_data/" + file)
-        object_name_in_gcs_bucket.cache_control = "no-store"
-        object_name_in_gcs_bucket.upload_from_filename(
-            os.path.join(active.DATA_PATH, file)
-        )
-
-
-def backup_to_gdrive():
-    pass
 
 
 def file_extract_recent(n):
@@ -227,7 +209,7 @@ def last_use():
         file.write(str(active.timestamp))
 
 
-def main():
+def main(UPLOAD):
     if "ANALYSIS-ONLY" not in active.switches:
         options = set_options()
         all_threads = []
@@ -246,16 +228,15 @@ def main():
             i.join() for i in all_threads
         ]  # Ensures all threads end before moving forward
         save()
-        #TODO: file_extract_recent(9800)
+        file_extract_recent(50000)
         print(f"Good: {active.good} | Bad: {active.bad}")
         for d in sorted(active.dashboard, key=lambda i: i["ID"]):
             print(d)
-    dpAnalysis.main()
-    if "UPLOAD" in active.switches:
-        upload_to_bucket()
+    dpAnalysis.main(UPLOAD)
 
 
 start = dt.now()
 active = Basics()
-main()
+UPLOAD = True if "UPLOAD" in active.switches else False
+main(UPLOAD)
 print(f"Time: {dt.now()-start}.")
