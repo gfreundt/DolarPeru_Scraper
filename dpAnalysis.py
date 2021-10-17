@@ -470,7 +470,7 @@ def upload_to_gcloud_bucket():
         i for i in local_paths if not "days" in i] if not active.FIRST_DAILY_RUN else local_paths
 
     for local_path in local_paths:
-        gcloud_path = local_path[13:].replace("\\", "/")
+        gcloud_path = local_path[11:].replace("\\", "/")
         object_name_in_gcs_bucket = bucket.blob(gcloud_path)
         object_name_in_gcs_bucket.cache_control = "no-store"
         object_name_in_gcs_bucket.upload_from_filename(local_path)
