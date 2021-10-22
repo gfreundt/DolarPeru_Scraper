@@ -228,7 +228,7 @@ def main(UPLOAD):
             i.join() for i in all_threads
         ]  # Ensures all threads end before moving forward
         save()
-        file_extract_recent(50000)
+        file_extract_recent(150000)
         print(f"Good: {active.good} | Bad: {active.bad}")
         for d in sorted(active.dashboard, key=lambda i: i["ID"]):
             print(d)
