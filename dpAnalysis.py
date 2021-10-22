@@ -3,13 +3,15 @@ import os
 import sys
 import json
 import platform
-from threading import local
+#from threading import local
 import matplotlib as plt
 import matplotlib.pyplot as plt
 from statistics import mean, median
 from datetime import datetime as dt
 from tqdm import tqdm
 from google.cloud import storage
+from pydrive.auth import GoogleAuth
+from pydrive.drive import GoogleDrive
 
 
 class Definitions:
@@ -23,6 +25,8 @@ class Definitions:
 
         self.DATA_STRUCTURE_FILE = os.path.join(
             self.WORK_FOLDER, "dataStructure.json")
+        self.ALL_QUOTES_FILE = os.path.join(
+            self.DATA_FOLDER, "historicQuotes.txt")
         self.ACTIVE_FILE = os.path.join(self.DATA_FOLDER, "recentQuotes.txt")
         self.MEDIAN_FILE = os.path.join(
             self.DATA_FOLDER, "historicMedians.txt")
@@ -455,7 +459,7 @@ def ts_to_str(ts, format):
 
 
 def upload_to_gcloud_bucket():
-    print("Upload to Bucket")
+    print("Upload to Cloud Storage Bucket")
     bucket_path = "data-bucket-gft"  # test bucket_path = 'data-bucket-gft-devops'
     client = storage.Client.from_service_account_json(
         json_credentials_path=active.GCLOUD_KEYS
@@ -478,9 +482,17 @@ def upload_to_gcloud_bucket():
 
 def backup_to_gdrive():
     print("Backup to GDrive")
-    local_paths = [os.path.join(i, j) for i in (
-        active.DATA_FOLDER, active.WEBFILE_FOLDER, active.GRAPH_FOLDER) for j in os.listdir(i) if os.path.isfile(os.path.join(i, j)) if "txt" in j]
-    # TODO: finish!
+    gauth = GoogleAuth(settings_file=os.path.join(
+        active.WORK_FOLDER, "settings.yaml"))
+    drive = GoogleDrive(gauth)
+
+    upload_file_list = [active.ALL_QUOTES_FILE, active.MEDIAN_FILE]
+    for upload_file in upload_file_list:
+        gfile = drive.CreateFile(
+            {'title': os.path.basename(upload_file), 'parents': [{'id': '17YwVtlWzS_E9InB4EkyrpQ5P8JVL9Iyz'}]})
+        # Read file and set it as the content of this instance.
+        gfile.SetContentFile(upload_file)
+        gfile.Upload()
 
 
 def main(UPLOAD):
@@ -492,7 +504,8 @@ def main(UPLOAD):
     analysis3(fintechs, data)
     if UPLOAD:
         upload_to_gcloud_bucket()
-        backup_to_gdrive()
+        if active.FIRST_DAILY_RUN():
+            backup_to_gdrive()
 
 
 if __name__ == "__main__":
