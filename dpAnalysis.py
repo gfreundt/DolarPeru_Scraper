@@ -3,7 +3,6 @@ import os
 import sys
 import json
 import platform
-#from threading import local
 import matplotlib as plt
 import matplotlib.pyplot as plt
 from statistics import mean, median
@@ -303,11 +302,12 @@ def analysis3(fintechs, data):
         "date": ts_to_str(ts=ts, format="date"),
     }
 
-    # create list of last 100 timestamps (newer to older)
+    # create list of last TS_COUNT timestamps (newer to older)
     ts_list = list(
         sorted(set([i[-1] for i in data])))[-TS_COUNT:]
     activity = {"scraper_count": TS_COUNT, "scraper_headings": ts_list}
     scraper = []
+    total = [0]*TS_COUNT
     for fintech in fintechs:
         id = f'{fintech["id"]:03d}'
         ts_fintech = [i[-1] for i in data if i[0] == id]
@@ -324,6 +324,24 @@ def analysis3(fintechs, data):
                 "latest": latest,
             }
         )
+
+        # Add to total row
+        for k, i in enumerate(latest):
+            if i != " ":
+                total[k] += 1
+
+    total = [f'{i/len(fintechs):.0%}' for i in total]
+
+    scraper.append(
+        {
+            "id": 999,
+            "name": "Total",
+            "success": " ",
+            "color": "good",
+            "latest": total,
+        }
+    )
+
     final_json = {"meta": meta, "activity": activity,
                   "scraper_results": scraper}
 
@@ -504,7 +522,7 @@ def main(UPLOAD):
     analysis3(fintechs, data)
     if UPLOAD:
         upload_to_gcloud_bucket()
-        if active.FIRST_DAILY_RUN():
+        if active.FIRST_DAILY_RUN:
             backup_to_gdrive()
 
 
