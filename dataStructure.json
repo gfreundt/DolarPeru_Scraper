@@ -1,78 +1,4 @@
 {
-   "oficiales": [
-      {
-         "id": 1,
-         "online": true,
-         "name": "SBS",
-         "url": "https://www.sbs.gob.pe/",
-         "link": "https://www.sbs.gob.pe/",
-         "bench": null,
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/form/div[3]/main/div[1]/div/div[3]/div/div[1]/div/div/div/div/ul/li[1]/div[2]/table/tbody/tr/td[1]/div",
-            "click": false,
-            "click_xpath": null,
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/form/div[3]/main/div[1]/div/div[3]/div/div[1]/div/div/div/div/ul/li[1]/div[2]/table/tbody/tr/td[2]/div/div",
-            "click": false,
-            "click_xpath": null,
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "image": "sbs.svg"
-      },
-      {
-         "id": 2,
-         "online": true,
-         "name": "SUNAT",
-         "url": "https://www.sunat.gob.pe/",
-         "link": "https://www.sunat.gob.pe/",
-         "bench": null,
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/section[2]/div/div[2]/div/p[1]/strong",
-            "click": false,
-            "click_xpath": null,
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/section[2]/div/div[2]/div/p[2]/strong",
-            "click": false,
-            "click_xpath": null,
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "image": "sunat.png"
-      },
-      {
-         "id": 3,
-         "online": true,
-         "name": "BCRP",
-         "url": "https://www.bcrp.gob.pe/",
-         "link": "https://www.bcrp.gob.pe/",
-         "bench": null,
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[2]/section/div/div/div[3]/div[3]/div[1]/div/div[2]/table[1]/tbody/tr[2]/td[2]",
-            "click": false,
-            "click_xpath": null,
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/div[2]/section/div/div/div[3]/div[3]/div[1]/div/div[2]/table[1]/tbody/tr[2]/td[3]",
-            "click": false,
-            "click_xpath": null,
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "image": "bcrp.png"
-      }
-   ],
    "fintechs": [
       {
          "id": 1,
@@ -81,20 +7,23 @@
          "url": "https://acomo.com.pe/",
          "link": "https://acomo.com.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[2]/section[1]/div[3]/div/div[1]/div[1]/span[3]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 3,
-            "extract_end": 9
-         },
-         "venta": {
-            "xpath": "/html/body/div[2]/section[1]/div[3]/div/div[1]/div[3]/span[3]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 3,
-            "extract_end": 9
+         "scraper": {
+            "compra": {
+               "method": "PAGESOURCE",
+               "parameters": {
+                  "loc_text": ">Compra</span><br><span class=\"fs-20\" id=\"current_bid\">S/ ",
+                  "instance": 1,
+                  "extract_start": 0
+               }
+            },
+            "venta": {
+               "method": "PAGESOURCE",
+               "parameters": {
+                  "loc_text": ">Venta</span><br><span class=\"fs-20\" id=\"current_offer\">S/ ",
+                  "instance": 1,
+                  "extract_start": 0
+               }
+            }
          },
          "image": "acomo.png",
          "bancos": {
@@ -126,20 +55,27 @@
          "url": "https://www.midpointfx.com/",
          "link": "https://www.midpointfx.com/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[1]/div/div[3]/div/main/div/div/div/div[2]/div/div/div/div[1]/div[2]/div/div[6]/h1/span/span/span/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/div[1]/div/div[3]/div/main/div/div/div/div[2]/div/div/div/div[1]/div[2]/div/div[7]/h1/span/span/span/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/div/div[3]/div/main/div/div/div/div[2]/div/div/div/div[1]/div[2]/div/div[6]/h1/span/span/span/span",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/div/div[3]/div/main/div/div/div/div[2]/div/div/div/div[1]/div[2]/div/div[7]/h1/span/span/span/span",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            }
          },
          "image": "midpointfx.png",
          "bancos": {
@@ -171,20 +107,27 @@
          "url": "https://www.billex.pe/",
          "link": "https://www.billex.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[3]/div[2]/main/div/section/div/div/div[1]/div/div[1]/div/div/div[2]/div/div/div[1]/span[1]/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
-         },
-         "venta": {
-            "xpath": "/html/body/div[3]/div[2]/main/div/section/div/div/div[1]/div/div[1]/div/div/div[2]/div/div/div[1]/span[2]/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[3]/div[2]/main/div/section/div/div/div[1]/div/div[1]/div/div/div[2]/div/div/div[1]/span[1]/span",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 6
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[3]/div[2]/main/div/section/div/div/div[1]/div/div[1]/div/div/div[2]/div/div/div[1]/span[2]/span",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 6
+               }
+            }
          },
          "image": "billex.png",
          "bancos": {
@@ -216,20 +159,27 @@
          "url": "https://tkambio.com",
          "link": "https://tkambio.com",
          "bench": "tkambio",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[2]/div[2]/div/div[1]/div/div[1]/div[2]/div[2]/div[2]/div/span[2]/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/div[2]/div[2]/div/div[1]/div/div[1]/div[2]/div[2]/div[2]/div/span[4]/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[2]/div[2]/div/div[1]/div/div[1]/div[2]/div[2]/div[2]/div/span[2]/span",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[2]/div[2]/div/div[1]/div/div[1]/div[2]/div[2]/div[2]/div/span[4]/span",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            }
          },
          "image": "tkambio.svg",
          "bancos": {
@@ -261,20 +211,27 @@
          "url": "https://rextie.com",
          "link": "https://rextie.com",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/app-root/div/div/app-side-nav/mat-sidenav-container/mat-sidenav-content/app-home/app-save-money-partial/div/div/div[1]/div[2]/div/app-fx-rates/div/div/div[1]/div/div[1]/div[2]/span[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
-         },
-         "venta": {
-            "xpath": "/html/body/app-root/div/div/app-side-nav/mat-sidenav-container/mat-sidenav-content/app-home/app-save-money-partial/div/div/div[1]/div[2]/div/app-fx-rates/div/div/div[1]/div/div[2]/div[2]/span[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/app-root/div/div/app-side-nav/mat-sidenav-container/mat-sidenav-content/app-home/app-save-money-partial/div/div/div[1]/div[2]/div/app-fx-rates/div/div/div[1]/div/div[1]/div[2]/span[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 6
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/app-root/div/div/app-side-nav/mat-sidenav-container/mat-sidenav-content/app-home/app-save-money-partial/div/div/div[1]/div[2]/div/app-fx-rates/div/div/div[1]/div/div[2]/div[2]/span[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 6
+               }
+            }
          },
          "image": "rextie.png",
          "bancos": {
@@ -306,20 +263,27 @@
          "url": "https://kambista.com",
          "link": "https://kambista.com",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[2]/div/main/div/div/div/article/div/div[1]/div[3]/div/div/div[2]/div[1]/strong[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/div[2]/div/main/div/div/div/article/div/div[1]/div[3]/div/div/div[2]/div[1]/strong[3]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[2]/div/main/div/div/div/article/div/div[1]/div[3]/div/div/div[2]/div[1]/strong[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[2]/div/main/div/div/div/article/div/div[1]/div[3]/div/div/div[2]/div[1]/strong[3]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            }
          },
          "image": "kambista.svg",
          "bancos": {
@@ -351,20 +315,27 @@
          "url": "https://securex.pe",
          "link": "https://securex.pe",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[4]/div/div[1]/section[1]/div/div/div[2]/form/div[1]/h4[1]/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/div[4]/div/div[1]/section[1]/div/div/div[2]/form/div[1]/h4[2]/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[4]/div/div[1]/section[1]/div/div/div[2]/form/div[1]/h4[1]/span",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[4]/div/div[1]/section[1]/div/div/div[2]/form/div[1]/h4[2]/span",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            }
          },
          "image": "securex.png",
          "bancos": {
@@ -396,20 +367,27 @@
          "url": "https://tucambista.pe",
          "link": "https://tucambista.pe",
          "bench": "tucambista",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/section[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[2]/div[1]/span[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/section[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[2]/div[2]/span[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/section[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[2]/div[1]/span[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/section[1]/div[3]/div/div[4]/div/div[1]/div/div/div/div/div[2]/div[2]/span[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            }
          },
          "image": "tucambista.svg",
          "bancos": {
@@ -441,20 +419,24 @@
          "url": "https://cocosylucasbcp.com",
          "link": "https://cocosylucasbcp.com",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/poly-root/poly-feature-layout/div/div/landing-root/landing-main/div[1]/landing-engine/section/div[1]/div/div[2]/div/landing-form-exchange/div/form/div[2]/div[1]/form-exchange-type[1]/div/div/div/div/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 4,
-            "extract_end": 10
-         },
-         "venta": {
-            "xpath": "/html/body/poly-root/poly-feature-layout/div/div/landing-root/landing-main/div[1]/landing-engine/section/div[1]/div/div[2]/div/landing-form-exchange/div/form/div[2]/div[1]/form-exchange-type[2]/div/div/div/div/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 4,
-            "extract_end": 10
+         "scraper": {
+            "compra": {
+               "method": "PAGESOURCE",
+               "parameters": {
+                  "loc_text": "Compra:",
+                  "borra": "</span><div _ngcontent-agm-c83=",
+                  "instance": 1,
+                  "extract_start": 177
+               }
+            },
+            "venta": {
+               "method": "PAGESOURCE",
+               "parameters": {
+                  "loc_text": "Venta:",
+                  "instance": 142,
+                  "extract_start": 177
+               }
+            }
          },
          "image": "cocosylucas.svg",
          "bancos": {
@@ -486,20 +468,27 @@
          "url": "https://cuantoestaeldolar.pe/",
          "link": "https://cambioseguro.com/",
          "bench": "cambioseguro",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[2]/div[1]/div[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[2]/div[1]/div[3]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[2]/div[1]/div[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[2]/div[1]/div[3]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            }
          },
          "image": "cambio_seguro.png",
          "bancos": {
@@ -531,20 +520,27 @@
          "url": "https://cambiafx.pe/",
          "link": "https://cambiafx.pe/",
          "bench": "cambiafx",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[1]/div/header/div[2]/div/div[2]/div/button[1]/span[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 3,
-            "extract_end": 9
-         },
-         "venta": {
-            "xpath": "/html/body/div[1]/div/header/div[2]/div/div[2]/div/button[2]/span[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 3,
-            "extract_end": 9
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/div/header/div[2]/div/div[2]/div/button[1]/span[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 3,
+                  "extract_end": 9
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/div/header/div[2]/div/div[2]/div/button[2]/span[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 3,
+                  "extract_end": 9
+               }
+            }
          },
          "image": "cambiafx.png",
          "bancos": {
@@ -576,20 +572,27 @@
          "url": "https://www.cambistainka.com/",
          "link": "https://www.cambistainka.com/",
          "bench": "cambistainka",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[1]/section[1]/div/div/div[2]/div/div[2]/form/div[1]/div[1]/span/strong",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
-         },
-         "venta": {
-            "xpath": "/html/body/div[1]/section[1]/div/div/div[2]/div/div[2]/form/div[1]/div[2]/span/strong",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/section[1]/div/div/div[2]/div/div[2]/form/div[1]/div[1]/span/strong",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 6
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/section[1]/div/div/div[2]/div/div[2]/form/div[1]/div[2]/span/strong",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 6
+               }
+            }
          },
          "image": "cambistainka.png",
          "bancos": {
@@ -621,20 +624,27 @@
          "url": "https://instakash.net/",
          "link": "https://instakash.net/",
          "bench": "instakash",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div/div/main/section[1]/div/div/section/div[2]/div/div[1]/p",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 4,
-            "extract_end": 9
-         },
-         "venta": {
-            "xpath": "/html/body/div/div/main/section[1]/div/div/section/div[2]/div/div[2]/p",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 4,
-            "extract_end": 9
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div/div/main/section[1]/div/div/section/div[2]/div/div[1]/p",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 4,
+                  "extract_end": 9
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div/div/main/section[1]/div/div/section/div[2]/div/div[2]/p",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 4,
+                  "extract_end": 9
+               }
+            }
          },
          "image": "instakash.svg",
          "bancos": {
@@ -666,20 +676,27 @@
          "url": "https://www.cambiomundial.com/",
          "link": "https://www.cambiomundial.com/",
          "bench": "cambiomundial",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div/section[1]/div/div[2]/form/div[1]/div[1]/span[1]/span[2]/label",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
-         },
-         "venta": {
-            "xpath": "/html/body/div/section[1]/div/div[2]/form/div[1]/div[1]/span[2]/span[2]/label",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div/section[1]/div/div[2]/form/div[1]/div[1]/span[1]/span[2]/label",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 6
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div/section[1]/div/div[2]/form/div[1]/div[1]/span[2]/span[2]/label",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 6
+               }
+            }
          },
          "image": "cambio_mundial.png",
          "bancos": {
@@ -711,20 +728,27 @@
          "url": "https://perudolar.pe/",
          "link": "https://perudolar.pe/",
          "bench": "perudolar",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 14,
-            "extract_end": 19
-         },
-         "venta": {
-            "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 29,
-            "extract_end": 35
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 14,
+                  "extract_end": 19
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 29,
+                  "extract_end": 35
+               }
+            }
          },
          "image": "perudolar.png",
          "bancos": {
@@ -756,20 +780,27 @@
          "url": "https://cuantoestaeldolar.pe/",
          "link": "https://terracash.pe/",
          "bench": "terracash",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[8]/div[1]/div[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[8]/div[1]/div[3]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[8]/div[1]/div[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[8]/div[1]/div[3]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            }
          },
          "image": "terracash.png",
          "bancos": {
@@ -801,20 +832,27 @@
          "url": "http://cambi.pe/",
          "link": "http://cambi.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div/div/section[1]/div/div[2]/div/div/div[2]/div[2]/div[1]/span[3]/strong",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/div[1]/div/section[1]/div/div[2]/div/div/div[2]/div[2]/div[1]/span[4]/strong",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div/div/section[1]/div/div[2]/div/div/div[2]/div[2]/div[1]/span[3]/strong",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/div/section[1]/div/div[2]/div/div/div[2]/div[2]/div[1]/span[4]/strong",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            }
          },
          "image": "cambipe.png",
          "bancos": {
@@ -846,20 +884,27 @@
          "url": "https://cuantoestaeldolar.pe/",
          "link": "https://roblex.pe/",
          "bench": "roblex",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[7]/div[1]/div[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 8,
-            "extract_end": 12
-         },
-         "venta": {
-            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[7]/div[1]/div[3]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 7,
-            "extract_end": 11
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[7]/div[1]/div[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 8,
+                  "extract_end": 12
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[7]/div[1]/div[3]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 8,
+                  "extract_end": 12
+               }
+            }
          },
          "image": "roblex.svg",
          "bancos": {
@@ -891,20 +936,27 @@
          "url": "https://noncash.pe",
          "link": "https://noncash.pe",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[1]/section[1]/div[2]/div/div/div[2]/div[2]/div[1]/p[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 8,
-            "extract_end": 13
-         },
-         "venta": {
-            "xpath": "/html/body/div[1]/section[1]/div[2]/div/div/div[2]/div[2]/div[1]/p[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 23,
-            "extract_end": 28
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/section[1]/div[2]/div/div/div[2]/div[2]/div[1]/p[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 8,
+                  "extract_end": 13
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/section[1]/div[2]/div/div/div[2]/div[2]/div[1]/p[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 23,
+                  "extract_end": 28
+               }
+            }
          },
          "image": "noncash.png",
          "bancos": {
@@ -936,20 +988,27 @@
          "url": "https://cuantoestaeldolar.pe/",
          "link": "https://cambix.com.pe/home",
          "bench": "cambix",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[3]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[2]/div[2]/div[1]/div[3]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            }
          },
          "image": "cambix.svg",
          "bancos": {
@@ -981,20 +1040,27 @@
          "url": "https://www.westernunionperu.pe/cambiodemoneda",
          "link": "https://www.westernunionperu.pe/cambiodemoneda",
          "bench": "westernunionperu",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/section/div/form/div[1]/div[2]/p/button[1]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
-         },
-         "venta": {
-            "xpath": "/html/body/section/div/form/div[1]/div[2]/p/button[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/section/div/form/div[1]/div[2]/p/button[1]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 6
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/section/div/form/div[1]/div[2]/p/button[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 6
+               }
+            }
          },
          "image": "western_union.png",
          "bancos": {
@@ -1026,20 +1092,27 @@
          "url": "https://www.casadecambioelalfarero.com/",
          "link": "https://www.casadecambioelalfarero.com/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/form/main/section[1]/div/div/div[2]/div[2]/div[2]/label[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
-         },
-         "venta": {
-            "xpath": "/html/body/form/main/section[1]/div/div/div[2]/div[2]/div[1]/label[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/form/main/section[1]/div/div/div[2]/div[2]/div[2]/label[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 6
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/form/main/section[1]/div/div/div[2]/div[2]/div[1]/label[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 6
+               }
+            }
          },
          "image": "el_alfarero.png",
          "bancos": {
@@ -1071,20 +1144,27 @@
          "url": "https://www.cambiox.pe/",
          "link": "https://www.cambiox.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[3]/section[1]/div/div/div/div[2]/center/span[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 8,
-            "extract_end": 13
-         },
-         "venta": {
-            "xpath": "/html/body/div[3]/section[1]/div/div/div/div[2]/center/span[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 23,
-            "extract_end": 28
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[3]/section[1]/div/div/div/div[2]/center/span[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 8,
+                  "extract_end": 13
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[3]/section[1]/div/div/div/div[2]/center/span[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 23,
+                  "extract_end": 28
+               }
+            }
          },
          "image": "cambiox.png",
          "bancos": {
@@ -1116,20 +1196,27 @@
          "url": "https://www.fintuu.com/",
          "link": "https://www.fintuu.com/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/main/div[1]/section[3]/div/div[3]/div[1]/div/div[1]/div[1]/div/h6",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 11,
-            "extract_end": 16
-         },
-         "venta": {
-            "xpath": "/html/body/main/div[1]/section[3]/div/div[3]/div[1]/div/div[1]/div[2]/div/h6",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 10,
-            "extract_end": 17
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/main/div[1]/section[3]/div/div[3]/div[1]/div/div[1]/div[1]/div/h6",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 11,
+                  "extract_end": 16
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/main/div[1]/section[3]/div/div[3]/div[1]/div/div[1]/div[2]/div/h6",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 10,
+                  "extract_end": 17
+               }
+            }
          },
          "image": "fintuu.png",
          "bancos": {
@@ -1161,20 +1248,27 @@
          "url": "https://www.safex.pe/",
          "link": "https://www.safex.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[1]/section[2]/div/div/form/div/div[1]/div[2]/div/span/strong/h3",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 8,
-            "extract_end": 13
-         },
-         "venta": {
-            "xpath": "/html/body/div[1]/section[2]/div/div/form/div/div[1]/div[2]/div/span/strong/h3",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 23,
-            "extract_end": 28
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/section[2]/div/div/form/div/div[1]/div[2]/div/span/strong/h3",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 8,
+                  "extract_end": 13
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/section[2]/div/div/form/div/div[1]/div[2]/div/span/strong/h3",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 23,
+                  "extract_end": 28
+               }
+            }
          },
          "image": "safex.png",
          "bancos": {
@@ -1206,20 +1300,27 @@
          "url": "https://www.efectibit.com/",
          "link": "https://www.efectibit.com/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[2]/div[2]/main/div/div/div/div/div/div[2]/div/form/div/div[1]/h4/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/div[2]/div[2]/main/div/div/div/div/div/div[2]/div/form/div/div[1]/h4/span",
-            "click": true,
-            "click_xpath": "/html/body/div[2]/div[2]/main/div/div/div/div/div/div[2]/div/form/div/div[3]/button",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[2]/div[2]/main/div/div/div/div/div/div[2]/div/form/div/div[1]/h4/span",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[2]/div[2]/main/div/div/div/div/div/div[2]/div/form/div/div[1]/h4/span",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            }
          },
          "image": "efectibit.svg",
          "bancos": {
@@ -1251,20 +1352,27 @@
          "url": "https://cuantoestaeldolar.pe/",
          "link": "https://dollarhouse.pe/",
          "bench": "dollarhouse",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/main/div/div/form/div[1]/div/p[1]/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/main/div/div/form/div[1]/div/p[2]/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/main/div/div/form/div[1]/div/p[1]/span",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/main/div/div/form/div[1]/div/p[2]/span",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            }
          },
          "image": "dollar_house.png",
          "bancos": {
@@ -1296,20 +1404,15 @@
          "url": "https://cambista.online/",
          "link": "https://cambista.online/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div/div/div[5]/div/div/p/strong/span[1]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
-         },
-         "venta": {
-            "xpath": "/html/body/div[1]/div[2]/div/div/div[2]/div/div[1]/div/div/div/div/div/div[5]/div/div/p/strong/span[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
+         "scraper": {
+            "compra": {
+               "method": "OCR",
+               "parameters": {}
+            },
+            "venta": {
+               "method": "OCR",
+               "parameters": {}
+            }
          },
          "image": "cambista_online.png",
          "bancos": {
@@ -1336,25 +1439,28 @@
       },
       {
          "id": 29,
-         "online": false,
+         "online": true,
          "name": "A$$e$$or",
          "url": "https://www.assessorperu.com/",
          "link": "https://www.assessorperu.com/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div/div[10]/section[1]/div/div[2]/div/div[1]/div/div/div[1]/div/div/h5/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/div/div[10]/section[1]/div/div[2]/div/div[1]/div/div/div[2]/div/div/h5/span",
-            "click": true,
-            "click_xpath": "/html/body/div/div[10]/section[1]/div/div[2]/div/div[1]/div/div/div[2]/div/div/h5/span",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "PAGESOURCE",
+               "parameters": {
+                  "loc_text": "montosoles",
+                  "instance": 1,
+                  "extract_start": 10
+               }
+            },
+            "venta": {
+               "method": "PAGESOURCE",
+               "parameters": {
+                  "loc_text": "montodolar",
+                  "instance": 1,
+                  "extract_start": 29
+               }
+            }
          },
          "image": "a$$e$$or.png",
          "bancos": {
@@ -1386,20 +1492,23 @@
          "url": "https://x-cambio.com/",
          "link": "https://x-cambio.com/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/section[1]/div/div/div[2]/form/div[2]/div/div[1]/p[1]/strong/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/section[1]/div/div/div[2]/form/div[2]/div/div[1]/p[2]/strong/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "PAGESOURCE",
+               "parameters": {
+                  "loc_text": "data-compra",
+                  "instance": 1,
+                  "extract_start": 3
+               }
+            },
+            "venta": {
+               "method": "PAGESOURCE",
+               "parameters": {
+                  "loc_text": "data-venta",
+                  "instance": 1,
+                  "extract_start": 3
+               }
+            }
          },
          "image": "x-cambio.png",
          "bancos": {
@@ -1431,20 +1540,27 @@
          "url": "https://www.keyex.pe/",
          "link": "https://www.keyex.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/header/div/div[1]/div[2]/div[2]/div/div[1]/div[1]/div[1]/span[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
-         },
-         "venta": {
-            "xpath": "/html/body/header/div/div[1]/div[2]/div[2]/div/div[1]/div[1]/div[2]/span[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/header/div/div[1]/div[2]/div[2]/div/div[1]/div[1]/div[1]/span[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 6
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/header/div/div[1]/div[2]/div[2]/div/div[1]/div[1]/div[2]/span[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 6
+               }
+            }
          },
          "image": "keyex.png",
          "bancos": {
@@ -1476,20 +1592,27 @@
          "url": "https://www.dinersfx.pe/",
          "link": "https://www.dinersfx.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/app-root/app-home/app-first-section/div/div[1]/div/div[2]/div[1]/div[2]/div/div/div[1]/p[1]/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 3,
-            "extract_end": 9
-         },
-         "venta": {
-            "xpath": "/html/body/app-root/app-home/app-first-section/div/div[1]/div/div[2]/div[1]/div[2]/div/div/div[1]/p[2]/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 3,
-            "extract_end": 9
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/app-root/app-home/app-first-section/div/div[1]/div/div[2]/div[1]/div[2]/div/div/div[1]/p[1]/span",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 3,
+                  "extract_end": 9
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/app-root/app-home/app-first-section/div/div[1]/div/div[2]/div[1]/div[2]/div/div/div[1]/p[2]/span",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 3,
+                  "extract_end": 9
+               }
+            }
          },
          "image": "dinersfx.svg",
          "bancos": {
@@ -1521,20 +1644,27 @@
          "url": "https://cuantoestaeldolar.pe/",
          "link": "https://dlsmoney.com/",
          "bench": "dlsmoney",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[8]/div[1]/div[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[8]/div[1]/div[3]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[8]/div[1]/div[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[3]/section/div[1]/div[4]/div[1]/div[3]/div[8]/div[1]/div[3]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            }
          },
          "image": "dls-money.png",
          "bancos": {
@@ -1566,20 +1696,27 @@
          "url": "https://hirpower.com/",
          "link": "https://hirpower.com/",
          "bench": "hirpower",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[1]/div[1]/div[3]/div[2]/div[1]/div",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 8,
-            "extract_end": 13
-         },
-         "venta": {
-            "xpath": "/html/body/div[1]/div[1]/div[3]/div[2]/div[2]/div",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 8,
-            "extract_end": 13
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/div[1]/div[3]/div[2]/div[1]/div",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 8,
+                  "extract_end": 13
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/div[1]/div[3]/div[2]/div[2]/div",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 8,
+                  "extract_end": 13
+               }
+            }
          },
          "image": "hir_power.png",
          "bancos": {
@@ -1611,20 +1748,27 @@
          "url": "https://yanki.pe/",
          "link": "https://yanki.pe/",
          "bench": "yanki",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[4]/div/div/ul/div[1]/div/div/div[2]/div/div[2]/div[1]/div[1]/b/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/div[4]/div/div/ul/div[1]/div/div/div[2]/div/div[2]/div[1]/div[3]/b/b/span",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[4]/div/div/ul/div[1]/div/div/div[2]/div/div[2]/div[1]/div[1]/b/span",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[4]/div/div/ul/div[1]/div/div/div[2]/div/div[2]/div[1]/div[3]/b/b/span",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            }
          },
          "image": "yanki.svg",
          "bancos": {
@@ -1656,20 +1800,27 @@
          "url": "https://tintercambio.com/",
          "link": "https://tintercambio.com/",
          "bench": "ftb",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/main/div[1]/div/div/div/div/div/div/div[3]/div[1]/div[1]/span[3]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/main/div[1]/div/div/div/div/div/div/div[3]/div[1]/div[2]/span[3]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/main/div[1]/div/div/div/div/div/div/div[3]/div[1]/div[1]/span[3]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/main/div[1]/div/div/div/div/div/div/div[3]/div[1]/div[2]/span[3]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            }
          },
          "image": "tintercambio.png",
          "bancos": {
@@ -1696,25 +1847,32 @@
       },
       {
          "id": 37,
-         "online": true,
+         "online": false,
          "name": "DolarSol",
          "url": "https://dolarsol.com/",
          "link": "https://dolarsol.com/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[2]/div/div[1]/div/div[1]/div[1]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 9,
-            "extract_end": 14
-         },
-         "venta": {
-            "xpath": "/html/body/div[2]/div/div[1]/div/div[1]/div[1]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 22,
-            "extract_end": 27
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[2]/div/div[1]/div/div[1]/div[1]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 9,
+                  "extract_end": 14
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[2]/div/div[1]/div/div[1]/div[1]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 22,
+                  "extract_end": 27
+               }
+            }
          },
          "image": "dolarsol.png",
          "bancos": {
@@ -1746,20 +1904,27 @@
          "url": "http://www.jetperu.com.pe/casa-de-cambio",
          "link": "http://www.jetperu.com.pe/casa-de-cambio",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[7]/div/div/div/div[1]/div/div[1]/div/div[4]/div/div/p",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 24,
-            "extract_end": 30
-         },
-         "venta": {
-            "xpath": "/html/body/div[7]/div/div/div/div[1]/div/div[1]/div/div[4]/div/div/p",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 40,
-            "extract_end": 46
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[7]/div/div/div/div[1]/div/div[1]/div/div[4]/div/div/p",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 24,
+                  "extract_end": 30
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[7]/div/div/div/div[1]/div/div[1]/div/div[4]/div/div/p",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 40,
+                  "extract_end": 46
+               }
+            }
          },
          "image": "jet_peru.png",
          "bancos": {
@@ -1786,25 +1951,32 @@
       },
       {
          "id": 39,
-         "online": true,
+         "online": false,
          "name": "PeruDollar",
          "url": "www.perudollar.pe",
          "link": "www.perudollar.pe",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/main/section/div/div/div/div/section[1]/div/div/div[2]/div/div/div/div/div/div/form/div[1]/div[1]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 8,
-            "extract_end": 12
-         },
-         "venta": {
-            "xpath": "/html/body/main/section/div/div/div/div/section[1]/div/div/div[2]/div/div/div/div/div/div/form/div[1]/div[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 7,
-            "extract_end": 11
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/main/section/div/div/div/div/section[1]/div/div/div[2]/div/div/div/div/div/div/form/div[1]/div[1]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 8,
+                  "extract_end": 12
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/main/section/div/div/div/div/section[1]/div/div/div[2]/div/div/div/div/div/div/form/div[1]/div[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 7,
+                  "extract_end": 11
+               }
+            }
          },
          "image": "perudollar.png",
          "bancos": {
@@ -1836,20 +2008,27 @@
          "url": "https://www.monnety.com/",
          "link": "https://www.monnety.com/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[2]/div[1]/div/div/div/div[2]/div[1]/label[1]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 8,
-            "extract_end": 12
-         },
-         "venta": {
-            "xpath": "/html/body/div[2]/div[1]/div/div/div/div[2]/div[1]/label[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 7,
-            "extract_end": 11
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[2]/div[1]/div/div/div/div[2]/div[1]/label[1]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 8,
+                  "extract_end": 12
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[2]/div[1]/div/div/div/div[2]/div[1]/label[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 7,
+                  "extract_end": 11
+               }
+            }
          },
          "image": "monnety.png",
          "bancos": {
@@ -1881,20 +2060,27 @@
          "url": "https://cambiosjp.com/",
          "link": "https://cambiosjp.com/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div[1]/div",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 8,
-            "extract_end": 13
-         },
-         "venta": {
-            "xpath": "/html/body/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div[2]/div",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 7,
-            "extract_end": 12
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div[1]/div",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 8,
+                  "extract_end": 13
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/div[2]/div/div[1]/div/div[2]/div[2]/div[2]/div",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 7,
+                  "extract_end": 12
+               }
+            }
          },
          "image": "cambios_jp.jpg",
          "bancos": {
@@ -1926,20 +2112,27 @@
          "url": "https://www.moneyking.pe/",
          "link": "https://www.moneyking.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/section[1]/div/div/div[2]/form/div[1]/div[1]/p",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 10,
-            "extract_end": 15
-         },
-         "venta": {
-            "xpath": "/html/body/section[1]/div/div/div[2]/form/div[1]/div[2]/p",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 8,
-            "extract_end": 13
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/section[1]/div/div/div[2]/form/div[1]/div[1]/p",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 10,
+                  "extract_end": 15
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/section[1]/div/div/div[2]/form/div[1]/div[2]/p",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 8,
+                  "extract_end": 13
+               }
+            }
          },
          "image": "moneyking.svg",
          "bancos": {
@@ -1971,20 +2164,27 @@
          "url": "https://yomimoka.com/",
          "link": "https://yomimoka.com/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[2]/div[3]/div/div/div/main/article/div/div/div/div/section[1]/div[2]/div/div/div/div/section[1]/div/div/div[3]/div/div/div[2]/div/div",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 32,
-            "extract_end": 37
-         },
-         "venta": {
-            "xpath": "/html/body/div[2]/div[3]/div/div/div/main/article/div/div/div/div/section[1]/div[2]/div/div/div/div/section[1]/div/div/div[3]/div/div/div[2]/div/div",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 45,
-            "extract_end": 50
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[2]/div[3]/div/div/div/main/article/div/div/div/div/section[1]/div[2]/div/div/div/div/section[1]/div/div/div[3]/div/div/div[2]/div/div",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 32,
+                  "extract_end": 37
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[2]/div[3]/div/div/div/main/article/div/div/div/div/section[1]/div[2]/div/div/div/div/section[1]/div/div/div[3]/div/div/div[2]/div/div",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 45,
+                  "extract_end": 50
+               }
+            }
          },
          "image": "yomimoka.png",
          "bancos": {
@@ -2011,25 +2211,32 @@
       },
       {
          "id": 44,
-         "online": true,
+         "online": false,
          "name": "iMoney",
          "url": "https://imoney.pe/",
          "link": "https://imoney.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div/div[2]/div[1]/div[1]/div[1]/h4[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
-         },
-         "venta": {
-            "xpath": "/html/body/div/div[2]/div[1]/div[1]/div[2]/h4[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 6
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div/div[2]/div[1]/div[1]/div[1]/h4[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 6
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div/div[2]/div[1]/div[1]/div[2]/h4[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 6
+               }
+            }
          },
          "image": "imoney.png",
          "bancos": {
@@ -2061,20 +2268,23 @@
          "url": "https://buenkambio.com/index.php",
          "link": "https://buenkambio.com/index.php",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 14,
-            "extract_end": 19
-         },
-         "venta": {
-            "xpath": "/html/body/div/div[2]/div[1]/div/div/div/div[4]/div[1]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 29,
-            "extract_end": 34
+         "scraper": {
+            "compra": {
+               "method": "PAGESOURCE",
+               "parameters": {
+                  "loc_text": "T/C: Compra: ",
+                  "instance": 1,
+                  "extract_start": 0
+               }
+            },
+            "venta": {
+               "method": "PAGESOURCE",
+               "parameters": {
+                  "loc_text": "| Venta: ",
+                  "instance": 1,
+                  "extract_start": 0
+               }
+            }
          },
          "image": "buenkambio.png",
          "bancos": {
@@ -2106,20 +2316,27 @@
          "url": "http://190.119.236.76:8090/",
          "link": "http://190.119.236.76:8090/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": null,
-            "extract_end": null
-         },
-         "venta": {
-            "xpath": "",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": null,
-            "extract_end": null
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            }
          },
          "image": "",
          "bancos": {
@@ -2151,20 +2368,23 @@
          "url": "https://www.fortuneonline.com.pe/",
          "link": "https://www.fortuneonline.com.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[4]/div[1]/section/div/div/section/div/div[1]/div/div/div/div[1]/div/ul/li/div/div[1]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 9,
-            "extract_end": 13
-         },
-         "venta": {
-            "xpath": "/html/body/div[4]/div[1]/section/div/div/section/div/div[1]/div/div/div/div[1]/div/ul/li/div/div[1]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 24,
-            "extract_end": 29
+         "scraper": {
+            "compra": {
+               "method": "PAGESOURCE",
+               "parameters": {
+                  "loc_text": "\"tipoCompra",
+                  "instance": 1,
+                  "extract_start": 3
+               }
+            },
+            "venta": {
+               "method": "PAGESOURCE",
+               "parameters": {
+                  "loc_text": "\"tipoVenta",
+                  "instance": 1,
+                  "extract_start": 3
+               }
+            }
          },
          "image": "fortune_online.jpg",
          "bancos": {
@@ -2196,20 +2416,23 @@
          "url": "https://lacasadeldolar.pe/",
          "link": "https://lacasadeldolar.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div/div/div/div/div/div/section[2]/div[2]/div/div[2]/div/div/div/div/h6",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 8,
-            "extract_end": 12
-         },
-         "venta": {
-            "xpath": "/html/body/div/div/div/div/div/div/section[2]/div[2]/div/div[3]/div/div/div/div/h6",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 8,
-            "extract_end": 12
+         "scraper": {
+            "compra": {
+               "method": "PAGESOURCE",
+               "parameters": {
+                  "loc_text": ">COMPRA: ",
+                  "instance": 1,
+                  "extract_start": 0
+               }
+            },
+            "venta": {
+               "method": "PAGESOURCE",
+               "parameters": {
+                  "loc_text": ">VENTA:  ",
+                  "instance": 1,
+                  "extract_start": 0
+               }
+            }
          },
          "image": "la_casa_del_dolar.png",
          "bancos": {
@@ -2241,20 +2464,15 @@
          "url": "https://ftb.pe/",
          "link": "https://ftb.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": null,
-            "extract_end": null
-         },
-         "venta": {
-            "xpath": "",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": null,
-            "extract_end": null
+         "scraper": {
+            "compra": {
+               "method": null,
+               "parameters": null
+            },
+            "venta": {
+               "method": null,
+               "parameters": null
+            }
          },
          "image": "",
          "bancos": {
@@ -2286,20 +2504,27 @@
          "url": "https://www.dolarvip.com/",
          "link": "https://www.dolarvip.com/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div[1]/div[2]/div/div/main/article/div/div/div/div/section[1]/div[2]/div/div[2]/div/div/div[2]/div/div/strong[1]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 4
-         },
-         "venta": {
-            "xpath": "/html/body/div[1]/div[2]/div/div/main/article/div/div/div/div/section[1]/div[2]/div/div[2]/div/div/div[2]/div/div/strong[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 4
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/div[2]/div/div/main/article/div/div/div/div/section[1]/div[2]/div/div[2]/div/div/div[2]/div/div/strong[1]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 4
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/div[2]/div/div/main/article/div/div/div/div/section[1]/div[2]/div/div[2]/div/div/div[2]/div/div/strong[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 4
+               }
+            }
          },
          "image": "dolar_vip.png",
          "bancos": {
@@ -2326,25 +2551,20 @@
       },
       {
          "id": 51,
-         "online": true,
+         "online": false,
          "name": "Cambialo",
          "url": "https://www.cambialo.pe/",
          "link": "https://www.cambialo.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div/div/section[1]/div/div/div/div/div[2]/span[1]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 14,
-            "extract_end": 19
-         },
-         "venta": {
-            "xpath": "/html/body/div/div/section[1]/div/div/div/div/div[2]/span[2]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 13,
-            "extract_end": 18
+         "scraper": {
+            "compra": {
+               "method": "OCR",
+               "parameters": {}
+            },
+            "venta": {
+               "method": "OCR",
+               "parameters": {}
+            }
          },
          "image": "cambialo.png",
          "bancos": {
@@ -2376,20 +2596,27 @@
          "url": "https://decamoney.com/",
          "link": "https://decamoney.com/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/app-root/app-landing/section[1]/div/div/div[2]/div[1]/div[1]/h5/span[1]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 8,
-            "extract_end": 14
-         },
-         "venta": {
-            "xpath": "/html/body/app-root/app-landing/section[1]/div/div/div[2]/div[1]/div[1]/h5/span[3]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 7,
-            "extract_end": 13
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/app-root/app-landing/section[1]/div/div/div[2]/div[1]/div[1]/h5/span[1]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 8,
+                  "extract_end": 14
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/app-root/app-landing/section[1]/div/div/div[2]/div[1]/div[1]/h5/span[3]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 7,
+                  "extract_end": 13
+               }
+            }
          },
          "image": "decamoney.png",
          "bancos": {
@@ -2416,25 +2643,20 @@
       },
       {
          "id": 53,
-         "online": true,
+         "online": false,
          "name": "Tica",
          "url": "https://www.tica.pe/",
          "link": "https://www.tica.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div/div[1]/div[2]/div/div/div[2]/div[1]/div[1]/div[1]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 10,
-            "extract_end": 16
-         },
-         "venta": {
-            "xpath": "/html/body/div/div[1]/div[2]/div/div/div[2]/div[1]/div[1]/div[3]",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 9,
-            "extract_end": 15
+         "scraper": {
+            "compra": {
+               "method": "OCR",
+               "parameters": {}
+            },
+            "venta": {
+               "method": "OCR",
+               "parameters": {}
+            }
          },
          "image": "tica.png",
          "bancos": {
@@ -2466,20 +2688,15 @@
          "url": "www.intispot.com",
          "link": "www.intispot.com",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": null,
-            "extract_end": null
-         },
-         "venta": {
-            "xpath": "",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": null,
-            "extract_end": null
+         "scraper": {
+            "compra": {
+               "method": null,
+               "parameters": null
+            },
+            "venta": {
+               "method": null,
+               "parameters": null
+            }
          },
          "image": "",
          "bancos": {
@@ -2506,25 +2723,28 @@
       },
       {
          "id": 55,
-         "online": false,
+         "online": true,
          "name": "Prex",
          "url": "https://www.prex.com.pe/",
          "link": "https://www.prex.com.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/main/section[1]/div[2]/div/div/div[2]/div/div[1]/h2",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
-         },
-         "venta": {
-            "xpath": "/html/body/main/section[1]/div[2]/div/div/div[2]/div/div[2]/h2",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 0,
-            "extract_end": 5
+         "scraper": {
+            "compra": {
+               "method": "PAGESOURCE",
+               "parameters": {
+                  "loc_text": "Compra</p>",
+                  "instance": 1,
+                  "extract_start": 34
+               }
+            },
+            "venta": {
+               "method": "PAGESOURCE",
+               "parameters": {
+                  "loc_text": "Venta</p>",
+                  "instance": 1,
+                  "extract_start": 47
+               }
+            }
          },
          "image": "prex.svg",
          "bancos": {
@@ -2556,20 +2776,27 @@
          "url": "https://zonadolar.pe/",
          "link": "https://zonadolar.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "/html/body/div/header/div/div/div[2]/div/div[1]/div[2]/ul/li[2]/a",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 26,
-            "extract_end": 32
-         },
-         "venta": {
-            "xpath": "/html/body/div/header/div/div/div[2]/div/div[1]/div[2]/ul/li[1]/a",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": 22,
-            "extract_end": 28
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div/header/div/div/div[2]/div/div[1]/div[2]/ul/li[2]/a",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 26,
+                  "extract_end": 32
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div/header/div/div/div[2]/div/div[1]/div[2]/ul/li[1]/a",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 22,
+                  "extract_end": 28
+               }
+            }
          },
          "image": "zona_dolar.jpg",
          "bancos": {
@@ -2601,20 +2828,15 @@
          "url": "https://amazfx.pe/",
          "link": "https://amazfx.pe/",
          "bench": "",
-         "sleep": 1,
-         "compra": {
-            "xpath": "",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": null,
-            "extract_end": null
-         },
-         "venta": {
-            "xpath": "",
-            "click": null,
-            "click_xpath": "",
-            "extract_start": null,
-            "extract_end": null
+         "scraper": {
+            "compra": {
+               "method": "OCR",
+               "parameters": {}
+            },
+            "venta": {
+               "method": "OCR",
+               "parameters": {}
+            }
          },
          "image": "",
          "bancos": {
@@ -2643,23 +2865,18 @@
          "id": 58,
          "online": true,
          "name": "Buenbit",
-         "url": "https://www.buenbit.com/es-PE/",
-         "link": "https://www.buenbit.com/es-PE/",
+         "url": "https://www.buenbit.com/es-PE/comprar-dolares-en-peru",
+         "link": "https://www.buenbit.com/es-PE/comprar-dolares-en-peru",
          "bench": "buenbit",
-         "sleep": 1,
-         "compra": {
-            "xpath": "",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": null,
-            "extract_end": null
-         },
-         "venta": {
-            "xpath": "",
-            "click": null,
-            "click_xpath": "",
-            "extract_start": null,
-            "extract_end": null
+         "scraper": {
+            "compra": {
+               "method": null,
+               "parameters": null
+            },
+            "venta": {
+               "method": null,
+               "parameters": null
+            }
          },
          "image": "buenbit.svg",
          "bancos": {
@@ -2685,26 +2902,21 @@
          "registro_SBS": ""
       },
       {
-         "id": 57,
+         "id": 59,
          "online": false,
          "name": "Tu Cambio Total",
          "url": "https://tucambiototal.com/",
          "link": "https://tucambiototal.com/",
          "bench": "tucambiototal",
-         "sleep": 1,
-         "compra": {
-            "xpath": "",
-            "click": false,
-            "click_xpath": "",
-            "extract_start": null,
-            "extract_end": null
-         },
-         "venta": {
-            "xpath": "",
-            "click": null,
-            "click_xpath": "",
-            "extract_start": null,
-            "extract_end": null
+         "scraper": {
+            "compra": {
+               "method": "OCR",
+               "parameters": {}
+            },
+            "venta": {
+               "method": "OCR",
+               "parameters": {}
+            }
          },
          "image": "",
          "bancos": {

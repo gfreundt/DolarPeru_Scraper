@@ -5,15 +5,12 @@ import csv
 import json
 import time
 import matplotlib.pyplot as plt
-# import matplotlib as mpl
-from datetime import datetime as dt  # , timedelta as delta
+from datetime import datetime as dt
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options as WebDriverOptions
 from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-# from statistics import mean, median
 import threading
 import bench
 import dpAnalysis
@@ -98,43 +95,67 @@ def set_options():
 
 def get_source(fintech, options, k):
     print(f'Starting: {fintech["id"]} - {fintech["name"]}')
-    driver = webdriver.Chrome(
-        os.path.join(os.getcwd(), active.CHROMEDRIVER), options=options
-    )
-    attempts = 1
-    while attempts <= 3:
-        try:
-            driver.get(fintech["url"])
-            break
-        except:
-            print("First Level Exception", fintech["name"])
-            attempts += 1
-            time.sleep(2)
+
+    # Open webpage in headless Chrome
+    driver = webdriver.Chrome(active.CHROMEDRIVER, options=options)
+
+    #attempts = 1
+    # while attempts <= 2:
+    #    try:
+    driver.get(fintech["url"])
+    #        break
+    #    except:
+    #        attempts += 1
+    #        time.sleep(2)
+
+    # Loop through 'compra' and 'venta' instructions
     info, attempts = [], 1
-    for quote in ["compra", "venta"]:
-        if fintech[quote]["click"]:
-            driver.find_element_by_xpath(fintech[quote]["click_xpath"]).click()
-        element_present = EC.visibility_of_element_located(
-            (By.XPATH, fintech[quote]["xpath"])
-        )
-        while attempts <= 2:
-            try:
-                WebDriverWait(driver, 10).until(element_present)
-                time.sleep(fintech["sleep"])
-                info.append(
-                    extract(
-                        driver.find_element_by_xpath(
-                            fintech[quote]["xpath"]).text,
-                        fintech[quote],
+    scraper = fintech["scraper"]
+    for compraventa in scraper.values():
+        parameters = compraventa["parameters"]
+
+        # XPATH method
+        if compraventa["method"] == "XPATH":
+            if parameters["click"]:
+                driver.find_element_by_xpath(
+                    parameters["click_xpath"]).click()
+            element_present = EC.visibility_of_element_located(
+                (By.XPATH, parameters["xpath"])
+            )
+            while attempts <= 2:
+                try:
+                    WebDriverWait(driver, 10).until(element_present)
+                    info.append(
+                        extract(
+                            driver.find_element_by_xpath(
+                                parameters["xpath"]).text,
+                            parameters,
+                        )
                     )
-                )
-                break
-            except:
-                attempts += 1
+                    break
+                except:
+                    attempts += 1
+
+        # PAGE SOURCE method
+        elif compraventa["method"] == "PAGESOURCE":
+            ps = driver.page_source
+            chunk_start = ps.find(
+                parameters["loc_text"]) + len(parameters["loc_text"])-1 + parameters["extract_start"]
+            chunk_text = ps[chunk_start:chunk_start + 7]
+            info.append(clean(chunk_text))
+
+        # OCR method
+        elif compraventa["method"] == "OCR":
+            pass
+
     driver.quit()
+
+    # Scraping complete for this fintech. Validate and if correct add to overall results.
+
     if info and info[0] != "" and sanity_check(info):
         active.results.append(
-            {"ID": f'{fintech["id"]:03d}', "Compra": info[0], "Venta": info[1]}
+            {"ID": f'{fintech["id"]:03d}',
+                "Compra": info[0], "Venta": info[1]}
         )
         active.dashboard.append(
             {"ID": k, "Status": "Add", "Fintech": fintech["name"]})
@@ -150,7 +171,8 @@ def get_source(fintech, options, k):
                         "Compra": info[0], "Venta": info[1]}
                 )
                 active.dashboard.append(
-                    {"ID": k, "Status": "Add", "Fintech": fintech["name"]}
+                    {"ID": f'{fintech["id"]:03d}', "Status": "Add",
+                        "Fintech": fintech["name"]}
                 )
                 active.good += 1
         else:
@@ -181,7 +203,8 @@ def clean(text):
 
 def extract(source, fintech):
     init = 0
-    text = source[init + fintech["extract_start"]: init + fintech["extract_end"]]
+    text = source[init + fintech["extract_start"]
+        : init + fintech["extract_end"]]
     return clean(text)
 
 
@@ -214,24 +237,22 @@ def main(UPLOAD):
         options = set_options()
         all_threads = []
         for k, fintech in enumerate(active.fintechs):
-            if fintech["online"]:  # and fintech['id'] == 10:
+            if fintech["online"]:  # and fintech['id'] == 55:
                 new_thread = threading.Thread(
                     target=get_source, args=(fintech, options, k)
                 )
                 all_threads.append(new_thread)
-                while (
-                    threading.active_count() == 15
-                ):  # Infinite loop to limit concurrent threads
-                    time.sleep(1)
+                # Infinite loop to limit concurrent threads
+                while (threading.active_count() == 15):
+                    time.sleep(0.5)
                 new_thread.start()
-        _ = [
-            i.join() for i in all_threads
-        ]  # Ensures all threads end before moving forward
+        # Ensure all threads end before moving forward
+        _ = [i.join() for i in all_threads]
         save()
-        file_extract_recent(150000)
-        print(f"Good: {active.good} | Bad: {active.bad}")
-        for d in sorted(active.dashboard, key=lambda i: i["ID"]):
+        print(f"Good: {active.good} | Bad: {active.bad}\n")
+        for d in sorted(active.results, key=lambda i: i["ID"]):
             print(d)
+        file_extract_recent(150000)
     dpAnalysis.main(UPLOAD)
 
 
