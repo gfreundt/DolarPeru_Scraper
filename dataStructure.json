@@ -1315,7 +1315,7 @@
                "method": "XPATH",
                "parameters": {
                   "xpath": "/html/body/div[2]/div[2]/main/div/div/div/div/div/div[2]/div/form/div/div[1]/h4/span",
-                  "click": false,
+                  "click": true,
                   "click_xpath": "",
                   "extract_start": 0,
                   "extract_end": 5
@@ -1399,7 +1399,7 @@
       },
       {
          "id": 28,
-         "online": true,
+         "online": false,
          "name": "Cambista Online",
          "url": "https://cambista.online/",
          "link": "https://cambista.online/",
@@ -2933,6 +2933,45 @@
          },
          "contacto": "contacto@tucambiototal.com",
          "RUC": "20607581275",
+         "App_iOS": "",
+         "App_Android": "",
+         "reserved1": "",
+         "reserved2": "",
+         "reserved3": "",
+         "reserved4": "",
+         "registro_SBS": "01989-2021"
+      },
+      {
+         "id": 60,
+         "online": true,
+         "name": "Firbid",
+         "url": "https://www.firbid.com/",
+         "link": "https://www.firbid.com/",
+         "bench": "",
+         "scraper": {
+            "compra": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/div/div/div[2]/div[1]/div[1]/div/div/div[2]/div[2]/div/div[2]/div[1]/div/div[1]/div/div[2]/div/div[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            },
+            "venta": {
+               "method": "XPATH",
+               "parameters": {
+                  "xpath": "/html/body/div[1]/div/div/div[2]/div[1]/div[1]/div/div/div[2]/div[2]/div/div[2]/div[1]/div/div[1]/div/div[3]/div/div[2]",
+                  "click": false,
+                  "click_xpath": "",
+                  "extract_start": 0,
+                  "extract_end": 5
+               }
+            }
+         },
+         "contacto": "soporte@firbid.com",
+         "RUC": "",
          "App_iOS": "",
          "App_Android": "",
          "reserved1": "",
