@@ -2970,6 +2970,19 @@
                }
             }
          },
+         "image": "firbid.svg",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
          "contacto": "soporte@firbid.com",
          "RUC": "",
          "App_iOS": "",
