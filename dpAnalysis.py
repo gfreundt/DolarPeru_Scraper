@@ -104,22 +104,25 @@ def analysis1(fintechs, data):
         datapoints = {
             i[0]: float(i[proc["quote"]]) for i in data if i[3] == last_timestamp
         }
-        # Calculate head data
-        meantc = round(mean(datapoints.values()), 4)
+        # Calculate median only
         mediantc = round(median(datapoints.values()), 4)
-        mejor = (
-            round(max(datapoints.values()), 4)
-            if proc["quote"] == 1
-            else round(min(datapoints.values()), 4)
-        )
         # Calculate band edges
         band_min = mediantc * 0.995
         band_max = mediantc * 1.005
+        # Calculate head data
+        datapoints_in_band = [
+            i for i in datapoints.values() if band_min <= i <= band_max]
+        meantc = round(mean(datapoints_in_band), 4)
+        mejor = (
+            round(max(datapoints_in_band), 4)
+            if proc["quote"] == 1
+            else round(min(datapoints_in_band), 4)
+        )
         # Create record with new Medians
         median_file_record.append(f"{mediantc:.4f}")
         # Create data for JSON file to be read by Web App
 
-        # Part 1: Add Averages, Best, Count of datapoints and Time/Date
+        # Part 1: Add Median, Mean, Best, Count of datapoints and Timestamp, Time/Date
         dump = {
             "head": {
                 "mediana": f"{mediantc:.4f}",
@@ -319,6 +322,7 @@ def analysis3(fintechs, data):
             {
                 "id": id,
                 "name": fintech["name"],
+                "url": fintech["url"],
                 "success": success,
                 "color": "bad" if rate < 0.8 else "good",
                 "latest": latest,
