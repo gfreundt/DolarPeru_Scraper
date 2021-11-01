@@ -1316,7 +1316,7 @@
                "parameters": {
                   "xpath": "/html/body/div[2]/div[2]/main/div/div/div/div/div/div[2]/div/form/div/div[1]/h4/span",
                   "click": true,
-                  "click_xpath": "",
+                  "click_xpath": "/html/body/div[2]/div[2]/main/div/div/div/div/div/div[2]/div/form/div/div[3]/button",
                   "extract_start": 0,
                   "extract_end": 5
                }
@@ -2569,9 +2569,9 @@
             "venta": {
                "method": "OCR",
                "parameters": {
-                  "x0": 1055,
+                  "x0": 1060,
                   "y0": 220,
-                  "x1": 1105,
+                  "x1": 1110,
                   "y1": 245
                }
             }
