@@ -11,8 +11,11 @@ from selenium.webdriver.chrome.options import Options as WebDriverOptions
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from PIL import Image
+from io import BytesIO
 import threading
 import bench
+import easyocr
 import dpAnalysis
 
 
@@ -146,7 +149,13 @@ def get_source(fintech, options, k):
 
         # OCR method
         elif compraventa["method"] == "OCR":
-            pass
+            screenshot = driver.get_screenshot_as_png()
+            crop_coords = (parameters["x0"], parameters["y0"],
+                           parameters["x1"], parameters["y1"])
+            area = Image.open(BytesIO(screenshot)).crop(crop_coords)
+            area.save('temp.png')
+            result = easyocr.Reader(['en']).readtext('temp.png')[0][1]
+            info.append(clean(result))
 
     driver.quit()
 
@@ -203,8 +212,7 @@ def clean(text):
 
 def extract(source, fintech):
     init = 0
-    text = source[init + fintech["extract_start"]
-        : init + fintech["extract_end"]]
+    text = source[init + fintech["extract_start"]: init + fintech["extract_end"]]
     return clean(text)
 
 
@@ -237,7 +245,7 @@ def main(UPLOAD):
         options = set_options()
         all_threads = []
         for k, fintech in enumerate(active.fintechs):
-            if fintech["online"]:  # and fintech['id'] == 55:
+            if fintech["online"]:  # and fintech['id'] == 51:
                 new_thread = threading.Thread(
                     target=get_source, args=(fintech, options, k)
                 )

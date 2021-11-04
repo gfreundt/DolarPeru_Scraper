@@ -4,3 +4,9 @@ chromedriver*.*
 virtualenv/
 first-daily-run.txt
 todo.txt
+.vscode*.*
+temp.png
+ocr.py
+source.py
+credentials.json
+
