@@ -249,7 +249,7 @@ def main(UPLOAD):
         options = set_options()
         all_threads = []
         for k, fintech in enumerate(active.fintechs):
-            if fintech["online"]:  # and fintech['id'] == 28:
+            if fintech["online"] and fintech['id'] == 28:
                 new_thread = threading.Thread(
                     target=get_source, args=(fintech, options, k)
                 )
