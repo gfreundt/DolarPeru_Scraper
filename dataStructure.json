@@ -3242,7 +3242,7 @@
                }
             }
          },
-         "image": "",
+         "image": "imagen-generica.png",
          "bancos": {
             "inmediatos": [
                "",
@@ -3438,7 +3438,7 @@
                "parameters": null
             }
          },
-         "image": "",
+         "image": "imagen-generica.png",
          "bancos": {
             "inmediatos": [
                "",
@@ -3769,7 +3769,7 @@
                "parameters": null
             }
          },
-         "image": "",
+         "image": "imagen-generica.png",
          "bancos": {
             "inmediatos": [
                "",
@@ -3969,7 +3969,7 @@
                "parameters": {}
             }
          },
-         "image": "",
+         "image": "imagen-generica.png",
          "bancos": {
             "inmediatos": [
                "",
