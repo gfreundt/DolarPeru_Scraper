@@ -16,6 +16,7 @@ from io import BytesIO
 import threading
 import bench
 import easyocr
+import requests
 import dpAnalysis
 
 
@@ -99,23 +100,24 @@ def set_options():
 def get_source(fintech, options, k):
     print(f'Starting: {fintech["id"]} - {fintech["name"]}')
 
+    scraper = fintech["scraper"]
+
     # Open webpage in headless Chrome
     driver = webdriver.Chrome(active.CHROMEDRIVER, options=options)
-
-    #attempts = 1
-    # while attempts <= 2:
-    #    try:
-    driver.get(fintech["url"])
-    #        break
-    #    except:
-    #        attempts += 1
-    #        time.sleep(2)
+    if scraper["compra"]["method"] != "API":
+        driver.get(fintech["url"])
 
     # Loop through 'compra' and 'venta' instructions
     info, attempts = [], 1
-    scraper = fintech["scraper"]
     for compraventa in scraper.values():
         parameters = compraventa["parameters"]
+
+        # API method
+        if compraventa["method"] == "API":
+            response = requests.get(parameters["url"]).json()
+            for path in parameters["path"].split(">"):
+                response = response[path]
+            info.append(response)
 
         # XPATH method
         if compraventa["method"] == "XPATH":
@@ -155,6 +157,7 @@ def get_source(fintech, options, k):
             area = Image.open(BytesIO(screenshot)).crop(crop_coords)
             area.save('temp.png')
             result = easyocr.Reader(['en']).readtext('temp.png')[0][1]
+            print("OCR result", result)
             info.append(clean(result))
 
     driver.quit()
@@ -212,7 +215,8 @@ def clean(text):
 
 def extract(source, fintech):
     init = 0
-    text = source[init + fintech["extract_start"]: init + fintech["extract_end"]]
+    text = source[init + fintech["extract_start"]
+        : init + fintech["extract_end"]]
     return clean(text)
 
 
@@ -245,7 +249,7 @@ def main(UPLOAD):
         options = set_options()
         all_threads = []
         for k, fintech in enumerate(active.fintechs):
-            if fintech["online"]:  # and fintech['id'] == 51:
+            if fintech["online"]:  # and fintech['id'] == 28:
                 new_thread = threading.Thread(
                     target=get_source, args=(fintech, options, k)
                 )
