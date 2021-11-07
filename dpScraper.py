@@ -30,6 +30,7 @@ class Basics:
     def __init__(self):
 
         self.good, self.bad = 0, 0
+        self.last_url = ""
 
         self.switches = [i.upper() for i in sys.argv]
 
@@ -108,7 +109,7 @@ def get_source(fintech, options, k):
         driver.get(fintech["url"])
 
     # Loop through 'compra' and 'venta' instructions
-    info, attempts = [], 1
+    info, attempts, last_url = [], 1, ""
     for compraventa in scraper.values():
         parameters = compraventa["parameters"]
 
@@ -151,12 +152,15 @@ def get_source(fintech, options, k):
 
         # OCR method
         elif compraventa["method"] == "OCR":
+            time.sleep(5)
             screenshot = driver.get_screenshot_as_png()
             crop_coords = (parameters["x0"], parameters["y0"],
                            parameters["x1"], parameters["y1"])
-            area = Image.open(BytesIO(screenshot)).crop(crop_coords)
-            area.save('temp.png')
-            result = easyocr.Reader(['en']).readtext('temp.png')[0][1]
+            area = Image.open(BytesIO(screenshot)).crop(
+                crop_coords).resize((100, 50))
+            filename = f'temp-{parameters["x0"]}-{parameters["y0"]}.png'
+            area.save(filename)
+            result = easyocr.Reader(['en']).readtext(filename)[0][1]
             print("OCR result", result)
             info.append(clean(result))
 
@@ -215,8 +219,7 @@ def clean(text):
 
 def extract(source, fintech):
     init = 0
-    text = source[init + fintech["extract_start"]
-        : init + fintech["extract_end"]]
+    text = source[init + fintech["extract_start"]: init + fintech["extract_end"]]
     return clean(text)
 
 
@@ -249,7 +252,7 @@ def main(UPLOAD):
         options = set_options()
         all_threads = []
         for k, fintech in enumerate(active.fintechs):
-            if fintech["online"] and fintech['id'] == 28:
+            if fintech["online"] and fintech['id'] == 59:
                 new_thread = threading.Thread(
                     target=get_source, args=(fintech, options, k)
                 )
