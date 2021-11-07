@@ -1912,7 +1912,7 @@
       },
       {
          "id": 28,
-         "online": false,
+         "online": true,
          "name": "Cambista",
          "url": "https://cambista.online/",
          "link": "https://cambista.online/",
