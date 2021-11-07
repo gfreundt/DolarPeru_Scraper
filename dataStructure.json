@@ -38,14 +38,33 @@
                ""
             ]
          },
-         "contacto": "contacto@acomo.com.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@acomo.com.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": "01937-2019"
       },
       {
@@ -90,14 +109,33 @@
                ""
             ]
          },
-         "contacto": "hola@midpointfx.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "hola@midpointfx.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -142,14 +180,33 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "servicioalcliente@billex.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -194,14 +251,33 @@
                ""
             ]
          },
-         "contacto": "contacto@tkambio.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@tkambio.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": "03054-2017"
       },
       {
@@ -246,14 +322,33 @@
                ""
             ]
          },
-         "contacto": "info@rextie.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "info@rextie.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -298,14 +393,33 @@
                ""
             ]
          },
-         "contacto": "contacto@kambista.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@kambista.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -350,14 +464,33 @@
                ""
             ]
          },
-         "contacto": "hola@securex.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "hola@securex.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -402,14 +535,33 @@
                ""
             ]
          },
-         "contacto": "contacto@tucambista.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@tucambista.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -451,14 +603,33 @@
                ""
             ]
          },
-         "contacto": "cocosylucas@bcp.com.pe",
-         "RUC": "20100047218",
-         "App_iOS": "https://apps.apple.com/us/app/cocos-y-lucas/id1532776169",
-         "App_Android": "https://play.google.com/store/apps/details?id=com.bcp.innovacxion.cylmprod",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "cocosylucas@bcp.com.pe",
+            "telefono": ""
+         },
+         "ruc": "20100047218",
+         "app_iOS": "https://apps.apple.com/us/app/cocos-y-lucas/id1532776169",
+         "app_Android": "https://play.google.com/store/apps/details?id=com.bcp.innovacxion.cylmprod",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -503,14 +674,33 @@
                ""
             ]
          },
-         "contacto": "info@cambioseguro.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "info@cambioseguro.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -555,14 +745,33 @@
                ""
             ]
          },
-         "contacto": "hola@cambiafx.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "hola@cambiafx.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -607,14 +816,33 @@
                ""
             ]
          },
-         "contacto": "info@cambistainka.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "info@cambistainka.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -659,14 +887,33 @@
                ""
             ]
          },
-         "contacto": "contacto@instakash.net",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@instakash.net",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -711,14 +958,33 @@
                ""
             ]
          },
-         "contacto": "clientes@cambiomundial.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "clientes@cambiomundial.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -763,14 +1029,33 @@
                ""
             ]
          },
-         "contacto": "contacto@perudolar.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@perudolar.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -815,14 +1100,33 @@
                ""
             ]
          },
-         "contacto": "estherventas@terracash.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "estherventas@terracash.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -867,14 +1171,33 @@
                ""
             ]
          },
-         "contacto": "operaciones@cambi.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "operaciones@cambi.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -919,14 +1242,33 @@
                ""
             ]
          },
-         "contacto": "contacto@roblex.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@roblex.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -971,14 +1313,33 @@
                ""
             ]
          },
-         "contacto": "info@noncash.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "info@noncash.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1023,14 +1384,33 @@
                ""
             ]
          },
-         "contacto": "cambix_info@bancomercio.com.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "cambix_info@bancomercio.com.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1075,14 +1455,33 @@
                ""
             ]
          },
-         "contacto": "01 422 0014",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "01 422 0014",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1127,14 +1526,33 @@
                ""
             ]
          },
-         "contacto": "ventas@casadecambioelalfarero.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "ventas@casadecambioelalfarero.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1179,14 +1597,33 @@
                ""
             ]
          },
-         "contacto": "consultas@cambiox.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "consultas@cambiox.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1231,14 +1668,33 @@
                ""
             ]
          },
-         "contacto": "N/A",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "N/A",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1283,14 +1739,33 @@
                ""
             ]
          },
-         "contacto": "978-830-054",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "978-830-054",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1335,14 +1810,33 @@
                ""
             ]
          },
-         "contacto": "915-097-744",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "915-097-744",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1387,55 +1881,98 @@
                ""
             ]
          },
-         "contacto": "contacto@dollarhouse.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@dollarhouse.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
          "id": 28,
          "online": false,
-         "name": "Cambista Online",
+         "name": "Cambista",
          "url": "https://cambista.online/",
          "link": "https://cambista.online/",
          "bench": "",
          "scraper": {
             "compra": {
-               "method": null,
-               "parameters": null
+               "method": "API",
+               "parameters": {
+                  "url": "https://cambista.com/api-rest/js/calc.json",
+                  "path": "site>dollar>price_c",
+                  "post-process": null
+               }
             },
             "venta": {
-               "method": null,
-               "parameters": null
+               "method": "API",
+               "parameters": {
+                  "url": "https://cambista.com/api-rest/js/calc.json",
+                  "path": "site>dollar>price_v",
+                  "post-process": null
+               }
             }
          },
-         "image": "cambista_online.png",
+         "image": "cambista.png",
          "bancos": {
             "inmediatos": [
-               "",
-               "",
-               ""
+               "BCP",
+               "BBVA"
             ],
             "interbancario": [
-               "",
-               "",
-               ""
+               "Scotiabank"
             ]
          },
-         "contacto": "contacto@cambista.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
-         "registro_SBS": ""
+         "contacto": {
+            "correo": "contacto@cambista.com",
+            "telefono": "970782603"
+         },
+         "ruc": "20568700831",
+         "app_iOS": null,
+         "app_Android": null,
+         "horario": "Lunes a Sábado de 9 am a 7 pm",
+         "redes_sociales": {
+            "facebook": "https://www.facebook.com/cambistaperu",
+            "twitter": "",
+            "instagram": "https://www.instagram.com/cambistaperu/",
+            "linkedin": "",
+            "youtube": "https://www.youtube.com/channel/UCjIV0wAlzpV_Hyo0EQ1GlQw"
+         },
+         "login_para_ver_tc": false,
+         "login_para_ejecutar_tc": false,
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "Casa de cambio online. Cambiamos sus soles y dólares rápidamente y con seguridad. Atención a todo Lima y provincias. Estamos registrados ante la SBS.",
+         "registro_SBS": "40657-2018"
       },
       {
          "id": 29,
@@ -1475,14 +2012,33 @@
                ""
             ]
          },
-         "contacto": "contacto@assessorperu.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@assessorperu.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1523,14 +2079,33 @@
                ""
             ]
          },
-         "contacto": "info@x-cambio.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "info@x-cambio.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1575,14 +2150,33 @@
                ""
             ]
          },
-         "contacto": "soporte@keyex.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "soporte@keyex.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1627,14 +2221,33 @@
                ""
             ]
          },
-         "contacto": "01-615-1111p2",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "01-615-1111p2",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1679,14 +2292,33 @@
                ""
             ]
          },
-         "contacto": "operaciones@dlsmoney.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "operaciones@dlsmoney.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1731,14 +2363,33 @@
                ""
             ]
          },
-         "contacto": "contacto@hirpower.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@hirpower.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1783,14 +2434,33 @@
                "Scotiabank"
             ]
          },
-         "contacto": "+51 980-020-052",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "+51 980-020-052",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1835,14 +2505,33 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "servicioalcliente@billex.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1887,14 +2576,33 @@
                ""
             ]
          },
-         "contacto": "+51 959-370-922",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "+51 959-370-922",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1939,14 +2647,33 @@
                ""
             ]
          },
-         "contacto": "N/A",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "N/A",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -1991,14 +2718,33 @@
                ""
             ]
          },
-         "contacto": "divisas@perudollar.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "divisas@perudollar.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2043,14 +2789,33 @@
                ""
             ]
          },
-         "contacto": "comunicaciones@monnety.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "comunicaciones@monnety.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2095,14 +2860,33 @@
                ""
             ]
          },
-         "contacto": "contactos@cambiosjp.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contactos@cambiosjp.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2147,14 +2931,33 @@
                ""
             ]
          },
-         "contacto": "moneyking.pe@gmail.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "moneyking.pe@gmail.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2199,14 +3002,33 @@
                ""
             ]
          },
-         "contacto": "contacto@yomimoka.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@yomimoka.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2251,14 +3073,33 @@
                ""
             ]
          },
-         "contacto": "982-273-702",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "982-273-702",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2299,14 +3140,33 @@
                ""
             ]
          },
-         "contacto": "contacto@buenkambio.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@buenkambio.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2351,14 +3211,33 @@
                ""
             ]
          },
-         "contacto": "servicioalcliente@billex.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "servicioalcliente@billex.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2399,14 +3278,33 @@
                ""
             ]
          },
-         "contacto": "cambios@fortuneonline.com.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "cambios@fortuneonline.com.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2447,14 +3345,33 @@
                ""
             ]
          },
-         "contacto": "informes@lacasadeldolar.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "informes@lacasadeldolar.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2487,14 +3404,33 @@
                ""
             ]
          },
-         "contacto": "info@ftb.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "info@ftb.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2539,14 +3475,33 @@
                ""
             ]
          },
-         "contacto": "contacto@dolarvip.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@dolarvip.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2589,14 +3544,33 @@
                ""
             ]
          },
-         "contacto": "admin@cambialo.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "admin@cambialo.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2641,14 +3615,33 @@
                ""
             ]
          },
-         "contacto": "contacto@decamoney.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@decamoney.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2681,14 +3674,33 @@
                ""
             ]
          },
-         "contacto": "contacto@tica.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@tica.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2721,14 +3733,33 @@
                ""
             ]
          },
-         "contacto": "N/A",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "N/A",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2769,14 +3800,33 @@
                ""
             ]
          },
-         "contacto": "info@prex.com.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "info@prex.com.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2821,14 +3871,33 @@
                ""
             ]
          },
-         "contacto": "jayala@zonadolar.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "jayala@zonadolar.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2861,14 +3930,33 @@
                ""
             ]
          },
-         "contacto": "contacto@amazfx.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@amazfx.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2901,14 +3989,33 @@
                ""
             ]
          },
-         "contacto": "soporte@buenbit.pe",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "soporte@buenbit.pe",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": ""
       },
       {
@@ -2941,14 +4048,33 @@
                ""
             ]
          },
-         "contacto": "contacto@tucambiototal.com",
-         "RUC": "20607581275",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "contacto@tucambiototal.com",
+            "telefono": ""
+         },
+         "ruc": "20607581275",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": "01989-2021"
       },
       {
@@ -2993,15 +4119,211 @@
                ""
             ]
          },
-         "contacto": "soporte@firbid.com",
-         "RUC": "",
-         "App_iOS": "",
-         "App_Android": "",
-         "reserved1": "",
-         "reserved2": "",
-         "reserved3": "",
-         "reserved4": "",
+         "contacto": {
+            "correo": "soporte@firbid.com",
+            "telefono": ""
+         },
+         "ruc": "",
+         "app_iOS": "",
+         "app_Android": "",
+         "horario": "",
+         "redes_sociales": {
+            "facebook": "",
+            "twitter": "",
+            "instagram": "",
+            "linkedin": "",
+            "youtube": ""
+         },
+         "login_para_ver_tc": "",
+         "login_para_ejecutar_tc": "",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": "",
+         "texto_libre": "",
          "registro_SBS": "01989-2021"
+      }
+   ],
+   "bancos": [
+      {
+         "id": 1,
+         "online": true,
+         "name": "BCP",
+         "url": "https://bcp.com.pe/",
+         "link": "https://bcp.com.pe/",
+         "scraper": {
+            "compra": {
+               "method": "API",
+               "parameters": {
+                  "url": "https://cambista.com/api-rest/js/calc.json",
+                  "path": "site>Interbank>price_bcp_c",
+                  "post-process": null
+               }
+            },
+            "venta": {
+               "method": "API",
+               "parameters": {
+                  "url": "https://cambista.com/api-rest/js/calc.json",
+                  "path": "site>Interbank>price_bcp_v",
+                  "post-process": null
+               }
+            }
+         },
+         "image": "bcp.png",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": ""
+      },
+      {
+         "id": 2,
+         "online": true,
+         "name": "BBVA",
+         "url": "https://bbva.com.pe/",
+         "link": "https://bbva.com.pe/",
+         "scraper": {
+            "compra": {
+               "method": "API",
+               "parameters": {
+                  "url": "https://cambista.com/api-rest/js/calc.json",
+                  "path": "site>Interbank>price_bbva_c",
+                  "post-process": null
+               }
+            },
+            "venta": {
+               "method": "API",
+               "parameters": {
+                  "url": "https://cambista.com/api-rest/js/calc.json",
+                  "path": "site>Interbank>price_bbva_v",
+                  "post-process": null
+               }
+            }
+         },
+         "image": "bbva.png",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": ""
+      },
+      {
+         "id": 3,
+         "online": true,
+         "name": "Interbank",
+         "url": "https://interbank.com.pe/",
+         "link": "https://interbank.com.pe/",
+         "scraper": {
+            "compra": {
+               "method": "API",
+               "parameters": {
+                  "url": "https://cambista.com/api-rest/js/calc.json",
+                  "path": "site>Interbank>interbank_bcp_c",
+                  "post-process": null
+               }
+            },
+            "venta": {
+               "method": "API",
+               "parameters": {
+                  "url": "https://cambista.com/api-rest/js/calc.json",
+                  "path": "site>Interbank>price_interbank_v",
+                  "post-process": null
+               }
+            }
+         },
+         "image": "interbank.png",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": ""
+      },
+      {
+         "id": 4,
+         "online": true,
+         "name": "Scotiabank",
+         "url": "https://scotiabank.com.pe/",
+         "link": "https://scotiabank.com.pe/",
+         "scraper": {
+            "compra": {
+               "method": "API",
+               "parameters": {
+                  "url": "https://cambista.com/api-rest/js/calc.json",
+                  "path": "site>Interbank>price_scotiabank_c",
+                  "post-process": null
+               }
+            },
+            "venta": {
+               "method": "API",
+               "parameters": {
+                  "url": "https://cambista.com/api-rest/js/calc.json",
+                  "path": "site>Interbank>price_scotiabank_v",
+                  "post-process": null
+               }
+            }
+         },
+         "image": "scotiabank.png",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": ""
+      },
+      {
+         "id": 5,
+         "online": true,
+         "name": "Banco de la Nación",
+         "url": "https://bn.com.pe/",
+         "link": "https://bn.com.pe/",
+         "scraper": {
+            "compra": {
+               "method": "API",
+               "parameters": {
+                  "url": "https://cambista.com/api-rest/js/calc.json",
+                  "path": "site>Interbank>price_nacion_c",
+                  "post-process": null
+               }
+            },
+            "venta": {
+               "method": "API",
+               "parameters": {
+                  "url": "https://cambista.com/api-rest/js/calc.json",
+                  "path": "site>Interbank>price_nacion_v",
+                  "post-process": null
+               }
+            }
+         },
+         "image": "bn.png",
+         "reserved7": "",
+         "reserved8": "",
+         "reserved9": "",
+         "reserved10": "",
+         "reserved11": "",
+         "reserved12": "",
+         "reserved13": "",
+         "reserved14": "",
+         "reserved15": ""
       }
    ]
 }

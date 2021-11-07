@@ -219,9 +219,9 @@ def analysis2(fintechs, data, historic):
                         "contacto": f["contacto"],
                         "registro_SBS": f["registro_SBS"],
                         "bancos": f["bancos"],
-                        "RUC": f["RUC"],
-                        "App_iOS": f["App_iOS"],
-                        "App_Android": f["App_Android"],
+                        "RUC": f["ruc"],
+                        "App_iOS": f["app_iOS"],
+                        "App_Android": f["app_Android"],
                     }
                 }
                 # Insert most recent quote
