@@ -219,7 +219,8 @@ def clean(text):
 
 def extract(source, fintech):
     init = 0
-    text = source[init + fintech["extract_start"]: init + fintech["extract_end"]]
+    text = source[init + fintech["extract_start"]
+        : init + fintech["extract_end"]]
     return clean(text)
 
 
@@ -252,7 +253,7 @@ def main(UPLOAD):
         options = set_options()
         all_threads = []
         for k, fintech in enumerate(active.fintechs):
-            if fintech["online"] and fintech['id'] == 59:
+            if fintech["online"]:  # and fintech['id'] == 59:
                 new_thread = threading.Thread(
                     target=get_source, args=(fintech, options, k)
                 )
