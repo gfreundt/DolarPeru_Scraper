@@ -3,6 +3,7 @@
       {
          "id": 1,
          "online": true,
+         "stats": true,
          "name": "A Como",
          "url": "https://acomo.com.pe/",
          "link": "https://acomo.com.pe/",
@@ -53,8 +54,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -70,6 +71,7 @@
       {
          "id": 2,
          "online": true,
+         "stats": true,
          "name": "MidpointFX",
          "url": "https://www.midpointfx.com/",
          "link": "https://www.midpointfx.com/",
@@ -124,8 +126,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -141,6 +143,7 @@
       {
          "id": 3,
          "online": true,
+         "stats": true,
          "name": "Billex",
          "url": "https://www.billex.pe/",
          "link": "https://www.billex.pe/",
@@ -195,8 +198,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -212,6 +215,7 @@
       {
          "id": 4,
          "online": true,
+         "stats": true,
          "name": "TKambio",
          "url": "https://tkambio.com",
          "link": "https://tkambio.com",
@@ -266,8 +270,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -283,6 +287,7 @@
       {
          "id": 5,
          "online": true,
+         "stats": true,
          "name": "Rextie",
          "url": "https://rextie.com",
          "link": "https://rextie.com",
@@ -337,8 +342,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -354,6 +359,7 @@
       {
          "id": 6,
          "online": true,
+         "stats": true,
          "name": "Kambista",
          "url": "https://kambista.com",
          "link": "https://kambista.com",
@@ -408,8 +414,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -425,6 +431,7 @@
       {
          "id": 7,
          "online": true,
+         "stats": true,
          "name": "Securex",
          "url": "https://securex.pe",
          "link": "https://securex.pe",
@@ -479,8 +486,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -496,6 +503,7 @@
       {
          "id": 8,
          "online": true,
+         "stats": true,
          "name": "Tu Cambista",
          "url": "https://tucambista.pe",
          "link": "https://tucambista.pe",
@@ -550,8 +558,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -567,6 +575,7 @@
       {
          "id": 9,
          "online": true,
+         "stats": true,
          "name": "Cocos y Lucas",
          "url": "https://cocosylucasbcp.com",
          "link": "https://cocosylucasbcp.com",
@@ -618,8 +627,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -635,6 +644,7 @@
       {
          "id": 10,
          "online": true,
+         "stats": true,
          "name": "Cambio Seguro",
          "url": "https://cuantoestaeldolar.pe/",
          "link": "https://cambioseguro.com/",
@@ -689,8 +699,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -706,6 +716,7 @@
       {
          "id": 11,
          "online": true,
+         "stats": true,
          "name": "CambiaFX",
          "url": "https://cambiafx.pe/",
          "link": "https://cambiafx.pe/",
@@ -760,8 +771,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -777,6 +788,7 @@
       {
          "id": 12,
          "online": true,
+         "stats": true,
          "name": "Cambista Inka",
          "url": "https://www.cambistainka.com/",
          "link": "https://www.cambistainka.com/",
@@ -831,8 +843,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -848,6 +860,7 @@
       {
          "id": 13,
          "online": true,
+         "stats": true,
          "name": "InstaKash",
          "url": "https://instakash.net/",
          "link": "https://instakash.net/",
@@ -902,8 +915,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -919,6 +932,7 @@
       {
          "id": 14,
          "online": true,
+         "stats": true,
          "name": "Cambio Mundial",
          "url": "https://www.cambiomundial.com/",
          "link": "https://www.cambiomundial.com/",
@@ -973,8 +987,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -990,6 +1004,7 @@
       {
          "id": 15,
          "online": true,
+         "stats": true,
          "name": "Peru Dolar",
          "url": "https://perudolar.pe/",
          "link": "https://perudolar.pe/",
@@ -1044,8 +1059,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -1061,6 +1076,7 @@
       {
          "id": 16,
          "online": true,
+         "stats": true,
          "name": "TerraCash",
          "url": "https://cuantoestaeldolar.pe/",
          "link": "https://terracash.pe/",
@@ -1115,8 +1131,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -1132,6 +1148,7 @@
       {
          "id": 17,
          "online": true,
+         "stats": true,
          "name": "Cambi.pe",
          "url": "http://cambi.pe/",
          "link": "http://cambi.pe/",
@@ -1186,8 +1203,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -1203,6 +1220,7 @@
       {
          "id": 18,
          "online": true,
+         "stats": true,
          "name": "Roblex",
          "url": "https://cuantoestaeldolar.pe/",
          "link": "https://roblex.pe/",
@@ -1257,8 +1275,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -1274,6 +1292,7 @@
       {
          "id": 19,
          "online": true,
+         "stats": true,
          "name": "NonCash",
          "url": "https://noncash.pe",
          "link": "https://noncash.pe",
@@ -1328,8 +1347,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -1345,6 +1364,7 @@
       {
          "id": 20,
          "online": true,
+         "stats": true,
          "name": "Cambix",
          "url": "https://cuantoestaeldolar.pe/",
          "link": "https://cambix.com.pe/home",
@@ -1399,8 +1419,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -1416,6 +1436,7 @@
       {
          "id": 21,
          "online": true,
+         "stats": true,
          "name": "Western Union",
          "url": "https://www.westernunionperu.pe/cambiodemoneda",
          "link": "https://www.westernunionperu.pe/cambiodemoneda",
@@ -1470,8 +1491,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -1487,6 +1508,7 @@
       {
          "id": 22,
          "online": true,
+         "stats": true,
          "name": "El Alfarero",
          "url": "https://www.casadecambioelalfarero.com/",
          "link": "https://www.casadecambioelalfarero.com/",
@@ -1541,8 +1563,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -1558,6 +1580,7 @@
       {
          "id": 23,
          "online": true,
+         "stats": true,
          "name": "CambioX",
          "url": "https://www.cambiox.pe/",
          "link": "https://www.cambiox.pe/",
@@ -1612,8 +1635,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -1629,6 +1652,7 @@
       {
          "id": 24,
          "online": false,
+         "stats": false,
          "name": "Fintuu",
          "url": "https://www.fintuu.com/",
          "link": "https://www.fintuu.com/",
@@ -1683,8 +1707,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -1700,6 +1724,7 @@
       {
          "id": 25,
          "online": true,
+         "stats": true,
          "name": "Safex",
          "url": "https://www.safex.pe/",
          "link": "https://www.safex.pe/",
@@ -1754,8 +1779,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -1771,6 +1796,7 @@
       {
          "id": 26,
          "online": true,
+         "stats": true,
          "name": "Efectibit",
          "url": "https://www.efectibit.com/",
          "link": "https://www.efectibit.com/",
@@ -1825,8 +1851,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -1842,6 +1868,7 @@
       {
          "id": 27,
          "online": true,
+         "stats": true,
          "name": "Dollar House",
          "url": "https://cuantoestaeldolar.pe/",
          "link": "https://dollarhouse.pe/",
@@ -1896,8 +1923,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -1913,6 +1940,7 @@
       {
          "id": 28,
          "online": true,
+         "stats": true,
          "name": "Cambista",
          "url": "https://cambista.online/",
          "link": "https://cambista.online/",
@@ -1960,8 +1988,8 @@
             "linkedin": "",
             "youtube": "https://www.youtube.com/channel/UCjIV0wAlzpV_Hyo0EQ1GlQw"
          },
-         "login_para_ver_tc": false,
-         "login_para_ejecutar_tc": false,
+         "login_para_ver": false,
+         "login_para_ejecutar": false,
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -1977,6 +2005,7 @@
       {
          "id": 29,
          "online": true,
+         "stats": true,
          "name": "A$$e$$or",
          "url": "https://www.assessorperu.com/",
          "link": "https://www.assessorperu.com/",
@@ -2027,8 +2056,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -2044,6 +2073,7 @@
       {
          "id": 30,
          "online": true,
+         "stats": true,
          "name": "X-Cambio",
          "url": "https://x-cambio.com/",
          "link": "https://x-cambio.com/",
@@ -2094,8 +2124,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -2111,6 +2141,7 @@
       {
          "id": 31,
          "online": true,
+         "stats": true,
          "name": "KeyEx",
          "url": "https://www.keyex.pe/",
          "link": "https://www.keyex.pe/",
@@ -2165,8 +2196,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -2182,6 +2213,7 @@
       {
          "id": 32,
          "online": true,
+         "stats": true,
          "name": "DinersFX",
          "url": "https://www.dinersfx.pe/",
          "link": "https://www.dinersfx.pe/",
@@ -2236,8 +2268,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -2253,6 +2285,7 @@
       {
          "id": 33,
          "online": true,
+         "stats": true,
          "name": "DL$Money",
          "url": "https://cuantoestaeldolar.pe/",
          "link": "https://dlsmoney.com/",
@@ -2307,8 +2340,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -2324,6 +2357,7 @@
       {
          "id": 34,
          "online": true,
+         "stats": true,
          "name": "HIR Power",
          "url": "https://hirpower.com/",
          "link": "https://hirpower.com/",
@@ -2378,8 +2412,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -2395,6 +2429,7 @@
       {
          "id": 35,
          "online": true,
+         "stats": true,
          "name": "Yanki",
          "url": "https://yanki.pe/",
          "link": "https://yanki.pe/",
@@ -2449,8 +2484,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -2466,10 +2501,11 @@
       {
          "id": 36,
          "online": true,
+         "stats": true,
          "name": "Tintercambio",
          "url": "https://tintercambio.com/",
          "link": "https://tintercambio.com/",
-         "bench": "ftb",
+         "bench": "",
          "scraper": {
             "compra": {
                "method": "XPATH",
@@ -2520,8 +2556,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -2537,6 +2573,7 @@
       {
          "id": 37,
          "online": false,
+         "stats": true,
          "name": "DolarSol",
          "url": "https://dolarsol.com/",
          "link": "https://dolarsol.com/",
@@ -2591,8 +2628,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -2608,6 +2645,7 @@
       {
          "id": 38,
          "online": true,
+         "stats": true,
          "name": "JetCash",
          "url": "http://www.jetperu.com.pe/casa-de-cambio",
          "link": "http://www.jetperu.com.pe/casa-de-cambio",
@@ -2662,8 +2700,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -2679,6 +2717,7 @@
       {
          "id": 39,
          "online": false,
+         "stats": true,
          "name": "PeruDollar",
          "url": "www.perudollar.pe",
          "link": "www.perudollar.pe",
@@ -2733,8 +2772,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -2750,6 +2789,7 @@
       {
          "id": 40,
          "online": true,
+         "stats": true,
          "name": "Monnety",
          "url": "https://www.monnety.com/",
          "link": "https://www.monnety.com/",
@@ -2804,8 +2844,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -2821,6 +2861,7 @@
       {
          "id": 41,
          "online": true,
+         "stats": true,
          "name": "CambiosJP",
          "url": "https://cambiosjp.com/",
          "link": "https://cambiosjp.com/",
@@ -2875,8 +2916,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -2892,6 +2933,7 @@
       {
          "id": 42,
          "online": true,
+         "stats": true,
          "name": "Money King",
          "url": "https://www.moneyking.pe/",
          "link": "https://www.moneyking.pe/",
@@ -2946,8 +2988,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -2963,6 +3005,7 @@
       {
          "id": 43,
          "online": true,
+         "stats": true,
          "name": "Yomimoka",
          "url": "https://yomimoka.com/",
          "link": "https://yomimoka.com/",
@@ -3017,8 +3060,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -3033,30 +3076,29 @@
       },
       {
          "id": 44,
-         "online": false,
+         "online": true,
+         "stats": true,
          "name": "iMoney",
          "url": "https://imoney.pe/",
          "link": "https://imoney.pe/",
          "bench": "",
          "scraper": {
             "compra": {
-               "method": "XPATH",
+               "method": "OCR",
                "parameters": {
-                  "xpath": "/html/body/div/div[2]/div[1]/div[1]/div[1]/h4[2]",
-                  "click": false,
-                  "click_xpath": "",
-                  "extract_start": 0,
-                  "extract_end": 6
+                  "x0": 790,
+                  "y0": 240,
+                  "x1": 880,
+                  "y1": 270
                }
             },
             "venta": {
-               "method": "XPATH",
+               "method": "OCR",
                "parameters": {
-                  "xpath": "/html/body/div/div[2]/div[1]/div[1]/div[2]/h4[2]",
-                  "click": false,
-                  "click_xpath": "",
-                  "extract_start": 0,
-                  "extract_end": 6
+                  "x0": 1055,
+                  "y0": 240,
+                  "x1": 1145,
+                  "y1": 270
                }
             }
          },
@@ -3088,8 +3130,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -3105,6 +3147,7 @@
       {
          "id": 45,
          "online": true,
+         "stats": true,
          "name": "Buenkambio",
          "url": "https://buenkambio.com/index.php",
          "link": "https://buenkambio.com/index.php",
@@ -3155,8 +3198,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -3172,6 +3215,7 @@
       {
          "id": 46,
          "online": false,
+         "stats": false,
          "name": "Dolartec",
          "url": "http://190.119.236.76:8090/",
          "link": "http://190.119.236.76:8090/",
@@ -3226,8 +3270,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -3243,6 +3287,7 @@
       {
          "id": 47,
          "online": true,
+         "stats": true,
          "name": "Fortune Online",
          "url": "https://www.fortuneonline.com.pe/",
          "link": "https://www.fortuneonline.com.pe/",
@@ -3293,8 +3338,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -3310,6 +3355,7 @@
       {
          "id": 48,
          "online": true,
+         "stats": true,
          "name": "La Casa del Dolar",
          "url": "https://lacasadeldolar.pe/",
          "link": "https://lacasadeldolar.pe/",
@@ -3360,8 +3406,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -3377,6 +3423,7 @@
       {
          "id": 49,
          "online": false,
+         "stats": true,
          "name": "FTB",
          "url": "https://ftb.pe/",
          "link": "https://ftb.pe/",
@@ -3419,8 +3466,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -3436,6 +3483,7 @@
       {
          "id": 50,
          "online": true,
+         "stats": true,
          "name": "Dolarvip",
          "url": "https://www.dolarvip.com/",
          "link": "https://www.dolarvip.com/",
@@ -3490,8 +3538,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -3507,6 +3555,7 @@
       {
          "id": 51,
          "online": true,
+         "stats": true,
          "name": "Cambialo",
          "url": "https://www.cambialo.pe/",
          "link": "https://www.cambialo.pe/",
@@ -3515,9 +3564,9 @@
             "compra": {
                "method": "OCR",
                "parameters": {
-                  "x0": 875,
+                  "x0": 880,
                   "y0": 220,
-                  "x1": 925,
+                  "x1": 930,
                   "y1": 245
                }
             },
@@ -3559,8 +3608,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -3576,6 +3625,7 @@
       {
          "id": 52,
          "online": true,
+         "stats": true,
          "name": "Decamoney",
          "url": "https://decamoney.com/",
          "link": "https://decamoney.com/",
@@ -3630,8 +3680,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -3646,7 +3696,8 @@
       },
       {
          "id": 53,
-         "online": false,
+         "online": true,
+         "stats": true,
          "name": "Tica",
          "url": "https://www.tica.pe/",
          "link": "https://www.tica.pe/",
@@ -3654,25 +3705,22 @@
          "scraper": {
             "compra": {
                "method": "OCR",
-               "parameters": {}
+               "parameters": {
+                  "x0": 535,
+                  "y0": 235,
+                  "x1": 600,
+                  "y1": 260
+               }
             },
             "venta": {
                "method": "OCR",
-               "parameters": {}
+               "parameters": {
+                  "x0": 835,
+                  "y0": 235,
+                  "x1": 900,
+                  "y1": 260
+               }
             }
-         },
-         "image": "tica.png",
-         "bancos": {
-            "inmediatos": [
-               "",
-               "",
-               ""
-            ],
-            "interbancario": [
-               "",
-               "",
-               ""
-            ]
          },
          "contacto": {
             "correo": "contacto@tica.pe",
@@ -3689,8 +3737,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -3706,6 +3754,7 @@
       {
          "id": 54,
          "online": false,
+         "stats": false,
          "name": "Intispot",
          "url": "www.intispot.com",
          "link": "www.intispot.com",
@@ -3734,7 +3783,7 @@
             ]
          },
          "contacto": {
-            "correo": "N/A",
+            "correo": null,
             "telefono": ""
          },
          "ruc": "",
@@ -3748,8 +3797,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -3765,6 +3814,7 @@
       {
          "id": 55,
          "online": true,
+         "stats": true,
          "name": "Prex",
          "url": "https://www.prex.com.pe/",
          "link": "https://www.prex.com.pe/",
@@ -3815,8 +3865,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -3832,6 +3882,7 @@
       {
          "id": 56,
          "online": true,
+         "stats": true,
          "name": "Zona Dolar",
          "url": "https://zonadolar.pe/",
          "link": "https://zonadolar.pe/",
@@ -3886,8 +3937,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -3903,17 +3954,18 @@
       {
          "id": 57,
          "online": false,
+         "stats": false,
          "name": "Amaz FX",
          "url": "https://amazfx.pe/",
          "link": "https://amazfx.pe/",
          "bench": "",
          "scraper": {
             "compra": {
-               "method": "OCR",
+               "method": null,
                "parameters": {}
             },
             "venta": {
-               "method": "OCR",
+               "method": null,
                "parameters": {}
             }
          },
@@ -3945,8 +3997,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -3962,6 +4014,7 @@
       {
          "id": 58,
          "online": true,
+         "stats": true,
          "name": "Buenbit",
          "url": "https://www.buenbit.com/es-PE/comprar-dolares-en-peru",
          "link": "https://www.buenbit.com/es-PE/comprar-dolares-en-peru",
@@ -4004,8 +4057,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -4020,7 +4073,8 @@
       },
       {
          "id": 59,
-         "online": false,
+         "online": true,
+         "stats": true,
          "name": "Tu Cambio Total",
          "url": "https://tucambiototal.com/",
          "link": "https://tucambiototal.com/",
@@ -4028,14 +4082,24 @@
          "scraper": {
             "compra": {
                "method": "OCR",
-               "parameters": {}
+               "parameters": {
+                  "x0": 923,
+                  "y0": 155,
+                  "x1": 975,
+                  "y1": 175
+               }
             },
             "venta": {
                "method": "OCR",
-               "parameters": {}
+               "parameters": {
+                  "x0": 1033,
+                  "y0": 155,
+                  "x1": 1085,
+                  "y1": 175
+               }
             }
          },
-         "image": "",
+         "image": "tu_cambio_total.png",
          "bancos": {
             "inmediatos": [
                "",
@@ -4063,8 +4127,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -4080,6 +4144,7 @@
       {
          "id": 60,
          "online": true,
+         "stats": true,
          "name": "Firbid",
          "url": "https://www.firbid.com/",
          "link": "https://www.firbid.com/",
@@ -4134,8 +4199,8 @@
             "linkedin": "",
             "youtube": ""
          },
-         "login_para_ver_tc": "",
-         "login_para_ejecutar_tc": "",
+         "login_para_ver": "",
+         "login_para_ejecutar": "",
          "reserved7": "",
          "reserved8": "",
          "reserved9": "",
@@ -4153,6 +4218,7 @@
       {
          "id": 1,
          "online": true,
+         "stats": true,
          "name": "BCP",
          "url": "https://bcp.com.pe/",
          "link": "https://bcp.com.pe/",
@@ -4188,6 +4254,7 @@
       {
          "id": 2,
          "online": true,
+         "stats": true,
          "name": "BBVA",
          "url": "https://bbva.com.pe/",
          "link": "https://bbva.com.pe/",
@@ -4223,6 +4290,7 @@
       {
          "id": 3,
          "online": true,
+         "stats": true,
          "name": "Interbank",
          "url": "https://interbank.com.pe/",
          "link": "https://interbank.com.pe/",
@@ -4258,6 +4326,7 @@
       {
          "id": 4,
          "online": true,
+         "stats": true,
          "name": "Scotiabank",
          "url": "https://scotiabank.com.pe/",
          "link": "https://scotiabank.com.pe/",
@@ -4293,6 +4362,7 @@
       {
          "id": 5,
          "online": true,
+         "stats": true,
          "name": "Banco de la Nación",
          "url": "https://bn.com.pe/",
          "link": "https://bn.com.pe/",
