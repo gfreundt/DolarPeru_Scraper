@@ -3722,6 +3722,19 @@
                }
             }
          },
+         "image": "tica.png",
+         "bancos": {
+            "inmediatos": [
+               "",
+               "",
+               ""
+            ],
+            "interbancario": [
+               "",
+               "",
+               ""
+            ]
+         },
          "contacto": {
             "correo": "contacto@tica.pe",
             "telefono": ""
