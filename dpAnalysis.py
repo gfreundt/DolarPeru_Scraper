@@ -216,12 +216,21 @@ def analysis2(fintechs, data, historic):
                         "name": f["name"],
                         "link": f["link"],
                         "image": f["image"],
-                        "contacto": f["contacto"],
+                        "bancos_inmediato": f["bancos"]["inmediatos"],
+                        "bancos_interbancario": f["bancos"]["interbancario"],
+                        "contacto_correo": f["contacto"]["correo"],
+                        "contacto_telefono": f["contacto"]["telefono"],
                         "registro_SBS": f["registro_SBS"],
-                        "bancos": f["bancos"],
-                        "RUC": f["ruc"],
-                        "App_iOS": f["app_iOS"],
-                        "App_Android": f["app_Android"],
+                        "horario": f["horario"],
+                        "facebook": f["redes_sociales"]["facebook"],
+                        "twitter": f["redes_sociales"]["twitter"],
+                        "instagram": f["redes_sociales"]["instagram"],
+                        "linkedin": f["redes_sociales"]["linkedin"],
+                        "youtube": f["redes_sociales"]["youtube"],
+                        "ruc": f["ruc"],
+                        "app_iOS": f["app_iOS"],
+                        "app_Android": f["app_Android"],
+                        "texto_libre": f["texto_libre"]
                     }
                 }
                 # Insert most recent quote
