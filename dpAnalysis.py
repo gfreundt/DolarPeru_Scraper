@@ -314,6 +314,9 @@ def analysis3(fintechs, data):
         "date": ts_to_str(ts=ts, format="date"),
     }
 
+    # filter fintechs to exclude those not being counted in stats
+    fintechs = [i for i in fintechs if i["stats"]]
+
     # create list of last TS_COUNT timestamps (newer to older)
     ts_list = list(
         sorted(set([i[-1] for i in data])))[-TS_COUNT:]

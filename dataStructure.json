@@ -2572,7 +2572,7 @@
       },
       {
          "id": 37,
-         "online": false,
+         "online": true,
          "stats": true,
          "name": "DolarSol",
          "url": "https://dolarsol.com/",
@@ -2580,23 +2580,21 @@
          "bench": "",
          "scraper": {
             "compra": {
-               "method": "XPATH",
+               "method": "OCR",
                "parameters": {
-                  "xpath": "/html/body/div[2]/div/div[1]/div/div[1]/div[1]",
-                  "click": false,
-                  "click_xpath": "",
-                  "extract_start": 9,
-                  "extract_end": 14
+                  "x0": 375,
+                  "y0": 345,
+                  "x1": 450,
+                  "y1": 370
                }
             },
             "venta": {
-               "method": "XPATH",
+               "method": "OCR",
                "parameters": {
-                  "xpath": "/html/body/div[2]/div/div[1]/div/div[1]/div[1]",
-                  "click": false,
-                  "click_xpath": "",
-                  "extract_start": 22,
-                  "extract_end": 27
+                  "x0": 535,
+                  "y0": 345,
+                  "x1": 605,
+                  "y1": 370
                }
             }
          },
@@ -2716,7 +2714,7 @@
       },
       {
          "id": 39,
-         "online": false,
+         "online": true,
          "stats": true,
          "name": "PeruDollar",
          "url": "www.perudollar.pe",
@@ -2724,23 +2722,21 @@
          "bench": "",
          "scraper": {
             "compra": {
-               "method": "XPATH",
+               "method": "OCR",
                "parameters": {
-                  "xpath": "/html/body/main/section/div/div/div/div/section[1]/div/div/div[2]/div/div/div/div/div/div/form/div[1]/div[1]",
-                  "click": false,
-                  "click_xpath": "",
-                  "extract_start": 8,
-                  "extract_end": 12
+                  "x0": 298,
+                  "y0": 392,
+                  "x1": 345,
+                  "y1": 412
                }
             },
             "venta": {
-               "method": "XPATH",
+               "method": "OCR",
                "parameters": {
-                  "xpath": "/html/body/main/section/div/div/div/div/section[1]/div/div/div[2]/div/div/div/div/div/div/form/div[1]/div[2]",
-                  "click": false,
-                  "click_xpath": "",
-                  "extract_start": 7,
-                  "extract_end": 11
+                  "x0": 405,
+                  "y0": 392,
+                  "x1": 455,
+                  "y1": 412
                }
             }
          },
@@ -3423,7 +3419,7 @@
       {
          "id": 49,
          "online": false,
-         "stats": true,
+         "stats": false,
          "name": "FTB",
          "url": "https://ftb.pe/",
          "link": "https://ftb.pe/",
