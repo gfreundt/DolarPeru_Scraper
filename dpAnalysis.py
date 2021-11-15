@@ -474,6 +474,9 @@ def graph(x, y, x1, y1, xt, yt, filename, rotation):
     plt.tick_params(axis="both", length=0)
     plt.xticks(xt[1], xt[0], color="#606060", fontsize=8, rotation=rotation)
     plt.yticks(yt, color="#606060", fontsize=8)
+    if min(y) != max(y):
+        plt.axhline(y=max(y), color='#C0392B', linestyle='-')
+        plt.axhline(y=min(y), color='#C0392B', linestyle='-')
     plt.grid(color="#DFD8DF")
     plt.savefig(
         os.path.join(active.GRAPH_FOLDER, filename),

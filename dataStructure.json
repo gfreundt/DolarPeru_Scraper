@@ -170,7 +170,7 @@
                }
             }
          },
-         "image": "billex.png",
+         "image": "billex.jpg",
          "bancos": {
             "inmediatos": [
                "",
@@ -2542,7 +2542,7 @@
             ]
          },
          "contacto": {
-            "correo": "servicioalcliente@billex.pe",
+            "correo": "",
             "telefono": ""
          },
          "ruc": "",
