@@ -69,14 +69,14 @@ class Basics:
                 {"name": "power", "root_path": r"D:\prodCode"},
                 {"name": "laptop", "root_path": r"C:\prodCode"},
                 {"name": "desktop", "root_path": "/home/gabfre/prodCode"},
-                {"name": "gft-vps", "root_path": "/root/prodCode"}
+                {"name": "rpi4-64", "root_path": "/home/pi/prodCode"}
             ]
         else:
             systems = [
                 {"name": "power", "root_path": r"D:\pythonCode"},
                 {"name": "laptop", "root_path": r"C:\pythonCode"},
                 {"name": "desktop", "root_path": "/home/gabfre/pythonCode"},
-                {"name": "gft-vps", "root_path": "/root/pythonCode"}
+                {"name": "rpi4-64", "root_path": "/home/pi/pythonCode"}
             ]
 
         for system in systems:
