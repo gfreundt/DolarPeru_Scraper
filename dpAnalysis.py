@@ -216,12 +216,21 @@ def analysis2(fintechs, data, historic):
                         "name": f["name"],
                         "link": f["link"],
                         "image": f["image"],
-                        "contacto": f["contacto"],
+                        "bancos_inmediato": f["bancos"]["inmediatos"],
+                        "bancos_interbancario": f["bancos"]["interbancario"],
+                        "contacto_correo": f["contacto"]["correo"],
+                        "contacto_telefono": f["contacto"]["telefono"],
                         "registro_SBS": f["registro_SBS"],
-                        "bancos": f["bancos"],
-                        "RUC": f["ruc"],
-                        "App_iOS": f["app_iOS"],
-                        "App_Android": f["app_Android"],
+                        "horario": f["horario"],
+                        "facebook": f["redes_sociales"]["facebook"],
+                        "twitter": f["redes_sociales"]["twitter"],
+                        "instagram": f["redes_sociales"]["instagram"],
+                        "linkedin": f["redes_sociales"]["linkedin"],
+                        "youtube": f["redes_sociales"]["youtube"],
+                        "ruc": f["ruc"],
+                        "app_iOS": f["app_iOS"],
+                        "app_Android": f["app_Android"],
+                        "texto_libre": f["texto_libre"]
                     }
                 }
                 # Insert most recent quote
@@ -304,6 +313,9 @@ def analysis3(fintechs, data):
         "time": ts_to_str(ts=ts, format="time"),
         "date": ts_to_str(ts=ts, format="date"),
     }
+
+    # filter fintechs to exclude those not being counted in stats
+    fintechs = [i for i in fintechs if i["stats"]]
 
     # create list of last TS_COUNT timestamps (newer to older)
     ts_list = list(
@@ -462,6 +474,9 @@ def graph(x, y, x1, y1, xt, yt, filename, rotation):
     plt.tick_params(axis="both", length=0)
     plt.xticks(xt[1], xt[0], color="#606060", fontsize=8, rotation=rotation)
     plt.yticks(yt, color="#606060", fontsize=8)
+    if min(y) != max(y):
+        plt.axhline(y=max(y), color='#DC7633', linestyle='dotted')
+        plt.axhline(y=min(y), color='#DC7633', linestyle='dotted')
     plt.grid(color="#DFD8DF")
     plt.savefig(
         os.path.join(active.GRAPH_FOLDER, filename),
