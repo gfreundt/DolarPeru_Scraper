@@ -23,12 +23,11 @@ def chromedriver_version():
 
 
 def alarm():
-    print("alarm!")
     sender = "gfreundt@gmail.com"
     send_to_list = ["gfreundt@losportales.com.pe", "gfreundt@gmail.com"]
-    subject = "CHROME VERSION MISMATCH"
+    subject = "ALERT: CHROME VERSION MISMATCH"
     files_to_send = []
-    text_to_send = "Alarm!"
+    text_to_send = "DolarPeru_Scraper"
     send_gmail(
         sender, send_to_list, subject=subject, body=text_to_send, attach=files_to_send
     )
@@ -36,7 +35,7 @@ def alarm():
 
 chrome = chrome_version()
 driver = chromedriver_version()
+driver = 90 ## Only for testing!!
 
 if chrome != driver:
-    print(chrome, driver)
     alarm()
