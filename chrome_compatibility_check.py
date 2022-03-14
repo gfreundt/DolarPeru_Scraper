@@ -35,7 +35,6 @@ def alarm():
 
 chrome = chrome_version()
 driver = chromedriver_version()
-driver = 90 ## Only for testing!!
 
 if chrome != driver:
     alarm()
